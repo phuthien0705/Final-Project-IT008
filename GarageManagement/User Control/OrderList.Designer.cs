@@ -56,7 +56,7 @@ namespace GarageManagement.User_Control
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(28, 17);
+            this.label15.Location = new System.Drawing.Point(28, 23);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(109, 23);
             this.label15.TabIndex = 5;
@@ -137,7 +137,7 @@ namespace GarageManagement.User_Control
             // backToAllBtn
             // 
             this.backToAllBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToAllBtn.Location = new System.Drawing.Point(111, 17);
+            this.backToAllBtn.Location = new System.Drawing.Point(111, 23);
             this.backToAllBtn.Name = "backToAllBtn";
             this.backToAllBtn.Size = new System.Drawing.Size(106, 23);
             this.backToAllBtn.TabIndex = 14;

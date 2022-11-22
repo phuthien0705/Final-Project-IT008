@@ -30,27 +30,34 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "29A-091.22"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Kia Morning"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "In Progress", System.Drawing.Color.Gold, System.Drawing.Color.White, new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))))}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "In Progress", System.Drawing.Color.Gold, System.Drawing.Color.White, new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "2022/11/15 15:20:30")}, -1);
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "77A-325.44",
             "Bentley",
-            "In Progress"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("3");
+            "In Progress",
+            "2022/10/01 08:32:36"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            "3",
+            "24A-025.16",
+            "Ford",
+            "Ordered",
+            "2022/11/08 12:12:52"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllList));
             this.listView1 = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.plateNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.brand = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.recently = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label15 = new System.Windows.Forms.Label();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.recently = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -65,17 +72,19 @@ namespace GarageManagement.User_Control
             this.recently});
             this.listView1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.FullRowSelect = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem7,
+            listViewItem8,
+            listViewItem9});
             this.listView1.Location = new System.Drawing.Point(32, 58);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1000, 296);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // id
             // 
@@ -95,13 +104,18 @@ namespace GarageManagement.User_Control
             // status
             // 
             this.status.Text = "Status";
-            this.status.Width = 100;
+            this.status.Width = 118;
+            // 
+            // recently
+            // 
+            this.recently.Text = "Recently";
+            this.recently.Width = 180;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(28, 17);
+            this.label15.Location = new System.Drawing.Point(28, 23);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(35, 23);
             this.label15.TabIndex = 9;
@@ -136,11 +150,6 @@ namespace GarageManagement.User_Control
             this.guna2TextBox1.Size = new System.Drawing.Size(285, 35);
             this.guna2TextBox1.TabIndex = 11;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(5, 0);
-            // 
-            // recently
-            // 
-            this.recently.Text = "Recently";
-            this.recently.Width = 108;
             // 
             // AllList
             // 

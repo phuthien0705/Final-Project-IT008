@@ -88,6 +88,12 @@
     <Compile Include="User Control\InProgressList.Designer.cs">
       <DependentUpon>InProgressList.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\KitForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\KitForm.Designer.cs">
+      <DependentUpon>KitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\OrderList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\InProgressList.resx">
       <DependentUpon>InProgressList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\KitForm.resx">
+      <DependentUpon>KitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\OrderList.resx">
       <DependentUpon>OrderList.cs</DependentUpon>
