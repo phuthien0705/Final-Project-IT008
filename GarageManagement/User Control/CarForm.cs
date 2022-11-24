@@ -20,5 +20,15 @@ namespace GarageManagement.User_Control
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
