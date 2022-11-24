@@ -1,0 +1,11 @@
+D:\study\UIT_Winform\Final-Project-IT008\BLL\bin\Debug\BLL.dll
+D:\study\UIT_Winform\Final-Project-IT008\BLL\bin\Debug\BLL.pdb
+D:\study\UIT_Winform\Final-Project-IT008\BLL\bin\Debug\DAL.dll
+D:\study\UIT_Winform\Final-Project-IT008\BLL\bin\Debug\DTO.dll
+D:\study\UIT_Winform\Final-Project-IT008\BLL\bin\Debug\DAL.pdb
+D:\study\UIT_Winform\Final-Project-IT008\BLL\bin\Debug\DTO.pdb
+D:\study\UIT_Winform\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\study\UIT_Winform\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\study\UIT_Winform\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\study\UIT_Winform\Final-Project-IT008\BLL\obj\Debug\BLL.dll
+D:\study\UIT_Winform\Final-Project-IT008\BLL\obj\Debug\BLL.pdb

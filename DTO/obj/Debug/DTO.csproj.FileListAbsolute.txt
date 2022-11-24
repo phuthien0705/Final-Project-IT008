@@ -1,0 +1,6 @@
+D:\study\UIT_Winform\Final-Project-IT008\DTO\bin\Debug\DTO.dll
+D:\study\UIT_Winform\Final-Project-IT008\DTO\bin\Debug\DTO.pdb
+D:\study\UIT_Winform\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\study\UIT_Winform\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\study\UIT_Winform\Final-Project-IT008\DTO\obj\Debug\DTO.dll
+D:\study\UIT_Winform\Final-Project-IT008\DTO\obj\Debug\DTO.pdb
