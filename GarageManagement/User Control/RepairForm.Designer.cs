@@ -36,28 +36,32 @@ namespace GarageManagement.User_Control
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "DanX"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "10cm X 10cm", System.Drawing.SystemColors.HotTrack, System.Drawing.SystemColors.Window, new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Gold"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1200")}, -1);
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1200"),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "20")}, -1);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Tire",
             "Pirelli",
             "17\"",
             "Carbon Black",
-            "200"}, -1);
+            "200",
+            "50"}, -1);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Exhaust"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "DanX"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "10cm X 10cm", System.Drawing.SystemColors.HotTrack, System.Drawing.SystemColors.Window, new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Gold"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1200")}, -1);
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1200"),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "2")}, -1);
             System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Tire",
             "Pirelli",
             "17\"",
             "Carbon Black",
-            "200"}, -1);
+            "200",
+            "3"}, -1);
             this.label15 = new System.Windows.Forms.Label();
             this.kitAvailableLv = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -77,10 +81,13 @@ namespace GarageManagement.User_Control
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.carCbb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.available = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label15
@@ -103,7 +110,8 @@ namespace GarageManagement.User_Control
             this.brand,
             this.type,
             this.color,
-            this.price});
+            this.price,
+            this.available});
             this.kitAvailableLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kitAvailableLv.FullRowSelect = true;
             this.kitAvailableLv.HideSelection = false;
@@ -203,14 +211,15 @@ namespace GarageManagement.User_Control
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7});
             this.kitChoosenLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kitChoosenLv.FullRowSelect = true;
             this.kitChoosenLv.HideSelection = false;
             this.kitChoosenLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem3,
             listViewItem4});
-            this.kitChoosenLv.Location = new System.Drawing.Point(29, 385);
+            this.kitChoosenLv.Location = new System.Drawing.Point(29, 391);
             this.kitChoosenLv.Name = "kitChoosenLv";
             this.kitChoosenLv.Size = new System.Drawing.Size(1000, 215);
             this.kitChoosenLv.TabIndex = 12;
@@ -246,6 +255,11 @@ namespace GarageManagement.User_Control
             // 
             this.columnHeader6.Text = "Price($)";
             this.columnHeader6.Width = 150;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Quanity";
+            this.columnHeader7.Width = 140;
             // 
             // label2
             // 
@@ -284,7 +298,7 @@ namespace GarageManagement.User_Control
             "75A-023.41 | Roll-royce",
             "44A-586.12 | Mercedes-Benz"});
             this.carCbb.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carCbb.Location = new System.Drawing.Point(749, 62);
+            this.carCbb.Location = new System.Drawing.Point(749, 38);
             this.carCbb.Name = "carCbb";
             this.carCbb.Size = new System.Drawing.Size(280, 36);
             this.carCbb.TabIndex = 19;
@@ -293,15 +307,31 @@ namespace GarageManagement.User_Control
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(633, 73);
+            this.label1.Location = new System.Drawing.Point(627, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 19);
             this.label1.TabIndex = 20;
             this.label1.Text = "Choose the car:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(888, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(171, 21);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "View car info detail";
+            // 
+            // available
+            // 
+            this.available.Text = "Available";
+            this.available.Width = 140;
+            // 
             // RepairForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.carCbb);
             this.Controls.Add(this.label3);
@@ -343,5 +373,8 @@ namespace GarageManagement.User_Control
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ColumnHeader available;
     }
 }

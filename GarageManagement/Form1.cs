@@ -27,6 +27,7 @@ namespace GarageManagement
             dashboard1.Visible = false;
             carForm1.Visible = true;
             kitForm1.Visible = false;
+            checkoutForm1.Visible = false;
         }
 
         private void dashboardBtn_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace GarageManagement
             carForm1.Visible = false;
             repairForm1.Visible = false;
             kitForm1.Visible = false;
+            checkoutForm1.Visible = false;
         }
 
         private void repairBtn_Click(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace GarageManagement
             dashboard1.Visible = false;
             carForm1.Visible = false;
             kitForm1.Visible = false;
+            checkoutForm1.Visible = false;
         }
 
         private void kitBtn_Click(object sender, EventArgs e)
@@ -51,6 +54,16 @@ namespace GarageManagement
             repairForm1.Visible = false;
             dashboard1.Visible = false;
             carForm1.Visible = false;
+            checkoutForm1.Visible = false;
+        }
+
+        private void checkoutBtn_Click(object sender, EventArgs e)
+        {
+            kitForm1.Visible = false;
+            repairForm1.Visible = false;
+            dashboard1.Visible = false;
+            carForm1.Visible = false;
+            checkoutForm1.Visible = true;
         }
     }
 }

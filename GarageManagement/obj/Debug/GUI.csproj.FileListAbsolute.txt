@@ -22,3 +22,30 @@ D:\study\UIT_Winform\Final-Project-IT008\GarageManagement\bin\Debug\BLL.dll
 D:\study\UIT_Winform\Final-Project-IT008\GarageManagement\bin\Debug\DTO.dll
 D:\study\UIT_Winform\Final-Project-IT008\GarageManagement\bin\Debug\BLL.pdb
 D:\study\UIT_Winform\Final-Project-IT008\GarageManagement\bin\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\GarageManagement.exe.config
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\GarageManagement.exe
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\GarageManagement.pdb
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\BLL.dll
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\DTO.dll
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\Guna.UI.dll
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\Guna.UI2.dll
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\XanderUI.dll
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\BLL.pdb
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.Form1.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.Properties.Resources.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.AllList.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.CarForm.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.CheckoutForm.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.Dashboard.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.InProgressList.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.KitForm.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.OrderList.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.ReceiptInfo.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.RepairForm.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GUI.csproj.CopyComplete
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.exe
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.pdb

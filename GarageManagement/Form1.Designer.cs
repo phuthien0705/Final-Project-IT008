@@ -42,16 +42,17 @@ namespace GarageManagement
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.billBtn = new Guna.UI.WinForms.GunaGradientButton();
+            this.checkoutBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.repairBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.carBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.dashboardBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.kitForm1 = new GarageManagement.User_Control.KitForm();
             this.repairForm1 = new GarageManagement.User_Control.RepairForm();
             this.carForm1 = new GarageManagement.User_Control.CarForm();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.kitForm1 = new GarageManagement.User_Control.KitForm();
+            this.checkoutForm1 = new GarageManagement.User_Control.CheckoutForm();
             this.dashboard1 = new GarageManagement.User_Control.Dashboard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -133,7 +134,7 @@ namespace GarageManagement
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.gunaCirclePictureBox1);
-            this.panel2.Controls.Add(this.billBtn);
+            this.panel2.Controls.Add(this.checkoutBtn);
             this.panel2.Controls.Add(this.repairBtn);
             this.panel2.Controls.Add(this.carBtn);
             this.panel2.Controls.Add(this.dashboardBtn);
@@ -212,32 +213,33 @@ namespace GarageManagement
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             // 
-            // billBtn
+            // checkoutBtn
             // 
-            this.billBtn.AnimationHoverSpeed = 0.07F;
-            this.billBtn.AnimationSpeed = 0.03F;
-            this.billBtn.BaseColor1 = System.Drawing.Color.Transparent;
-            this.billBtn.BaseColor2 = System.Drawing.Color.Transparent;
-            this.billBtn.BorderColor = System.Drawing.Color.Black;
-            this.billBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.billBtn.FocusedColor = System.Drawing.Color.Empty;
-            this.billBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billBtn.ForeColor = System.Drawing.Color.DarkOrange;
-            this.billBtn.Image = ((System.Drawing.Image)(resources.GetObject("billBtn.Image")));
-            this.billBtn.ImageOffsetX = 20;
-            this.billBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.billBtn.Location = new System.Drawing.Point(0, 481);
-            this.billBtn.Name = "billBtn";
-            this.billBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
-            this.billBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
-            this.billBtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.billBtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.billBtn.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("billBtn.OnHoverImage")));
-            this.billBtn.OnPressedColor = System.Drawing.Color.Black;
-            this.billBtn.Size = new System.Drawing.Size(231, 73);
-            this.billBtn.TabIndex = 5;
-            this.billBtn.Text = "Checkout";
-            this.billBtn.TextOffsetX = 10;
+            this.checkoutBtn.AnimationHoverSpeed = 0.07F;
+            this.checkoutBtn.AnimationSpeed = 0.03F;
+            this.checkoutBtn.BaseColor1 = System.Drawing.Color.Transparent;
+            this.checkoutBtn.BaseColor2 = System.Drawing.Color.Transparent;
+            this.checkoutBtn.BorderColor = System.Drawing.Color.Black;
+            this.checkoutBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.checkoutBtn.FocusedColor = System.Drawing.Color.Empty;
+            this.checkoutBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutBtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.checkoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("checkoutBtn.Image")));
+            this.checkoutBtn.ImageOffsetX = 20;
+            this.checkoutBtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.checkoutBtn.Location = new System.Drawing.Point(0, 481);
+            this.checkoutBtn.Name = "checkoutBtn";
+            this.checkoutBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
+            this.checkoutBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
+            this.checkoutBtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.checkoutBtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.checkoutBtn.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("checkoutBtn.OnHoverImage")));
+            this.checkoutBtn.OnPressedColor = System.Drawing.Color.Black;
+            this.checkoutBtn.Size = new System.Drawing.Size(231, 73);
+            this.checkoutBtn.TabIndex = 5;
+            this.checkoutBtn.Text = "Checkout";
+            this.checkoutBtn.TextOffsetX = 10;
+            this.checkoutBtn.Click += new System.EventHandler(this.checkoutBtn_Click);
             // 
             // repairBtn
             // 
@@ -326,6 +328,7 @@ namespace GarageManagement
             // panel3
             // 
             this.panel3.Controls.Add(this.dashboard1);
+            this.panel3.Controls.Add(this.checkoutForm1);
             this.panel3.Controls.Add(this.kitForm1);
             this.panel3.Controls.Add(this.repairForm1);
             this.panel3.Controls.Add(this.carForm1);
@@ -334,6 +337,15 @@ namespace GarageManagement
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1069, 625);
             this.panel3.TabIndex = 2;
+            // 
+            // kitForm1
+            // 
+            this.kitForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kitForm1.Location = new System.Drawing.Point(0, 0);
+            this.kitForm1.Margin = new System.Windows.Forms.Padding(4);
+            this.kitForm1.Name = "kitForm1";
+            this.kitForm1.Size = new System.Drawing.Size(1069, 625);
+            this.kitForm1.TabIndex = 2;
             // 
             // repairForm1
             // 
@@ -348,7 +360,7 @@ namespace GarageManagement
             // 
             this.carForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.carForm1.Location = new System.Drawing.Point(0, 0);
-            this.carForm1.Margin = new System.Windows.Forms.Padding(30, 49, 30, 49);
+            this.carForm1.Margin = new System.Windows.Forms.Padding(38, 64, 38, 64);
             this.carForm1.Name = "carForm1";
             this.carForm1.Size = new System.Drawing.Size(1069, 625);
             this.carForm1.TabIndex = 0;
@@ -363,14 +375,16 @@ namespace GarageManagement
             this.gunaElipse2.Radius = 15;
             this.gunaElipse2.TargetControl = this;
             // 
-            // kitForm1
+            // checkoutForm1
             // 
-            this.kitForm1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kitForm1.Location = new System.Drawing.Point(0, 0);
-            this.kitForm1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.kitForm1.Name = "kitForm1";
-            this.kitForm1.Size = new System.Drawing.Size(1069, 625);
-            this.kitForm1.TabIndex = 2;
+            this.checkoutForm1.BackColor = System.Drawing.SystemColors.Control;
+            this.checkoutForm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkoutForm1.BackgroundImage")));
+            this.checkoutForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkoutForm1.Location = new System.Drawing.Point(0, 0);
+            this.checkoutForm1.Margin = new System.Windows.Forms.Padding(5);
+            this.checkoutForm1.Name = "checkoutForm1";
+            this.checkoutForm1.Size = new System.Drawing.Size(1069, 625);
+            this.checkoutForm1.TabIndex = 3;
             // 
             // dashboard1
             // 
@@ -379,7 +393,7 @@ namespace GarageManagement
             this.dashboard1.Location = new System.Drawing.Point(0, 0);
             this.dashboard1.Name = "dashboard1";
             this.dashboard1.Size = new System.Drawing.Size(1069, 625);
-            this.dashboard1.TabIndex = 3;
+            this.dashboard1.TabIndex = 4;
             // 
             // Form1
             // 
@@ -415,7 +429,7 @@ namespace GarageManagement
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaGradientButton dashboardBtn;
-        private Guna.UI.WinForms.GunaGradientButton billBtn;
+        private Guna.UI.WinForms.GunaGradientButton checkoutBtn;
         private Guna.UI.WinForms.GunaGradientButton repairBtn;
         private Guna.UI.WinForms.GunaGradientButton carBtn;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
@@ -429,8 +443,9 @@ namespace GarageManagement
         private User_Control.CarForm carForm1;
         private User_Control.RepairForm repairForm1;
         private Guna.UI.WinForms.GunaGradientButton kitBtn;
-        private User_Control.Dashboard dashboard1;
         private User_Control.KitForm kitForm1;
+        private User_Control.Dashboard dashboard1;
+        private User_Control.CheckoutForm checkoutForm1;
     }
 }
 
