@@ -80,8 +80,8 @@ namespace GarageManagement.User_Control
             this.label2 = new System.Windows.Forms.Label();
             this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.addBillPn = new Guna.UI2.WinForms.Guna2Panel();
-            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.receiptInfo1 = new GarageManagement.User_Control.ReceiptInfo();
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2ContainerControl1.SuspendLayout();
             this.totalPn.SuspendLayout();
             this.addBillPn.SuspendLayout();
@@ -348,11 +348,6 @@ namespace GarageManagement.User_Control
             this.addBillPn.Size = new System.Drawing.Size(691, 349);
             this.addBillPn.TabIndex = 3;
             // 
-            // gunaElipse2
-            // 
-            this.gunaElipse2.Radius = 15;
-            this.gunaElipse2.TargetControl = this.addBillPn;
-            // 
             // receiptInfo1
             // 
             this.receiptInfo1.BackColor = System.Drawing.Color.White;
@@ -361,6 +356,11 @@ namespace GarageManagement.User_Control
             this.receiptInfo1.Name = "receiptInfo1";
             this.receiptInfo1.Size = new System.Drawing.Size(691, 349);
             this.receiptInfo1.TabIndex = 0;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 15;
+            this.gunaElipse2.TargetControl = this.addBillPn;
             // 
             // CheckoutForm
             // 
