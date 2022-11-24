@@ -1,0 +1,18 @@
+D:\study\UIT_Winform\Final-Project-IT008\DAL\bin\Debug\DAL.dll
+D:\study\UIT_Winform\Final-Project-IT008\DAL\bin\Debug\DAL.pdb
+D:\study\UIT_Winform\Final-Project-IT008\DAL\bin\Debug\DTO.dll
+D:\study\UIT_Winform\Final-Project-IT008\DAL\bin\Debug\DTO.pdb
+D:\study\UIT_Winform\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\study\UIT_Winform\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\study\UIT_Winform\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\study\UIT_Winform\Final-Project-IT008\DAL\obj\Debug\DAL.dll
+D:\study\UIT_Winform\Final-Project-IT008\DAL\obj\Debug\DAL.pdb
+D:\Lập trình Trực quan\GarageManagement\DAL\bin\Debug\DAL.dll
+D:\Lập trình Trực quan\GarageManagement\DAL\bin\Debug\DAL.pdb
+D:\Lập trình Trực quan\GarageManagement\DAL\bin\Debug\DTO.dll
+D:\Lập trình Trực quan\GarageManagement\DAL\bin\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.dll
+D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.pdb
