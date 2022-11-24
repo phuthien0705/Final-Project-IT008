@@ -16,3 +16,12 @@ D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.csproj.CoreCompil
 D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.dll
 D:\Lập trình Trực quan\GarageManagement\DAL\obj\Debug\DAL.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\bin\Debug\DAL.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\bin\Debug\DAL.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\bin\Debug\DTO.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\bin\Debug\DTO.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\obj\Debug\DAL.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DAL\obj\Debug\DAL.pdb

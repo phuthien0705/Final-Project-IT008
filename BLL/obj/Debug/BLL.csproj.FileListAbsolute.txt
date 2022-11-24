@@ -20,3 +20,14 @@ D:\Lập trình Trực quan\GarageManagement\BLL\obj\Debug\BLL.csproj.CoreCompil
 D:\Lập trình Trực quan\GarageManagement\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Lập trình Trực quan\GarageManagement\BLL\obj\Debug\BLL.dll
 D:\Lập trình Trực quan\GarageManagement\BLL\obj\Debug\BLL.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\bin\Debug\BLL.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\bin\Debug\BLL.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\bin\Debug\DAL.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\bin\Debug\DTO.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\bin\Debug\DAL.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\bin\Debug\DTO.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.pdb
