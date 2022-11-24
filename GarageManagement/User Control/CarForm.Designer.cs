@@ -147,6 +147,7 @@ namespace GarageManagement.User_Control
             this.guna2ComboBox2.Name = "guna2ComboBox2";
             this.guna2ComboBox2.Size = new System.Drawing.Size(280, 36);
             this.guna2ComboBox2.TabIndex = 15;
+            this.guna2ComboBox2.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox2_SelectedIndexChanged);
             // 
             // label3
             // 

@@ -15,5 +15,10 @@ namespace GarageManagement.User_Control
         {
             InitializeComponent();
         }
+
+        private void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

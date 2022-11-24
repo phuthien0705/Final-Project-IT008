@@ -49,3 +49,29 @@ D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GUI.cspr
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GUI.csproj.CopyComplete
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.exe
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\bin\Debug\GarageManagement.exe.config
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\bin\Debug\GarageManagement.exe
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\bin\Debug\GarageManagement.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\bin\Debug\BLL.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\bin\Debug\DTO.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\bin\Debug\Guna.UI2.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\bin\Debug\BLL.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\bin\Debug\DTO.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.Form1.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.Properties.Resources.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.AllList.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CarForm.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CheckoutForm.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.Dashboard.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.InProgressList.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.KitForm.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.OrderList.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.ReceiptInfo.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.RepairForm.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.CopyComplete
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.exe
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.pdb
