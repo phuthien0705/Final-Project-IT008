@@ -46,6 +46,10 @@ namespace GarageManagement.User_Control
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientCircleButton4 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.guna2GradientCircleButton5 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2GradientCircleButton6 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +91,7 @@ namespace GarageManagement.User_Control
             this.guna2GradientCircleButton3.FillColor2 = System.Drawing.Color.DarkOrange;
             this.guna2GradientCircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientCircleButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton3.Location = new System.Drawing.Point(942, 487);
+            this.guna2GradientCircleButton3.Location = new System.Drawing.Point(547, 442);
             this.guna2GradientCircleButton3.Name = "guna2GradientCircleButton3";
             this.guna2GradientCircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2GradientCircleButton3.Size = new System.Drawing.Size(148, 148);
@@ -117,11 +121,13 @@ namespace GarageManagement.User_Control
             this.guna2CustomGradientPanel1.BorderThickness = 1;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label6);
             this.guna2CustomGradientPanel1.Controls.Add(this.label5);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox6);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox5);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox4);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox3);
@@ -132,7 +138,7 @@ namespace GarageManagement.User_Control
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(195, 88);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(794, 289);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(794, 329);
             this.guna2CustomGradientPanel1.TabIndex = 26;
             // 
             // guna2GradientButton1
@@ -147,7 +153,7 @@ namespace GarageManagement.User_Control
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.DarkOrange;
             this.guna2GradientButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(598, 210);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(598, 276);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(132, 30);
             this.guna2GradientButton1.TabIndex = 32;
@@ -346,12 +352,83 @@ namespace GarageManagement.User_Control
             this.guna2GradientCircleButton4.Size = new System.Drawing.Size(100, 100);
             this.guna2GradientCircleButton4.TabIndex = 22;
             // 
+            // guna2GradientCircleButton5
+            // 
+            this.guna2GradientCircleButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientCircleButton5.FillColor = System.Drawing.Color.OrangeRed;
+            this.guna2GradientCircleButton5.FillColor2 = System.Drawing.Color.DarkOrange;
+            this.guna2GradientCircleButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientCircleButton5.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton5.Location = new System.Drawing.Point(918, 423);
+            this.guna2GradientCircleButton5.Name = "guna2GradientCircleButton5";
+            this.guna2GradientCircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2GradientCircleButton5.Size = new System.Drawing.Size(200, 200);
+            this.guna2GradientCircleButton5.TabIndex = 23;
+            // 
+            // guna2TextBox6
+            // 
+            this.guna2TextBox6.BorderColor = System.Drawing.Color.DarkOrange;
+            this.guna2TextBox6.BorderRadius = 15;
+            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox6.DefaultText = "";
+            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox6.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.guna2TextBox6.Location = new System.Drawing.Point(450, 209);
+            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox6.Name = "guna2TextBox6";
+            this.guna2TextBox6.PasswordChar = '\0';
+            this.guna2TextBox6.PlaceholderText = "Type for quanity";
+            this.guna2TextBox6.SelectedText = "";
+            this.guna2TextBox6.Size = new System.Drawing.Size(280, 31);
+            this.guna2TextBox6.TabIndex = 23;
+            this.guna2TextBox6.TextOffset = new System.Drawing.Point(0, -1);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(446, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 21);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Quanity";
+            // 
+            // guna2GradientCircleButton6
+            // 
+            this.guna2GradientCircleButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton6.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientCircleButton6.FillColor = System.Drawing.Color.OrangeRed;
+            this.guna2GradientCircleButton6.FillColor2 = System.Drawing.Color.DarkOrange;
+            this.guna2GradientCircleButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientCircleButton6.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton6.Location = new System.Drawing.Point(21, 163);
+            this.guna2GradientCircleButton6.Name = "guna2GradientCircleButton6";
+            this.guna2GradientCircleButton6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2GradientCircleButton6.Size = new System.Drawing.Size(148, 148);
+            this.guna2GradientCircleButton6.TabIndex = 23;
+            // 
             // KitForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2GradientCircleButton4);
             this.Controls.Add(this.guna2GradientCircleButton2);
+            this.Controls.Add(this.guna2GradientCircleButton5);
+            this.Controls.Add(this.guna2GradientCircleButton6);
             this.Controls.Add(this.guna2GradientCircleButton3);
             this.Controls.Add(this.guna2GradientCircleButton1);
             this.Controls.Add(this.label15);
@@ -382,5 +459,9 @@ namespace GarageManagement.User_Control
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton4;
+        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton5;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton6;
     }
 }

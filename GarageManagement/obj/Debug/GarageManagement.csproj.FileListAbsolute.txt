@@ -18,3 +18,5 @@ D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\Guna.UI2
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.CarForm.resources
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.RepairForm.resources
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.KitForm.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.CheckoutForm.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.ReceiptInfo.resources

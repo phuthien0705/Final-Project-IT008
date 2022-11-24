@@ -76,6 +76,12 @@
     <Compile Include="User Control\CarForm.Designer.cs">
       <DependentUpon>CarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\CheckoutForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CheckoutForm.Designer.cs">
+      <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="User Control\OrderList.Designer.cs">
       <DependentUpon>OrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ReceiptInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ReceiptInfo.Designer.cs">
+      <DependentUpon>ReceiptInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\RepairForm.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +136,9 @@
     <EmbeddedResource Include="User Control\CarForm.resx">
       <DependentUpon>CarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CheckoutForm.resx">
+      <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\OrderList.resx">
       <DependentUpon>OrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ReceiptInfo.resx">
+      <DependentUpon>ReceiptInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\RepairForm.resx">
       <DependentUpon>RepairForm.cs</DependentUpon>

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace GarageManagement.User_Control
 {
-    public partial class AllList : UserControl
+    public partial class ReceiptInfo : UserControl
     {
-        public AllList()
+        public ReceiptInfo()
         {
             InitializeComponent();
         }
