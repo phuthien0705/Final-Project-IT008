@@ -108,6 +108,9 @@ namespace GarageManagement.User_Control
             this.viewCompleted.Size = new System.Drawing.Size(59, 23);
             this.viewCompleted.TabIndex = 2;
             this.viewCompleted.Text = "View";
+            this.viewCompleted.Click += new System.EventHandler(this.viewCompleted_Click);
+            this.viewCompleted.MouseLeave += new System.EventHandler(this.viewCompleted_MouseLeave);
+            this.viewCompleted.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewCompleted_MouseMove);
             // 
             // label16
             // 

@@ -43,5 +43,15 @@ namespace GarageManagement.User_Control
             backToAllBtn.Font = new Font(backToAllBtn.Font, FontStyle.Regular);
             Cursor.Current = Cursors.Default;
         }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

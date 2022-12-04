@@ -10,3 +10,9 @@ D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.csprojAssemblyRef
 D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.dll
 D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\bin\Debug\DTO.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\bin\Debug\DTO.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\obj\Debug\DTO.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\obj\Debug\DTO.pdb

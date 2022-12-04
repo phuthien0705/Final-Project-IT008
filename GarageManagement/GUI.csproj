@@ -85,6 +85,12 @@
     <Compile Include="User Control\CheckoutForm.Designer.cs">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\CompletedList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CompletedList.Designer.cs">
+      <DependentUpon>CompletedList.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\CheckoutForm.resx">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CompletedList.resx">
+      <DependentUpon>CompletedList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

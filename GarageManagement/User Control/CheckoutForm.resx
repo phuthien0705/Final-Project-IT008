@@ -120,17 +120,17 @@
   <metadata name="gunaElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="gunaElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>151, 17</value>
-  </metadata>
   <metadata name="gunaElipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>285, 17</value>
+  </metadata>
+  <metadata name="gunaElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>151, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABC0AAAJuCAIAAAAb8m+kAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
-        IwAALiMBeKU/dgAA/7JJREFUeF7M/W23dk233XVBjNsQJWB4lM3Tt1ExuoOIaILcigYD0a1RiBAfo1Eg
+        IgAALiIBquLdkgAA/7JJREFUeF7M/W23dk233XVBjNsQJWB4lM3Tt1ExuoOIaILcigYD0a1RiBAfo1Eg
         AooBJJ/2ttfsc/bZq49RNeex1rmu2Nq/jTaq1nW9X79Wx7HOv+f3//W/5/f/jWNG9+XfO/ZxxHLF3W++
         1n9z3lkcf+P+OVuY76v+W9f0JfbRn7Bl7s/Zwl1z3397jjf1Pvrv2LLsv3DOP8JyTBVH9OePuOjIXemy
         7Z+/5j//J8/+/LVE/915vulf2PbfQ//F0b9wTO9fnPdN//1r+uL9S0e+j+Mf/P5fWvQ/2PY/rP2Xzv7C

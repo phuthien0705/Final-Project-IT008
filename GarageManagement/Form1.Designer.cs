@@ -47,13 +47,13 @@ namespace GarageManagement
             this.carBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.dashboardBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dashboard1 = new GarageManagement.User_Control.Dashboard();
+            this.checkoutForm1 = new GarageManagement.User_Control.CheckoutForm();
             this.kitForm1 = new GarageManagement.User_Control.KitForm();
             this.repairForm1 = new GarageManagement.User_Control.RepairForm();
             this.carForm1 = new GarageManagement.User_Control.CarForm();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.checkoutForm1 = new GarageManagement.User_Control.CheckoutForm();
-            this.dashboard1 = new GarageManagement.User_Control.Dashboard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,11 +74,12 @@ namespace GarageManagement
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1300, 95);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1268, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(1268, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -338,6 +339,27 @@ namespace GarageManagement
             this.panel3.Size = new System.Drawing.Size(1069, 625);
             this.panel3.TabIndex = 2;
             // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1069, 625);
+            this.dashboard1.TabIndex = 4;
+            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
+            // 
+            // checkoutForm1
+            // 
+            this.checkoutForm1.BackColor = System.Drawing.SystemColors.Control;
+            this.checkoutForm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkoutForm1.BackgroundImage")));
+            this.checkoutForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkoutForm1.Location = new System.Drawing.Point(0, 0);
+            this.checkoutForm1.Margin = new System.Windows.Forms.Padding(5);
+            this.checkoutForm1.Name = "checkoutForm1";
+            this.checkoutForm1.Size = new System.Drawing.Size(1069, 625);
+            this.checkoutForm1.TabIndex = 3;
+            // 
             // kitForm1
             // 
             this.kitForm1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -360,7 +382,7 @@ namespace GarageManagement
             // 
             this.carForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.carForm1.Location = new System.Drawing.Point(0, 0);
-            this.carForm1.Margin = new System.Windows.Forms.Padding(38, 64, 38, 64);
+            this.carForm1.Margin = new System.Windows.Forms.Padding(60, 110, 60, 110);
             this.carForm1.Name = "carForm1";
             this.carForm1.Size = new System.Drawing.Size(1069, 625);
             this.carForm1.TabIndex = 0;
@@ -374,26 +396,6 @@ namespace GarageManagement
             // 
             this.gunaElipse2.Radius = 15;
             this.gunaElipse2.TargetControl = this;
-            // 
-            // checkoutForm1
-            // 
-            this.checkoutForm1.BackColor = System.Drawing.SystemColors.Control;
-            this.checkoutForm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkoutForm1.BackgroundImage")));
-            this.checkoutForm1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkoutForm1.Location = new System.Drawing.Point(0, 0);
-            this.checkoutForm1.Margin = new System.Windows.Forms.Padding(5);
-            this.checkoutForm1.Name = "checkoutForm1";
-            this.checkoutForm1.Size = new System.Drawing.Size(1069, 625);
-            this.checkoutForm1.TabIndex = 3;
-            // 
-            // dashboard1
-            // 
-            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1069, 625);
-            this.dashboard1.TabIndex = 4;
             // 
             // Form1
             // 
