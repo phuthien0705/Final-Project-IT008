@@ -47,13 +47,13 @@ namespace GarageManagement
             this.carBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.dashboardBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.dashboard1 = new GarageManagement.User_Control.Dashboard();
             this.checkoutForm1 = new GarageManagement.User_Control.CheckoutForm();
             this.kitForm1 = new GarageManagement.User_Control.KitForm();
             this.repairForm1 = new GarageManagement.User_Control.RepairForm();
             this.carForm1 = new GarageManagement.User_Control.CarForm();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,7 +79,7 @@ namespace GarageManagement
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1255, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(1268, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,7 +195,7 @@ namespace GarageManagement
             this.label3.Location = new System.Drawing.Point(52, 102);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(154, 22);
+            this.label3.Size = new System.Drawing.Size(160, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nguyễn Mai Linh";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -339,16 +339,6 @@ namespace GarageManagement
             this.panel3.Size = new System.Drawing.Size(1069, 625);
             this.panel3.TabIndex = 2;
             // 
-            // gunaElipse1
-            // 
-            this.gunaElipse1.Radius = 20;
-            this.gunaElipse1.TargetControl = this;
-            // 
-            // gunaElipse2
-            // 
-            this.gunaElipse2.Radius = 15;
-            this.gunaElipse2.TargetControl = this;
-            // 
             // dashboard1
             // 
             this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
@@ -396,6 +386,16 @@ namespace GarageManagement
             this.carForm1.Name = "carForm1";
             this.carForm1.Size = new System.Drawing.Size(1069, 625);
             this.carForm1.TabIndex = 0;
+            // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 20;
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 15;
+            this.gunaElipse2.TargetControl = this;
             // 
             // Form1
             // 

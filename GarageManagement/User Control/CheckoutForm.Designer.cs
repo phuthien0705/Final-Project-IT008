@@ -137,17 +137,17 @@ namespace GarageManagement.User_Control
             // kitName
             // 
             this.kitName.Text = "Kit name";
-            this.kitName.Width = 172;
+            this.kitName.Width = 218;
             // 
             // brand
             // 
             this.brand.Text = "Brand";
-            this.brand.Width = 143;
+            this.brand.Width = 182;
             // 
             // type
             // 
             this.type.Text = "Type";
-            this.type.Width = 141;
+            this.type.Width = 174;
             // 
             // color
             // 
