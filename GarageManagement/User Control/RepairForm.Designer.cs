@@ -30,35 +30,35 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Exhaust",
             "1200",
             "20"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Tire",
             "200",
             "50"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Exhaust",
             "1200",
             "20"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Tire",
             "200",
             "50"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
@@ -116,8 +116,8 @@ namespace GarageManagement.User_Control
             this.kitAvailableLv.FullRowSelect = true;
             this.kitAvailableLv.HideSelection = false;
             this.kitAvailableLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem8,
+            listViewItem9});
             this.kitAvailableLv.Location = new System.Drawing.Point(29, 112);
             this.kitAvailableLv.Name = "kitAvailableLv";
             this.kitAvailableLv.Size = new System.Drawing.Size(593, 180);
@@ -302,8 +302,8 @@ namespace GarageManagement.User_Control
             this.kitChoosenLv.FullRowSelect = true;
             this.kitChoosenLv.HideSelection = false;
             this.kitChoosenLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
+            listViewItem10,
+            listViewItem11});
             this.kitChoosenLv.Location = new System.Drawing.Point(28, 374);
             this.kitChoosenLv.Name = "kitChoosenLv";
             this.kitChoosenLv.Size = new System.Drawing.Size(593, 180);
@@ -361,9 +361,9 @@ namespace GarageManagement.User_Control
             this.problemLv.FullRowSelect = true;
             this.problemLv.HideSelection = false;
             this.problemLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6,
-            listViewItem7});
+            listViewItem12,
+            listViewItem13,
+            listViewItem14});
             this.problemLv.Location = new System.Drawing.Point(665, 190);
             this.problemLv.Name = "problemLv";
             this.problemLv.Size = new System.Drawing.Size(369, 102);
