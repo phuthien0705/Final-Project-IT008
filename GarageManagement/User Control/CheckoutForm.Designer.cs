@@ -80,8 +80,8 @@ namespace GarageManagement.User_Control
             this.label2 = new System.Windows.Forms.Label();
             this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.addBillPn = new Guna.UI2.WinForms.Guna2Panel();
-            this.receiptInfo1 = new GarageManagement.User_Control.ReceiptInfo();
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.receiptInfo1 = new GarageManagement.User_Control.ReceiptInfo();
             this.guna2ContainerControl1.SuspendLayout();
             this.totalPn.SuspendLayout();
             this.addBillPn.SuspendLayout();
@@ -198,7 +198,7 @@ namespace GarageManagement.User_Control
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.DarkOrchid;
             this.guna2GradientButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(24, 289);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(24, 275);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(239, 30);
             this.guna2GradientButton1.TabIndex = 36;
@@ -223,7 +223,7 @@ namespace GarageManagement.User_Control
             "Google Pay",
             "Visa"});
             this.guna2ComboBox1.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.Location = new System.Drawing.Point(24, 244);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(24, 235);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(239, 26);
             this.guna2ComboBox1.TabIndex = 35;
@@ -232,7 +232,7 @@ namespace GarageManagement.User_Control
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 216);
+            this.label12.Location = new System.Drawing.Point(19, 206);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(187, 23);
             this.label12.TabIndex = 34;
@@ -348,6 +348,11 @@ namespace GarageManagement.User_Control
             this.addBillPn.Size = new System.Drawing.Size(691, 349);
             this.addBillPn.TabIndex = 3;
             // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 15;
+            this.gunaElipse2.TargetControl = this.addBillPn;
+            // 
             // receiptInfo1
             // 
             this.receiptInfo1.BackColor = System.Drawing.Color.White;
@@ -356,11 +361,6 @@ namespace GarageManagement.User_Control
             this.receiptInfo1.Name = "receiptInfo1";
             this.receiptInfo1.Size = new System.Drawing.Size(691, 349);
             this.receiptInfo1.TabIndex = 0;
-            // 
-            // gunaElipse2
-            // 
-            this.gunaElipse2.Radius = 15;
-            this.gunaElipse2.TargetControl = this.addBillPn;
             // 
             // CheckoutForm
             // 
