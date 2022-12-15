@@ -31,3 +31,14 @@ D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CoreComp
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.dll
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\BLL\obj\Debug\BLL.pdb
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\bin\Debug\BLL.dll
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\bin\Debug\BLL.pdb
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\bin\Debug\DTO.dll
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\bin\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\obj\Debug\BLL.dll
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\obj\Debug\BLL.pdb
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\bin\Debug\DAL.dll
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\BLL\bin\Debug\DAL.pdb
