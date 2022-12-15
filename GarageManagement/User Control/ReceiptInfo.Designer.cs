@@ -51,17 +51,17 @@ namespace GarageManagement.User_Control
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(24, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 21);
+            this.label3.Size = new System.Drawing.Size(161, 23);
             this.label3.TabIndex = 18;
             this.label3.Text = "Choose the car";
             // 
             // guna2ComboBox2
             // 
             this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.DarkOrange;
+            this.guna2ComboBox2.BorderColor = System.Drawing.Color.DarkOrchid;
             this.guna2ComboBox2.BorderRadius = 15;
             this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -80,7 +80,7 @@ namespace GarageManagement.User_Control
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.DarkOrange;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.DarkOrchid;
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.label17);

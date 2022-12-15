@@ -194,8 +194,8 @@ namespace GarageManagement.User_Control
             this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.OrangeRed;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.DarkOrange;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.Orchid;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.DarkOrchid;
             this.guna2GradientButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.Location = new System.Drawing.Point(24, 289);
@@ -207,7 +207,7 @@ namespace GarageManagement.User_Control
             // guna2ComboBox1
             // 
             this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.DarkOrange;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.DarkOrchid;
             this.guna2ComboBox1.BorderRadius = 15;
             this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -243,7 +243,7 @@ namespace GarageManagement.User_Control
             // 
             this.gunaLinePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLinePanel1.LineBottom = 2;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.DarkOrange;
+            this.gunaLinePanel1.LineColor = System.Drawing.Color.DarkOrchid;
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel1.Location = new System.Drawing.Point(23, 141);
             this.gunaLinePanel1.Name = "gunaLinePanel1";

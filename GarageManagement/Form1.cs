@@ -65,15 +65,5 @@ namespace GarageManagement
             carForm1.Visible = false;
             checkoutForm1.Visible = true;
         }
-
-        private void dashboard1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
