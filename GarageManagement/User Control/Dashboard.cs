@@ -75,5 +75,23 @@ namespace GarageManagement.User_Control
             viewCompleted.Font = new Font(viewCompleted.Font, FontStyle.Regular);
             Cursor.Current = Cursors.Default;
         }
+
+        private void viewDetail_Click(object sender, EventArgs e)
+        {
+            CarDetail carDetail = new CarDetail();
+            carDetail.Show();
+        }
+
+        private void viewDetail_MouseLeave(object sender, EventArgs e)
+        {
+            viewDetail.Font = new Font(viewDetail.Font, FontStyle.Regular);
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void viewDetail_MouseMove(object sender, MouseEventArgs e)
+        {
+            viewDetail.Font = new Font(viewDetail.Font, FontStyle.Underline);
+            Cursor.Current = Cursors.Hand;
+        }
     }
 }
