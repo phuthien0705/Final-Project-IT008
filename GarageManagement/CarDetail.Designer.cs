@@ -30,7 +30,7 @@ namespace GarageManagement
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarDetail));
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.carImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,19 +48,19 @@ namespace GarageManagement
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.chooseImgBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2PictureBox1
+            // carImg
             // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(23, 65);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.carImg.Image = ((System.Drawing.Image)(resources.GetObject("carImg.Image")));
+            this.carImg.ImageRotate = 0F;
+            this.carImg.Location = new System.Drawing.Point(23, 65);
+            this.carImg.Name = "carImg";
+            this.carImg.Size = new System.Drawing.Size(100, 100);
+            this.carImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.carImg.TabIndex = 0;
+            this.carImg.TabStop = false;
             // 
             // label8
             // 
@@ -333,7 +333,7 @@ namespace GarageManagement
             this.chooseImgBtn.Name = "chooseImgBtn";
             this.chooseImgBtn.Size = new System.Drawing.Size(110, 23);
             this.chooseImgBtn.TabIndex = 63;
-            this.chooseImgBtn.Text = "Choose an image";
+            this.chooseImgBtn.Text = "Upload";
             this.chooseImgBtn.UseVisualStyleBackColor = true;
             this.chooseImgBtn.Click += new System.EventHandler(this.chooseImgBtn_Click);
             // 
@@ -358,10 +358,10 @@ namespace GarageManagement
             this.Controls.Add(this.guna2TextBox2);
             this.Controls.Add(this.guna2TextBox3);
             this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.carImg);
             this.Name = "CarDetail";
             this.Text = "Car Detail";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,7 +369,7 @@ namespace GarageManagement
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox carImg;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

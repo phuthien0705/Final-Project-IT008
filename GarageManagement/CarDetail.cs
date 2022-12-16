@@ -19,7 +19,21 @@ namespace GarageManagement
 
         private void chooseImgBtn_Click(object sender, EventArgs e)
         {
+            string imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;...";
 
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+                    carImg.ImageLocation = imageLocation;
+                }
+            } catch (Exception)
+            {
+                MessageBox.Show("Cann't upload image now !","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
