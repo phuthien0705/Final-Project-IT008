@@ -35,5 +35,20 @@ namespace GarageManagement
                 MessageBox.Show("Cann't upload image now !","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CarDetail_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Do you want to delete this car ?", "delete car", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+        }
     }
 }

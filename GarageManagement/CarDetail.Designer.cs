@@ -43,10 +43,10 @@ namespace GarageManagement
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.deleteBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.updateBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.chooseImgBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
             this.SuspendLayout();
@@ -257,24 +257,25 @@ namespace GarageManagement
             this.guna2TextBox1.TabIndex = 48;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(0, -1);
             // 
-            // guna2GradientButton1
+            // deleteBtn
             // 
-            this.guna2GradientButton1.BorderColor = System.Drawing.Color.Blue;
-            this.guna2GradientButton1.BorderRadius = 15;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.HotPink;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.IndianRed;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(568, 278);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(110, 30);
-            this.guna2GradientButton1.TabIndex = 59;
-            this.guna2GradientButton1.Text = "Delete";
+            this.deleteBtn.BorderColor = System.Drawing.Color.Blue;
+            this.deleteBtn.BorderRadius = 15;
+            this.deleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.deleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.deleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.deleteBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.deleteBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deleteBtn.FillColor = System.Drawing.Color.HotPink;
+            this.deleteBtn.FillColor2 = System.Drawing.Color.IndianRed;
+            this.deleteBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.Location = new System.Drawing.Point(568, 278);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(110, 30);
+            this.deleteBtn.TabIndex = 59;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // label5
             // 
@@ -308,30 +309,31 @@ namespace GarageManagement
             this.guna2ComboBox2.Size = new System.Drawing.Size(295, 31);
             this.guna2ComboBox2.TabIndex = 62;
             // 
-            // guna2GradientButton2
+            // updateBtn
             // 
-            this.guna2GradientButton2.BorderColor = System.Drawing.Color.Blue;
-            this.guna2GradientButton2.BorderRadius = 15;
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.DodgerBlue;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.SystemColors.Highlight;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(693, 278);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(110, 30);
-            this.guna2GradientButton2.TabIndex = 59;
-            this.guna2GradientButton2.Text = "Update";
+            this.updateBtn.BorderColor = System.Drawing.Color.Blue;
+            this.updateBtn.BorderRadius = 15;
+            this.updateBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.updateBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.updateBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.updateBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.updateBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.updateBtn.FillColor = System.Drawing.Color.DodgerBlue;
+            this.updateBtn.FillColor2 = System.Drawing.SystemColors.Highlight;
+            this.updateBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.ForeColor = System.Drawing.Color.White;
+            this.updateBtn.Location = new System.Drawing.Point(693, 278);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(110, 30);
+            this.updateBtn.TabIndex = 59;
+            this.updateBtn.Text = "Update";
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // chooseImgBtn
             // 
-            this.chooseImgBtn.Location = new System.Drawing.Point(18, 175);
+            this.chooseImgBtn.Location = new System.Drawing.Point(40, 171);
             this.chooseImgBtn.Name = "chooseImgBtn";
-            this.chooseImgBtn.Size = new System.Drawing.Size(110, 23);
+            this.chooseImgBtn.Size = new System.Drawing.Size(71, 23);
             this.chooseImgBtn.TabIndex = 63;
             this.chooseImgBtn.Text = "Upload";
             this.chooseImgBtn.UseVisualStyleBackColor = true;
@@ -344,8 +346,8 @@ namespace GarageManagement
             this.Controls.Add(this.chooseImgBtn);
             this.Controls.Add(this.guna2ComboBox2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.guna2GradientButton2);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.updateBtn);
+            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -361,6 +363,7 @@ namespace GarageManagement
             this.Controls.Add(this.carImg);
             this.Name = "CarDetail";
             this.Text = "Car Detail";
+            this.Load += new System.EventHandler(this.CarDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -382,10 +385,10 @@ namespace GarageManagement
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton deleteBtn;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2GradientButton updateBtn;
         private System.Windows.Forms.Button chooseImgBtn;
     }
 }
