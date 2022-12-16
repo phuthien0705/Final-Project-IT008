@@ -30,35 +30,35 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Exhaust",
             "1200",
             "20"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Tire",
             "200",
             "50"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Exhaust",
             "1200",
             "20"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Tire",
             "200",
             "50"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
@@ -72,6 +72,11 @@ namespace GarageManagement.User_Control
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.kitChoosenLv = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.carCbb = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -79,11 +84,6 @@ namespace GarageManagement.User_Control
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.kitChoosenLv = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.removeBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.problemLv = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -116,8 +116,8 @@ namespace GarageManagement.User_Control
             this.kitAvailableLv.FullRowSelect = true;
             this.kitAvailableLv.HideSelection = false;
             this.kitAvailableLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem8,
-            listViewItem9});
+            listViewItem1,
+            listViewItem2});
             this.kitAvailableLv.Location = new System.Drawing.Point(29, 112);
             this.kitAvailableLv.Name = "kitAvailableLv";
             this.kitAvailableLv.Size = new System.Drawing.Size(593, 180);
@@ -190,6 +190,48 @@ namespace GarageManagement.User_Control
             this.gunaElipse2.Radius = 15;
             this.gunaElipse2.TargetControl = this.kitChoosenLv;
             // 
+            // kitChoosenLv
+            // 
+            this.kitChoosenLv.AutoArrange = false;
+            this.kitChoosenLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.kitChoosenLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.kitChoosenLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kitChoosenLv.FullRowSelect = true;
+            this.kitChoosenLv.HideSelection = false;
+            this.kitChoosenLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem3,
+            listViewItem4});
+            this.kitChoosenLv.Location = new System.Drawing.Point(28, 374);
+            this.kitChoosenLv.Name = "kitChoosenLv";
+            this.kitChoosenLv.Size = new System.Drawing.Size(593, 180);
+            this.kitChoosenLv.TabIndex = 41;
+            this.kitChoosenLv.UseCompatibleStateImageBehavior = false;
+            this.kitChoosenLv.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 50;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Name";
+            this.columnHeader2.Width = 230;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Price($)";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Available";
+            this.columnHeader4.Width = 162;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -213,7 +255,7 @@ namespace GarageManagement.User_Control
             // carCbb
             // 
             this.carCbb.BackColor = System.Drawing.Color.Transparent;
-            this.carCbb.BorderColor = System.Drawing.Color.DarkOrange;
+            this.carCbb.BorderColor = System.Drawing.Color.IndianRed;
             this.carCbb.BorderRadius = 15;
             this.carCbb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.carCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -279,8 +321,8 @@ namespace GarageManagement.User_Control
             this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.OrangeRed;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.DarkOrange;
+            this.guna2GradientButton2.FillColor = System.Drawing.Color.DarkKhaki;
+            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Gold;
             this.guna2GradientButton2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton2.Location = new System.Drawing.Point(921, 303);
@@ -288,48 +330,6 @@ namespace GarageManagement.User_Control
             this.guna2GradientButton2.Size = new System.Drawing.Size(113, 25);
             this.guna2GradientButton2.TabIndex = 40;
             this.guna2GradientButton2.Text = "Confirm";
-            // 
-            // kitChoosenLv
-            // 
-            this.kitChoosenLv.AutoArrange = false;
-            this.kitChoosenLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.kitChoosenLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.kitChoosenLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kitChoosenLv.FullRowSelect = true;
-            this.kitChoosenLv.HideSelection = false;
-            this.kitChoosenLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10,
-            listViewItem11});
-            this.kitChoosenLv.Location = new System.Drawing.Point(28, 374);
-            this.kitChoosenLv.Name = "kitChoosenLv";
-            this.kitChoosenLv.Size = new System.Drawing.Size(593, 180);
-            this.kitChoosenLv.TabIndex = 41;
-            this.kitChoosenLv.UseCompatibleStateImageBehavior = false;
-            this.kitChoosenLv.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 50;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 230;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Price($)";
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Available";
-            this.columnHeader4.Width = 162;
             // 
             // removeBtn
             // 
@@ -361,9 +361,9 @@ namespace GarageManagement.User_Control
             this.problemLv.FullRowSelect = true;
             this.problemLv.HideSelection = false;
             this.problemLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem12,
-            listViewItem13,
-            listViewItem14});
+            listViewItem5,
+            listViewItem6,
+            listViewItem7});
             this.problemLv.Location = new System.Drawing.Point(665, 190);
             this.problemLv.Name = "problemLv";
             this.problemLv.Size = new System.Drawing.Size(369, 102);

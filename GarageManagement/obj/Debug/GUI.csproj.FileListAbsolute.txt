@@ -105,3 +105,4 @@ D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\GarageManag
 D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.CopyComplete
 D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.exe
 D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.pdb
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.CarDetail.resources
