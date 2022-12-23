@@ -34,3 +34,12 @@ D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DAL\bin\Deb
 D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DAL\bin\Debug\DTO.dll
 D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DAL\bin\Debug\DTO.pdb
 D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\bin\Debug\DAL.dll
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\bin\Debug\DAL.pdb
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\bin\Debug\DTO.dll
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\obj\Debug\DAL.dll
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DAL\obj\Debug\DAL.pdb
