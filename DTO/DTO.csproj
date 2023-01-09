@@ -42,8 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CHITIETPHIEUSUACHUA.cs" />
+    <Compile Include="CHITIETTIENCONG.cs" />
+    <Compile Include="HIEUXE.cs" />
+    <Compile Include="KHACHHANG.cs" />
+    <Compile Include="KHO.cs" />
+    <Compile Include="PHIEUSUACHUA.cs" />
+    <Compile Include="PHIEUTHUTIEN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="THAMSO.cs" />
+    <Compile Include="TIENCONG.cs" />
+    <Compile Include="XE.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

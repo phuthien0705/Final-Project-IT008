@@ -106,3 +106,30 @@ D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\GarageManag
 D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.exe
 D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.pdb
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.CarDetail.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\bin\Debug\GarageManagement.exe.config
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\bin\Debug\GarageManagement.exe
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\bin\Debug\GarageManagement.pdb
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\bin\Debug\BLL.dll
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\bin\Debug\DTO.dll
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\bin\Debug\Guna.UI2.dll
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\bin\Debug\BLL.pdb
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.CarDetail.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.Form1.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.Properties.Resources.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.AllList.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CarForm.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CheckoutForm.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CompletedList.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.Dashboard.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.InProgressList.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.KitForm.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.OrderList.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.ReceiptInfo.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.RepairForm.resources
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.exe
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.pdb
