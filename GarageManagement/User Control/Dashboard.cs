@@ -55,5 +55,43 @@ namespace GarageManagement.User_Control
             panel1.Controls.Add(inProgressList);
             inProgressList.Dock = DockStyle.Fill;
         }
+
+        private void viewCompleted_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            CompletedList completedList = new CompletedList(this);
+            panel1.Controls.Add(completedList);
+            completedList.Dock = DockStyle.Fill;
+        }
+
+        private void viewCompleted_MouseMove(object sender, MouseEventArgs e)
+        {
+            viewCompleted.Font = new Font(viewCompleted.Font, FontStyle.Underline);
+            Cursor.Current = Cursors.Hand;
+        }
+
+        private void viewCompleted_MouseLeave(object sender, EventArgs e)
+        {
+            viewCompleted.Font = new Font(viewCompleted.Font, FontStyle.Regular);
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void viewDetail_Click(object sender, EventArgs e)
+        {
+            CarDetail carDetail = new CarDetail();
+            carDetail.Show();
+        }
+
+        private void viewDetail_MouseLeave(object sender, EventArgs e)
+        {
+            viewDetail.Font = new Font(viewDetail.Font, FontStyle.Regular);
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void viewDetail_MouseMove(object sender, MouseEventArgs e)
+        {
+            viewDetail.Font = new Font(viewDetail.Font, FontStyle.Underline);
+            Cursor.Current = Cursors.Hand;
+        }
     }
 }

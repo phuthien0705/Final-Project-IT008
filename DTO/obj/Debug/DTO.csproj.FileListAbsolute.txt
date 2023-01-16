@@ -1,0 +1,30 @@
+D:\study\UIT_Winform\Final-Project-IT008\DTO\bin\Debug\DTO.dll
+D:\study\UIT_Winform\Final-Project-IT008\DTO\bin\Debug\DTO.pdb
+D:\study\UIT_Winform\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\study\UIT_Winform\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\study\UIT_Winform\Final-Project-IT008\DTO\obj\Debug\DTO.dll
+D:\study\UIT_Winform\Final-Project-IT008\DTO\obj\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagement\DTO\bin\Debug\DTO.dll
+D:\Lập trình Trực quan\GarageManagement\DTO\bin\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.dll
+D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\bin\Debug\DTO.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\bin\Debug\DTO.pdb
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\obj\Debug\DTO.dll
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\DTO\obj\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DTO\bin\Debug\DTO.dll
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DTO\bin\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DTO\obj\Debug\DTO.dll
+D:\Lập trình Trực quan\GarageManagementTest\Final-Project-IT008\DTO\obj\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\bin\Debug\DTO.dll
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\obj\Debug\DTO.dll
+C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\obj\Debug\DTO.pdb

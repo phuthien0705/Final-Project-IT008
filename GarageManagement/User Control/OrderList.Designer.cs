@@ -30,12 +30,12 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "29A-091.22"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Roll-Royce"),
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Ordered", System.Drawing.SystemColors.HotTrack, System.Drawing.SystemColors.Window, new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))))}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "90A-167.57",
             "Bentley",
@@ -50,13 +50,15 @@ namespace GarageManagement.User_Control
             this.status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.backToAllBtn = new System.Windows.Forms.Label();
+            this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.guna2ContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(28, 17);
+            this.label15.Location = new System.Drawing.Point(28, 23);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(109, 23);
             this.label15.TabIndex = 5;
@@ -80,14 +82,15 @@ namespace GarageManagement.User_Control
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
-            this.listView1.Location = new System.Drawing.Point(32, 58);
+            listViewItem1,
+            listViewItem2});
+            this.listView1.Location = new System.Drawing.Point(12, 13);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1000, 296);
+            this.listView1.Size = new System.Drawing.Size(968, 269);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // id
             // 
@@ -137,7 +140,7 @@ namespace GarageManagement.User_Control
             // backToAllBtn
             // 
             this.backToAllBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToAllBtn.Location = new System.Drawing.Point(111, 17);
+            this.backToAllBtn.Location = new System.Drawing.Point(111, 23);
             this.backToAllBtn.Name = "backToAllBtn";
             this.backToAllBtn.Size = new System.Drawing.Size(106, 23);
             this.backToAllBtn.TabIndex = 14;
@@ -146,15 +149,26 @@ namespace GarageManagement.User_Control
             this.backToAllBtn.MouseLeave += new System.EventHandler(this.backToAllBtn_MouseLeave);
             this.backToAllBtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.backToAllBtn_MouseMove);
             // 
+            // guna2ContainerControl1
+            // 
+            this.guna2ContainerControl1.BorderRadius = 15;
+            this.guna2ContainerControl1.Controls.Add(this.listView1);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(32, 58);
+            this.guna2ContainerControl1.Name = "guna2ContainerControl1";
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(1000, 296);
+            this.guna2ContainerControl1.TabIndex = 15;
+            this.guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
             // OrderList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.backToAllBtn);
             this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label15);
+            this.Controls.Add(this.guna2ContainerControl1);
             this.Name = "OrderList";
             this.Size = new System.Drawing.Size(1069, 387);
+            this.guna2ContainerControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +185,6 @@ namespace GarageManagement.User_Control
         private System.Windows.Forms.ColumnHeader status;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label backToAllBtn;
+        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
     }
 }

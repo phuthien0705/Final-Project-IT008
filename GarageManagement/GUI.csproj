@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>GarageManagement</RootNamespace>
     <AssemblyName>GarageManagement</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
@@ -56,6 +59,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarDetail.Designer.cs">
+      <DependentUpon>CarDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +85,18 @@
     <Compile Include="User Control\CarForm.Designer.cs">
       <DependentUpon>CarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\CheckoutForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CheckoutForm.Designer.cs">
+      <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\CompletedList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CompletedList.Designer.cs">
+      <DependentUpon>CompletedList.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,11 +109,23 @@
     <Compile Include="User Control\InProgressList.Designer.cs">
       <DependentUpon>InProgressList.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\KitForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\KitForm.Designer.cs">
+      <DependentUpon>KitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\OrderList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Control\OrderList.Designer.cs">
       <DependentUpon>OrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ReceiptInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ReceiptInfo.Designer.cs">
+      <DependentUpon>ReceiptInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\RepairForm.cs">
       <SubType>UserControl</SubType>
@@ -100,6 +133,9 @@
     <Compile Include="User Control\RepairForm.Designer.cs">
       <DependentUpon>RepairForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CarDetail.resx">
+      <DependentUpon>CarDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +147,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="User Control\AllList.resx">
       <DependentUpon>AllList.cs</DependentUpon>
@@ -118,18 +155,31 @@
     <EmbeddedResource Include="User Control\CarForm.resx">
       <DependentUpon>CarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CheckoutForm.resx">
+      <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CompletedList.resx">
+      <DependentUpon>CompletedList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\InProgressList.resx">
       <DependentUpon>InProgressList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\KitForm.resx">
+      <DependentUpon>KitForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\OrderList.resx">
       <DependentUpon>OrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ReceiptInfo.resx">
+      <DependentUpon>ReceiptInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\RepairForm.resx">
       <DependentUpon>RepairForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -140,6 +190,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{9fefcbdf-49a5-444d-9fb8-e58ecf50582f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{572dfdd7-0f8c-4880-a5f4-62218f36de1c}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
