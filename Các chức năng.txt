@@ -1,0 +1,36 @@
+- XE_DAO: (Phú)
++ Danh sách các xe có trong Garage (DataTable)
++ Xem chi tiết xe
++ Số lượng xe ordered, in progress, completed
++ Thêm xe mới (nhập các trường BienSo, MaHX, MaKH, các trường mặc định
+NgayTiepNhan = Datetime.Now, TrangThai = Ordered)
++ Xóa xe 
++ Cập nhật xe (Biển số, MaHX, MaKH) 
+--> Hiệu xe nên nhập tay hay chọn hiệu xe có sẵn? --> Set cứng
+- KHACHHANG_DAO: (Trung)
++ Thêm khách hàng
++ Xóa khách hàng
++ Cập nhật khách hàng
+- KHO_DAO: (Thiên)
++ Thêm phụ tùng
++ Xóa phụ tùng
++ Cập nhật phụ tùng
+- HIEUXE_DAO:
+--> Set cứng 
+- TIENCONG_DAO:
+--> Set cứng
+- CHITIETTIENCONG_DAO: (Phú)
++ Thêm chi tiết tiền công
++ Danh sách tiền công có tham số truyền vào là MaPhieuSuaChua
++ Xóa, sửa
+- CHITIETPHIEUSUACHUA_DAO:(Phú)
++ Thêm chi tiết sửa chữa
++ Danh sách phụ tùng có tham số truyền vào là MaPhieuSuaChua
++ Xóa, sửa
+- PHIEUSUACHUA_DAO: (Trung)
++ Thêm phiếu sửa chữa
+--> Có nên xóa, sửa phiếu sửa chữa ?? --> ko xóa
+- PHIEUTHUTIEN_DAO: (Thiên)
++ Thêm phiếu thu tiền
+--> có nên xóa phiếu thu tiền ?? --> ko xóa
+Deadline: mùng 4 tết 
