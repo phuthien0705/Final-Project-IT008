@@ -20,7 +20,7 @@ namespace DAL
 
         public List<PHIEUTHUTIEN> getListBillByUserId(int MaKH) {
             List<PHIEUTHUTIEN> bills = new List<PHIEUTHUTIEN>();
-            string query = "SELECT * FROM dbo.PHIEUTHUTIEN WHERE MaKh=" + MaKH;
+            string query = "SELECT * FROM dbo.PHIEUTHUTIEN WHERE MaKh=N'" + MaKH + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
@@ -33,7 +33,7 @@ namespace DAL
         public void addBill(int MaPhieuThuTien, int MaKH,
             int TienThu, DateTime? NgayThuTien)
         {
-            string query = "INSERT dbo.KHO {MaPhieuThuTien,MaKH,TienThu,NgayThuTien} VALUES (" + MaPhieuThuTien + "," + MaKH + "," + TienThu + "," + NgayThuTien + ")";
+            string query = "INSERT dbo.KHO (MaPhieuThuTien,MaKH,TienThu,NgayThuTien) VALUES (N'" + MaPhieuThuTien + "',N'" + MaKH + "',N'" + TienThu + "',N'" + NgayThuTien + "')";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
     }

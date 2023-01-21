@@ -34,20 +34,20 @@ namespace DAL
         public void addAccessory(int MaPhuTung, string TenVatTuPhuTung,
             int SoLuong, int DonGia)
         {
-            string query = "INSERT dbo.KHO {MaPhuTung,TenVatTuPhuTung,SoLuong,DonGia} VALUES ("+ MaPhuTung+ ","+ TenVatTuPhuTung + "," + SoLuong + ","+ DonGia + ")";
+            string query = "INSERT dbo.KHO (MaPhuTung,TenVatTuPhuTung,SoLuong,DonGia) VALUES (N'"+ MaPhuTung+ "',N'"+ TenVatTuPhuTung + "',N'" + SoLuong + "',N'"+ DonGia + "')";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         public void deleteAccessory(int MaPhuTung)
         {
-            string query = "DELETE FROM dbo.KHO WHERE MaPhuTung=" + MaPhuTung;
+            string query = "DELETE FROM dbo.KHO WHERE MaPhuTung=N'" + MaPhuTung+"'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         public void updateAccessory(int MaPhuTung, string TenVatTuPhuTung,
             int SoLuong, int DonGia)
         {
-            string query = "UPDATE dbo.KHO SET TenVatTuPhuTung=" + TenVatTuPhuTung + ",SoLuong=" + SoLuong + ",DonGia=" + DonGia + "WHERE MaPhuTung="+ MaPhuTung;
+            string query = "UPDATE dbo.KHO SET TenVatTuPhuTung=N'" + TenVatTuPhuTung + "',SoLuong=N'" + SoLuong + "',DonGia=N'" + DonGia + "' WHERE MaPhuTung=N'"+ MaPhuTung+"'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
