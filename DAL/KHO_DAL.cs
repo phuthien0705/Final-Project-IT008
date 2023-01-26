@@ -18,36 +18,30 @@ namespace DAL
         }
 
         // this function is use to get accessories in stock
-        public List<KHO> getAccessoriesInStock()
+        public DataTable getAccessoriesInStock()
         {
-            List<KHO> accessories = new List<KHO>();
             string query = "SELECT * FROM dbo.KHO";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow item in data.Rows)
-            {
-                KHO kho = new KHO(item);
-                accessories.Add(kho);
-            }
-            return accessories;
+            return data;
         }
-
+        // this function is use to add accessory
         public void addAccessory(int MaPhuTung, string TenVatTuPhuTung,
             int SoLuong, int DonGia)
         {
-            string query = "INSERT dbo.KHO (MaPhuTung,TenVatTuPhuTung,SoLuong,DonGia) VALUES (N'"+ MaPhuTung+ "',N'"+ TenVatTuPhuTung + "',N'" + SoLuong + "',N'"+ DonGia + "')";
+            string query = $"INSERT dbo.KHO (MaPhuTung,TenVatTuPhuTung,SoLuong,DonGia) VALUES (N'{MaPhuTung}',N'{TenVatTuPhuTung}',N'{SoLuong}',N'{DonGia}')";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-
+        // this function is use to delete accessory
         public void deleteAccessory(int MaPhuTung)
         {
             string query = "DELETE FROM dbo.KHO WHERE MaPhuTung=N'" + MaPhuTung+"'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-
+        // this function is use to update accessory
         public void updateAccessory(int MaPhuTung, string TenVatTuPhuTung,
             int SoLuong, int DonGia)
         {
-            string query = "UPDATE dbo.KHO SET TenVatTuPhuTung=N'" + TenVatTuPhuTung + "',SoLuong=N'" + SoLuong + "',DonGia=N'" + DonGia + "' WHERE MaPhuTung=N'"+ MaPhuTung+"'";
+            string query = $"UPDATE dbo.KHO SET TenVatTuPhuTung=N'{TenVatTuPhuTung}',SoLuong=N'{SoLuong}',DonGia=N'{DonGia}' WHERE MaPhuTung=N'{MaPhuTung}'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
     }

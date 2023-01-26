@@ -17,23 +17,17 @@ namespace DAL
             get { if (instance == null) { instance = new PHIEUTHUTIEN_DAL(); } return PHIEUTHUTIEN_DAL.instance; }
             private set { PHIEUTHUTIEN_DAL.instance = value; }
         }
-
-        public List<PHIEUTHUTIEN> getListBillByUserId(int MaKH) {
-            List<PHIEUTHUTIEN> bills = new List<PHIEUTHUTIEN>();
-            string query = "SELECT * FROM dbo.PHIEUTHUTIEN WHERE MaKh=N'" + MaKH + "'";
+        // this function is use to get list bill by user id
+        public DataTable getListBillByUserId(int MaKH) {
+            string query = $"SELECT * FROM dbo.PHIEUTHUTIEN WHERE MaKh=N'{MaKH}'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow item in data.Rows)
-            {
-                PHIEUTHUTIEN phieuthutien = new PHIEUTHUTIEN(item);
-                bills.Add(phieuthutien);
-            }
-            return bills;
+            return data;
         }
-
+        // this function is use to acc bill
         public void addBill(int MaPhieuThuTien, int MaKH,
             int TienThu, DateTime? NgayThuTien)
         {
-            string query = "INSERT dbo.KHO (MaPhieuThuTien,MaKH,TienThu,NgayThuTien) VALUES (N'" + MaPhieuThuTien + "',N'" + MaKH + "',N'" + TienThu + "',N'" + NgayThuTien + "')";
+            string query = $"INSERT dbo.KHO (MaPhieuThuTien,MaKH,TienThu,NgayThuTien) VALUES (N'{MaPhieuThuTien}',N'{MaKH}',N'{TienThu}',N'{NgayThuTien}')";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
