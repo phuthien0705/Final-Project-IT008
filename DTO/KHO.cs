@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,13 @@ namespace DTO
             this.TenVatTuPhuTung = TenVatTuPhuTung;
             this.SoLuong = SoLuong;
             this.DonGia = DonGia;
+        }
+
+        public KHO(DataRow row) {
+            this.MaPhuTung = (int)row["MaPhuTung"];
+            this.TenVatTuPhuTung = row["TenVatTuPhuTung"].ToString();
+            this.SoLuong = (int)row["SoLuong"];
+            this.DonGia = (int)row["DonGia"];
         }
     }
 }
