@@ -47,13 +47,14 @@ namespace GarageManagement
             this.carBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.dashboardBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dashboard1 = new GarageManagement.User_Control.Dashboard();
+            this.checkoutForm1 = new GarageManagement.User_Control.CheckoutForm();
             this.kitForm1 = new GarageManagement.User_Control.KitForm();
             this.repairForm1 = new GarageManagement.User_Control.RepairForm();
             this.carForm1 = new GarageManagement.User_Control.CarForm();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.checkoutForm1 = new GarageManagement.User_Control.CheckoutForm();
-            this.dashboard1 = new GarageManagement.User_Control.Dashboard();
+            this.customerBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,7 +104,7 @@ namespace GarageManagement
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 23);
+            this.label2.Size = new System.Drawing.Size(186, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Garage Management";
             // 
@@ -113,7 +114,7 @@ namespace GarageManagement
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(121, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 34);
+            this.label1.Size = new System.Drawing.Size(131, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "AutoRepair";
             // 
@@ -130,6 +131,7 @@ namespace GarageManagement
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.customerBtn);
             this.panel2.Controls.Add(this.kitBtn);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -159,7 +161,7 @@ namespace GarageManagement
             this.kitBtn.Image = ((System.Drawing.Image)(resources.GetObject("kitBtn.Image")));
             this.kitBtn.ImageOffsetX = 20;
             this.kitBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.kitBtn.Location = new System.Drawing.Point(0, 323);
+            this.kitBtn.Location = new System.Drawing.Point(0, 396);
             this.kitBtn.Name = "kitBtn";
             this.kitBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
             this.kitBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
@@ -169,7 +171,7 @@ namespace GarageManagement
             this.kitBtn.OnPressedColor = System.Drawing.Color.Black;
             this.kitBtn.Size = new System.Drawing.Size(231, 73);
             this.kitBtn.TabIndex = 7;
-            this.kitBtn.Text = "Kit";
+            this.kitBtn.Text = "Phụ tùng";
             this.kitBtn.TextOffsetX = 10;
             this.kitBtn.Click += new System.EventHandler(this.kitBtn_Click);
             // 
@@ -180,7 +182,7 @@ namespace GarageManagement
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(92, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 21);
+            this.label4.Size = new System.Drawing.Size(53, 19);
             this.label4.TabIndex = 6;
             this.label4.Text = "Admin";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,7 +196,7 @@ namespace GarageManagement
             this.label3.Location = new System.Drawing.Point(52, 102);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(160, 23);
+            this.label3.Size = new System.Drawing.Size(130, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nguyễn Mai Linh";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,7 +229,7 @@ namespace GarageManagement
             this.checkoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("checkoutBtn.Image")));
             this.checkoutBtn.ImageOffsetX = 20;
             this.checkoutBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.checkoutBtn.Location = new System.Drawing.Point(0, 481);
+            this.checkoutBtn.Location = new System.Drawing.Point(0, 550);
             this.checkoutBtn.Name = "checkoutBtn";
             this.checkoutBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
             this.checkoutBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
@@ -237,7 +239,7 @@ namespace GarageManagement
             this.checkoutBtn.OnPressedColor = System.Drawing.Color.Black;
             this.checkoutBtn.Size = new System.Drawing.Size(231, 73);
             this.checkoutBtn.TabIndex = 5;
-            this.checkoutBtn.Text = "Checkout";
+            this.checkoutBtn.Text = "Thanh toán";
             this.checkoutBtn.TextOffsetX = 10;
             this.checkoutBtn.Click += new System.EventHandler(this.checkoutBtn_Click);
             // 
@@ -255,7 +257,7 @@ namespace GarageManagement
             this.repairBtn.Image = ((System.Drawing.Image)(resources.GetObject("repairBtn.Image")));
             this.repairBtn.ImageOffsetX = 20;
             this.repairBtn.ImageSize = new System.Drawing.Size(25, 25);
-            this.repairBtn.Location = new System.Drawing.Point(0, 402);
+            this.repairBtn.Location = new System.Drawing.Point(0, 473);
             this.repairBtn.Name = "repairBtn";
             this.repairBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
             this.repairBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
@@ -265,7 +267,7 @@ namespace GarageManagement
             this.repairBtn.OnPressedColor = System.Drawing.Color.Black;
             this.repairBtn.Size = new System.Drawing.Size(231, 73);
             this.repairBtn.TabIndex = 4;
-            this.repairBtn.Text = "Repair";
+            this.repairBtn.Text = "Sửa chữa";
             this.repairBtn.TextOffsetX = 10;
             this.repairBtn.Click += new System.EventHandler(this.repairBtn_Click);
             // 
@@ -283,7 +285,7 @@ namespace GarageManagement
             this.carBtn.Image = ((System.Drawing.Image)(resources.GetObject("carBtn.Image")));
             this.carBtn.ImageOffsetX = 20;
             this.carBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.carBtn.Location = new System.Drawing.Point(0, 244);
+            this.carBtn.Location = new System.Drawing.Point(0, 319);
             this.carBtn.Name = "carBtn";
             this.carBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
             this.carBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
@@ -293,7 +295,7 @@ namespace GarageManagement
             this.carBtn.OnPressedColor = System.Drawing.Color.Black;
             this.carBtn.Size = new System.Drawing.Size(231, 73);
             this.carBtn.TabIndex = 3;
-            this.carBtn.Text = "Car";
+            this.carBtn.Text = "Xe";
             this.carBtn.TextOffsetX = 10;
             this.carBtn.Click += new System.EventHandler(this.carBtn_Click);
             // 
@@ -321,7 +323,7 @@ namespace GarageManagement
             this.dashboardBtn.OnPressedColor = System.Drawing.Color.Black;
             this.dashboardBtn.Size = new System.Drawing.Size(231, 73);
             this.dashboardBtn.TabIndex = 2;
-            this.dashboardBtn.Text = "Dashboard";
+            this.dashboardBtn.Text = "Trang chủ";
             this.dashboardBtn.TextOffsetX = 10;
             this.dashboardBtn.Click += new System.EventHandler(this.dashboardBtn_Click);
             // 
@@ -337,6 +339,25 @@ namespace GarageManagement
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1069, 625);
             this.panel3.TabIndex = 2;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1069, 625);
+            this.dashboard1.TabIndex = 4;
+            // 
+            // checkoutForm1
+            // 
+            this.checkoutForm1.BackColor = System.Drawing.SystemColors.Control;
+            this.checkoutForm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkoutForm1.BackgroundImage")));
+            this.checkoutForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkoutForm1.Location = new System.Drawing.Point(0, 0);
+            this.checkoutForm1.Name = "checkoutForm1";
+            this.checkoutForm1.Size = new System.Drawing.Size(1069, 625);
+            this.checkoutForm1.TabIndex = 3;
             // 
             // kitForm1
             // 
@@ -375,24 +396,32 @@ namespace GarageManagement
             this.gunaElipse2.Radius = 15;
             this.gunaElipse2.TargetControl = this;
             // 
-            // checkoutForm1
+            // customerBtn
             // 
-            this.checkoutForm1.BackColor = System.Drawing.SystemColors.Control;
-            this.checkoutForm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkoutForm1.BackgroundImage")));
-            this.checkoutForm1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkoutForm1.Location = new System.Drawing.Point(0, 0);
-            this.checkoutForm1.Name = "checkoutForm1";
-            this.checkoutForm1.Size = new System.Drawing.Size(1069, 625);
-            this.checkoutForm1.TabIndex = 3;
-            // 
-            // dashboard1
-            // 
-            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1069, 625);
-            this.dashboard1.TabIndex = 4;
+            this.customerBtn.AnimationHoverSpeed = 0.07F;
+            this.customerBtn.AnimationSpeed = 0.03F;
+            this.customerBtn.BaseColor1 = System.Drawing.Color.Transparent;
+            this.customerBtn.BaseColor2 = System.Drawing.Color.Transparent;
+            this.customerBtn.BorderColor = System.Drawing.Color.Black;
+            this.customerBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.customerBtn.FocusedColor = System.Drawing.Color.Empty;
+            this.customerBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerBtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.customerBtn.Image = ((System.Drawing.Image)(resources.GetObject("customerBtn.Image")));
+            this.customerBtn.ImageOffsetX = 20;
+            this.customerBtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.customerBtn.Location = new System.Drawing.Point(0, 242);
+            this.customerBtn.Name = "customerBtn";
+            this.customerBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
+            this.customerBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
+            this.customerBtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.customerBtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.customerBtn.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("customerBtn.OnHoverImage")));
+            this.customerBtn.OnPressedColor = System.Drawing.Color.Black;
+            this.customerBtn.Size = new System.Drawing.Size(231, 73);
+            this.customerBtn.TabIndex = 8;
+            this.customerBtn.Text = "Khách hàng";
+            this.customerBtn.TextOffsetX = 10;
             // 
             // Form1
             // 
@@ -445,6 +474,7 @@ namespace GarageManagement
         private User_Control.KitForm kitForm1;
         private User_Control.Dashboard dashboard1;
         private User_Control.CheckoutForm checkoutForm1;
+        private Guna.UI.WinForms.GunaGradientButton customerBtn;
     }
 }
 

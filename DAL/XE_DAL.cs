@@ -24,6 +24,13 @@ namespace DAL
             return data;
         }
 
+        public DataTable LoadCarListOnStatus(int TrangThai)
+        {
+            string query = String.Format("SELECT MaXe, BienSo, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE WHERE XE.MaHX = HIEUXE.MaHX AND TrangThai = {0} ORDER BY NgayTiepNhan DESC", TrangThai);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
         public DataTable GetCarDetail(int MaXe)
         {
             string query = String.Format("SELECT MaXe, BienSo, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE WHERE XE.MaHX = HIEUXE.MaHX AND MaXe = {0}", MaXe);
@@ -53,9 +60,9 @@ namespace DAL
             return result > 0;
         }
 
-        public int GetNumberOfTypeCar(int type)
+        public int GetNumberOfTypeCar(int TrangThai)
         {
-            string query = String.Format("SELECT COUNT(*) FROM XE WHERE TrangThai = {0}", type);
+            string query = String.Format("SELECT COUNT(*) FROM XE WHERE TrangThai = {0}", TrangThai);
             return (int)DataProvider.Instance.ExecuteScalar(query);
         }
     }
