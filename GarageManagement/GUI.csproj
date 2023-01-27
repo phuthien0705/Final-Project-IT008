@@ -97,6 +97,12 @@
     <Compile Include="User Control\CompletedList.Designer.cs">
       <DependentUpon>CompletedList.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\CustomerForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\CompletedList.resx">
       <DependentUpon>CompletedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

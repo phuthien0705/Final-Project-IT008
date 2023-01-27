@@ -38,6 +38,7 @@ namespace GarageManagement
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.customerBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.kitBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,14 +48,14 @@ namespace GarageManagement
             this.carBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.dashboardBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dashboard1 = new GarageManagement.User_Control.Dashboard();
             this.checkoutForm1 = new GarageManagement.User_Control.CheckoutForm();
             this.kitForm1 = new GarageManagement.User_Control.KitForm();
             this.repairForm1 = new GarageManagement.User_Control.RepairForm();
             this.carForm1 = new GarageManagement.User_Control.CarForm();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.customerBtn = new Guna.UI.WinForms.GunaGradientButton();
+            this.customerForm2 = new GarageManagement.User_Control.CustomerForm();
+            this.dashboard1 = new GarageManagement.User_Control.Dashboard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,7 +105,7 @@ namespace GarageManagement
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 21);
+            this.label2.Size = new System.Drawing.Size(227, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Garage Management";
             // 
@@ -114,7 +115,7 @@ namespace GarageManagement
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(121, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 26);
+            this.label1.Size = new System.Drawing.Size(165, 34);
             this.label1.TabIndex = 2;
             this.label1.Text = "AutoRepair";
             // 
@@ -146,6 +147,34 @@ namespace GarageManagement
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(231, 625);
             this.panel2.TabIndex = 1;
+            // 
+            // customerBtn
+            // 
+            this.customerBtn.AnimationHoverSpeed = 0.07F;
+            this.customerBtn.AnimationSpeed = 0.03F;
+            this.customerBtn.BaseColor1 = System.Drawing.Color.Transparent;
+            this.customerBtn.BaseColor2 = System.Drawing.Color.Transparent;
+            this.customerBtn.BorderColor = System.Drawing.Color.Black;
+            this.customerBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.customerBtn.FocusedColor = System.Drawing.Color.Empty;
+            this.customerBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerBtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.customerBtn.Image = ((System.Drawing.Image)(resources.GetObject("customerBtn.Image")));
+            this.customerBtn.ImageOffsetX = 20;
+            this.customerBtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.customerBtn.Location = new System.Drawing.Point(0, 242);
+            this.customerBtn.Name = "customerBtn";
+            this.customerBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
+            this.customerBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
+            this.customerBtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.customerBtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.customerBtn.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("customerBtn.OnHoverImage")));
+            this.customerBtn.OnPressedColor = System.Drawing.Color.Black;
+            this.customerBtn.Size = new System.Drawing.Size(231, 73);
+            this.customerBtn.TabIndex = 8;
+            this.customerBtn.Text = "Khách hàng";
+            this.customerBtn.TextOffsetX = 10;
+            this.customerBtn.Click += new System.EventHandler(this.customerBtn_Click);
             // 
             // kitBtn
             // 
@@ -182,7 +211,7 @@ namespace GarageManagement
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(92, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 19);
+            this.label4.Size = new System.Drawing.Size(63, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Admin";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,7 +225,7 @@ namespace GarageManagement
             this.label3.Location = new System.Drawing.Point(52, 102);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(130, 18);
+            this.label3.Size = new System.Drawing.Size(160, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nguyễn Mai Linh";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -330,6 +359,7 @@ namespace GarageManagement
             // panel3
             // 
             this.panel3.Controls.Add(this.dashboard1);
+            this.panel3.Controls.Add(this.customerForm2);
             this.panel3.Controls.Add(this.checkoutForm1);
             this.panel3.Controls.Add(this.kitForm1);
             this.panel3.Controls.Add(this.repairForm1);
@@ -339,15 +369,6 @@ namespace GarageManagement
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1069, 625);
             this.panel3.TabIndex = 2;
-            // 
-            // dashboard1
-            // 
-            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1069, 625);
-            this.dashboard1.TabIndex = 4;
             // 
             // checkoutForm1
             // 
@@ -396,32 +417,23 @@ namespace GarageManagement
             this.gunaElipse2.Radius = 15;
             this.gunaElipse2.TargetControl = this;
             // 
-            // customerBtn
+            // customerForm2
             // 
-            this.customerBtn.AnimationHoverSpeed = 0.07F;
-            this.customerBtn.AnimationSpeed = 0.03F;
-            this.customerBtn.BaseColor1 = System.Drawing.Color.Transparent;
-            this.customerBtn.BaseColor2 = System.Drawing.Color.Transparent;
-            this.customerBtn.BorderColor = System.Drawing.Color.Black;
-            this.customerBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.customerBtn.FocusedColor = System.Drawing.Color.Empty;
-            this.customerBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerBtn.ForeColor = System.Drawing.Color.DarkOrange;
-            this.customerBtn.Image = ((System.Drawing.Image)(resources.GetObject("customerBtn.Image")));
-            this.customerBtn.ImageOffsetX = 20;
-            this.customerBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.customerBtn.Location = new System.Drawing.Point(0, 242);
-            this.customerBtn.Name = "customerBtn";
-            this.customerBtn.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
-            this.customerBtn.OnHoverBaseColor2 = System.Drawing.Color.DarkOrange;
-            this.customerBtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.customerBtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.customerBtn.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("customerBtn.OnHoverImage")));
-            this.customerBtn.OnPressedColor = System.Drawing.Color.Black;
-            this.customerBtn.Size = new System.Drawing.Size(231, 73);
-            this.customerBtn.TabIndex = 8;
-            this.customerBtn.Text = "Khách hàng";
-            this.customerBtn.TextOffsetX = 10;
+            this.customerForm2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerForm2.Location = new System.Drawing.Point(0, 0);
+            this.customerForm2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customerForm2.Name = "customerForm2";
+            this.customerForm2.Size = new System.Drawing.Size(1069, 625);
+            this.customerForm2.TabIndex = 4;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1069, 625);
+            this.dashboard1.TabIndex = 5;
             // 
             // Form1
             // 
@@ -472,9 +484,10 @@ namespace GarageManagement
         private User_Control.RepairForm repairForm1;
         private Guna.UI.WinForms.GunaGradientButton kitBtn;
         private User_Control.KitForm kitForm1;
-        private User_Control.Dashboard dashboard1;
         private User_Control.CheckoutForm checkoutForm1;
         private Guna.UI.WinForms.GunaGradientButton customerBtn;
+        private User_Control.CustomerForm customerForm2;
+        private User_Control.Dashboard dashboard1;
     }
 }
 
