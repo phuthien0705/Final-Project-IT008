@@ -24,7 +24,7 @@ namespace GarageManagement.User_Control
 
         private void CustomerForm_Load(object sender, EventArgs e)
         {
-
+            genderCb.SelectedIndex = 0;
         }
     }
 }

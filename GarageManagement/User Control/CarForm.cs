@@ -20,5 +20,10 @@ namespace GarageManagement.User_Control
         {
 
         }
+
+        private void CarForm_Load(object sender, EventArgs e)
+        {
+            brandCb.SelectedIndex = 0;
+        }
     }
 }
