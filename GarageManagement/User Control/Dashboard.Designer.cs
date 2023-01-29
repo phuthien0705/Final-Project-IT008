@@ -51,8 +51,8 @@ namespace GarageManagement.User_Control
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.allList1 = new GarageManagement.User_Control.AllList();
             this.viewDetail = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.allList1 = new GarageManagement.User_Control.AllList();
             this.gunaGradient2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.gunaGradient2Panel3.SuspendLayout();
@@ -67,12 +67,12 @@ namespace GarageManagement.User_Control
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(24, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(141, 28);
+            this.label15.Size = new System.Drawing.Size(147, 29);
             this.label15.TabIndex = 9;
-            this.label15.Text = "Dashboard";
+            this.label15.Text = "Trang chủ";
             // 
             // gunaGradient2Panel4
             // 
@@ -106,9 +106,9 @@ namespace GarageManagement.User_Control
             this.viewCompleted.ForeColor = System.Drawing.SystemColors.Window;
             this.viewCompleted.Location = new System.Drawing.Point(17, 106);
             this.viewCompleted.Name = "viewCompleted";
-            this.viewCompleted.Size = new System.Drawing.Size(48, 21);
+            this.viewCompleted.Size = new System.Drawing.Size(101, 21);
             this.viewCompleted.TabIndex = 2;
-            this.viewCompleted.Text = "View";
+            this.viewCompleted.Text = "Xem chi tiết";
             this.viewCompleted.Click += new System.EventHandler(this.viewCompleted_Click);
             this.viewCompleted.MouseLeave += new System.EventHandler(this.viewCompleted_MouseLeave);
             this.viewCompleted.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewCompleted_MouseMove);
@@ -131,9 +131,9 @@ namespace GarageManagement.User_Control
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(13, 17);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(97, 19);
+            this.label17.Size = new System.Drawing.Size(126, 19);
             this.label17.TabIndex = 0;
-            this.label17.Text = "Completed";
+            this.label17.Text = "Đã hoàn thành";
             // 
             // gunaGradient2Panel3
             // 
@@ -167,9 +167,9 @@ namespace GarageManagement.User_Control
             this.viewInProgress.ForeColor = System.Drawing.SystemColors.Window;
             this.viewInProgress.Location = new System.Drawing.Point(17, 106);
             this.viewInProgress.Name = "viewInProgress";
-            this.viewInProgress.Size = new System.Drawing.Size(48, 21);
+            this.viewInProgress.Size = new System.Drawing.Size(101, 21);
             this.viewInProgress.TabIndex = 2;
-            this.viewInProgress.Text = "View";
+            this.viewInProgress.Text = "Xem chi tiết";
             this.viewInProgress.Click += new System.EventHandler(this.viewInProgress_Click);
             this.viewInProgress.MouseLeave += new System.EventHandler(this.viewInProgress_MouseLeave);
             this.viewInProgress.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewInProgress_MouseMove);
@@ -192,9 +192,9 @@ namespace GarageManagement.User_Control
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(13, 17);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 19);
+            this.label13.Size = new System.Drawing.Size(83, 19);
             this.label13.TabIndex = 0;
-            this.label13.Text = "In Progress";
+            this.label13.Text = "Đang sửa";
             // 
             // gunaGradient2Panel2
             // 
@@ -228,9 +228,9 @@ namespace GarageManagement.User_Control
             this.viewOrdered.ForeColor = System.Drawing.SystemColors.Window;
             this.viewOrdered.Location = new System.Drawing.Point(17, 106);
             this.viewOrdered.Name = "viewOrdered";
-            this.viewOrdered.Size = new System.Drawing.Size(48, 21);
+            this.viewOrdered.Size = new System.Drawing.Size(101, 21);
             this.viewOrdered.TabIndex = 2;
-            this.viewOrdered.Text = "View";
+            this.viewOrdered.Text = "Xem chi tiết";
             this.viewOrdered.Click += new System.EventHandler(this.viewOrdered_Click);
             this.viewOrdered.MouseLeave += new System.EventHandler(this.viewOrdered_MouseLeave);
             this.viewOrdered.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewOrdered_MouseMove);
@@ -253,9 +253,9 @@ namespace GarageManagement.User_Control
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(13, 17);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 19);
+            this.label10.Size = new System.Drawing.Size(107, 19);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Ordered";
+            this.label10.Text = "Đã tiếp nhận";
             // 
             // gunaGradient2Panel1
             // 
@@ -299,9 +299,9 @@ namespace GarageManagement.User_Control
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(13, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 19);
+            this.label6.Size = new System.Drawing.Size(89, 19);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Revenue";
+            this.label6.Text = "Doanh thu";
             // 
             // panel1
             // 
@@ -313,6 +313,19 @@ namespace GarageManagement.User_Control
             this.panel1.Size = new System.Drawing.Size(1069, 387);
             this.panel1.TabIndex = 10;
             // 
+            // viewDetail
+            // 
+            this.viewDetail.BackColor = System.Drawing.Color.Transparent;
+            this.viewDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewDetail.Location = new System.Drawing.Point(639, 20);
+            this.viewDetail.Name = "viewDetail";
+            this.viewDetail.Size = new System.Drawing.Size(103, 18);
+            this.viewDetail.TabIndex = 2;
+            this.viewDetail.Text = "Xem chi tiết xe";
+            this.viewDetail.Click += new System.EventHandler(this.viewDetail_Click);
+            this.viewDetail.MouseLeave += new System.EventHandler(this.viewDetail_MouseLeave);
+            this.viewDetail.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewDetail_MouseMove);
+            // 
             // allList1
             // 
             this.allList1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -320,19 +333,6 @@ namespace GarageManagement.User_Control
             this.allList1.Name = "allList1";
             this.allList1.Size = new System.Drawing.Size(1069, 387);
             this.allList1.TabIndex = 0;
-            // 
-            // viewDetail
-            // 
-            this.viewDetail.BackColor = System.Drawing.Color.Transparent;
-            this.viewDetail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewDetail.Location = new System.Drawing.Point(639, 20);
-            this.viewDetail.Name = "viewDetail";
-            this.viewDetail.Size = new System.Drawing.Size(101, 19);
-            this.viewDetail.TabIndex = 2;
-            this.viewDetail.Text = "View car detail";
-            this.viewDetail.Click += new System.EventHandler(this.viewDetail_Click);
-            this.viewDetail.MouseLeave += new System.EventHandler(this.viewDetail_MouseLeave);
-            this.viewDetail.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewDetail_MouseMove);
             // 
             // Dashboard
             // 
