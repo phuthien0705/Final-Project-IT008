@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,14 @@ namespace DTO
             this.MaKH = MaKH;
             this.TienThu = TienThu;
             this.NgayThuTien = NgayThuTien;
+        }
+
+        public PHIEUTHUTIEN(DataRow row)
+        {
+            this.MaPhieuThuTien = (int)row["MaPhieuThuTien"];
+            this.MaKH = (int)row["MaKH"];
+            this.TienThu = (int)row["TienThu"];
+            this.NgayThuTien = (DateTime)row["NgayThuTien"];
         }
     }
 }
