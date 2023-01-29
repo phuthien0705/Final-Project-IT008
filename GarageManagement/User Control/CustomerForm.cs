@@ -5,25 +5,26 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GarageManagement.User_Control
 {
-    public partial class CarForm : UserControl
+    public partial class CustomerForm : UserControl
     {
-        public CarForm()
+        public CustomerForm()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void label15_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void CarForm_Load(object sender, EventArgs e)
+        private void CustomerForm_Load(object sender, EventArgs e)
         {
-            brandCb.SelectedIndex = 0;
+            genderCb.SelectedIndex = 0;
         }
     }
 }

@@ -45,6 +45,7 @@ namespace GarageManagement.User_Control
             this.guna2GradientCircleButton4 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientCircleButton5 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace GarageManagement.User_Control
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,12 +60,12 @@ namespace GarageManagement.User_Control
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(188, 33);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(189, 37);
+            this.label15.Size = new System.Drawing.Size(216, 29);
             this.label15.TabIndex = 14;
-            this.label15.Text = "Add new kit";
+            this.label15.Text = "Thêm phụ tùng";
             // 
             // guna2GradientCircleButton2
             // 
@@ -163,7 +163,7 @@ namespace GarageManagement.User_Control
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(31, 174);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 21);
+            this.label6.Size = new System.Drawing.Size(65, 19);
             this.label6.TabIndex = 28;
             this.label6.Text = "Quanity";
             // 
@@ -173,7 +173,7 @@ namespace GarageManagement.User_Control
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(31, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 21);
+            this.label5.Size = new System.Drawing.Size(60, 19);
             this.label5.TabIndex = 28;
             this.label5.Text = "Price($)";
             // 
@@ -183,7 +183,7 @@ namespace GarageManagement.User_Control
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(31, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 21);
+            this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 31;
             this.label1.Text = "Kit Name";
             // 
@@ -334,6 +334,26 @@ namespace GarageManagement.User_Control
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(372, 329);
             this.guna2CustomGradientPanel2.TabIndex = 34;
             // 
+            // guna2ComboBox2
+            // 
+            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox2.BorderColor = System.Drawing.Color.Gold;
+            this.guna2ComboBox2.BorderRadius = 15;
+            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox2.ItemHeight = 25;
+            this.guna2ComboBox2.Items.AddRange(new object[] {
+            "44A-156.23 | Mazda"});
+            this.guna2ComboBox2.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBox2.Location = new System.Drawing.Point(35, 54);
+            this.guna2ComboBox2.Name = "guna2ComboBox2";
+            this.guna2ComboBox2.Size = new System.Drawing.Size(280, 31);
+            this.guna2ComboBox2.TabIndex = 35;
+            // 
             // guna2GradientButton2
             // 
             this.guna2GradientButton2.BorderRadius = 15;
@@ -358,7 +378,7 @@ namespace GarageManagement.User_Control
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(31, 174);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 21);
+            this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 28;
             this.label2.Text = "Quanity";
             // 
@@ -368,7 +388,7 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(31, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 21);
+            this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 28;
             this.label3.Text = "Price($)";
             // 
@@ -378,7 +398,7 @@ namespace GarageManagement.User_Control
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(31, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 21);
+            this.label4.Size = new System.Drawing.Size(71, 19);
             this.label4.TabIndex = 31;
             this.label4.Text = "Kit Name";
             // 
@@ -435,32 +455,12 @@ namespace GarageManagement.User_Control
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(642, 33);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(310, 37);
+            this.label7.Size = new System.Drawing.Size(261, 29);
             this.label7.TabIndex = 33;
-            this.label7.Text = "Update available kit";
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.Gold;
-            this.guna2ComboBox2.BorderRadius = 15;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 25;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
-            "44A-156.23 | Mazda"});
-            this.guna2ComboBox2.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.Location = new System.Drawing.Point(35, 54);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(280, 31);
-            this.guna2ComboBox2.TabIndex = 35;
+            this.label7.Text = "Cập nhật phụ tùng";
             // 
             // KitForm
             // 
