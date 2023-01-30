@@ -30,42 +30,8 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "29A-091.22"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Kia Morning"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "In Progress", System.Drawing.Color.Gold, System.Drawing.Color.White, new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "2022/11/15 15:20:30"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "2022/12/02 08:20:11")}, -1);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "77A-325.44",
-            "Bentley",
-            "In Progress",
-            "2022/10/01 08:32:36",
-            "2022/10/20 11:50:22"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
-            "3",
-            "24A-025.16",
-            "Ford",
-            "Ordered",
-            "2022/11/08 12:12:52",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
-            "4",
-            "55G-253.14",
-            "Mercedes-Benz",
-            "Completed",
-            "2022/05/18 17:22:10",
-            "2022/05/25 20:55:15"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllList));
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.plateNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.brand = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.entryTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.checkoutTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.carLv = new System.Windows.Forms.ListView();
             this.label15 = new System.Windows.Forms.Label();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -73,62 +39,20 @@ namespace GarageManagement.User_Control
             this.guna2ContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // carLv
             // 
-            this.listView1.AutoArrange = false;
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.plateNumber,
-            this.brand,
-            this.status,
-            this.entryTime,
-            this.checkoutTime});
-            this.listView1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
-            this.listView1.Location = new System.Drawing.Point(12, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(968, 274);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // id
-            // 
-            this.id.Text = "ID";
-            this.id.Width = 50;
-            // 
-            // plateNumber
-            // 
-            this.plateNumber.Text = "Plate number";
-            this.plateNumber.Width = 150;
-            // 
-            // brand
-            // 
-            this.brand.Text = "Brand";
-            this.brand.Width = 150;
-            // 
-            // status
-            // 
-            this.status.Text = "Status";
-            this.status.Width = 118;
-            // 
-            // entryTime
-            // 
-            this.entryTime.Text = "Entry time";
-            this.entryTime.Width = 180;
-            // 
-            // checkoutTime
-            // 
-            this.checkoutTime.Text = "Checkout time";
-            this.checkoutTime.Width = 180;
+            this.carLv.AutoArrange = false;
+            this.carLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.carLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carLv.FullRowSelect = true;
+            this.carLv.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.carLv.HideSelection = false;
+            this.carLv.Location = new System.Drawing.Point(3, 3);
+            this.carLv.Name = "carLv";
+            this.carLv.Size = new System.Drawing.Size(994, 283);
+            this.carLv.TabIndex = 10;
+            this.carLv.UseCompatibleStateImageBehavior = false;
+            this.carLv.View = System.Windows.Forms.View.Details;
             // 
             // label15
             // 
@@ -143,7 +67,7 @@ namespace GarageManagement.User_Control
             // gunaElipse1
             // 
             this.gunaElipse1.Radius = 15;
-            this.gunaElipse1.TargetControl = this.listView1;
+            this.gunaElipse1.TargetControl = this.carLv;
             // 
             // guna2TextBox1
             // 
@@ -173,7 +97,7 @@ namespace GarageManagement.User_Control
             // guna2ContainerControl1
             // 
             this.guna2ContainerControl1.BorderRadius = 15;
-            this.guna2ContainerControl1.Controls.Add(this.listView1);
+            this.guna2ContainerControl1.Controls.Add(this.carLv);
             this.guna2ContainerControl1.Location = new System.Drawing.Point(32, 58);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1000, 286);
@@ -196,16 +120,10 @@ namespace GarageManagement.User_Control
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader id;
-        private System.Windows.Forms.ColumnHeader plateNumber;
-        private System.Windows.Forms.ColumnHeader brand;
-        private System.Windows.Forms.ColumnHeader status;
+        private System.Windows.Forms.ListView carLv;
         private System.Windows.Forms.Label label15;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.ColumnHeader entryTime;
-        private System.Windows.Forms.ColumnHeader checkoutTime;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
     }
 }

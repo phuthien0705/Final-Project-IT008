@@ -34,17 +34,17 @@ namespace GarageManagement.User_Control
             this.gunaGradient2Panel4 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.viewCompleted = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.completedQuantityLb = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.gunaGradient2Panel3 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.viewInProgress = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.inProgressQuantityLb = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.gunaGradient2Panel2 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.viewOrdered = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.orderedQuantityLb = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -70,7 +70,7 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(24, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(147, 29);
+            this.label15.Size = new System.Drawing.Size(182, 36);
             this.label15.TabIndex = 9;
             this.label15.Text = "Trang chủ";
             // 
@@ -79,7 +79,7 @@ namespace GarageManagement.User_Control
             this.gunaGradient2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradient2Panel4.Controls.Add(this.pictureBox6);
             this.gunaGradient2Panel4.Controls.Add(this.viewCompleted);
-            this.gunaGradient2Panel4.Controls.Add(this.label16);
+            this.gunaGradient2Panel4.Controls.Add(this.completedQuantityLb);
             this.gunaGradient2Panel4.Controls.Add(this.label17);
             this.gunaGradient2Panel4.GradientColor1 = System.Drawing.Color.DeepPink;
             this.gunaGradient2Panel4.GradientColor2 = System.Drawing.Color.Crimson;
@@ -106,23 +106,23 @@ namespace GarageManagement.User_Control
             this.viewCompleted.ForeColor = System.Drawing.SystemColors.Window;
             this.viewCompleted.Location = new System.Drawing.Point(17, 106);
             this.viewCompleted.Name = "viewCompleted";
-            this.viewCompleted.Size = new System.Drawing.Size(101, 21);
+            this.viewCompleted.Size = new System.Drawing.Size(120, 23);
             this.viewCompleted.TabIndex = 2;
             this.viewCompleted.Text = "Xem chi tiết";
             this.viewCompleted.Click += new System.EventHandler(this.viewCompleted_Click);
             this.viewCompleted.MouseLeave += new System.EventHandler(this.viewCompleted_MouseLeave);
             this.viewCompleted.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewCompleted_MouseMove);
             // 
-            // label16
+            // completedQuantityLb
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(11, 47);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 47);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "30";
+            this.completedQuantityLb.AutoSize = true;
+            this.completedQuantityLb.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.completedQuantityLb.ForeColor = System.Drawing.Color.White;
+            this.completedQuantityLb.Location = new System.Drawing.Point(11, 47);
+            this.completedQuantityLb.Name = "completedQuantityLb";
+            this.completedQuantityLb.Size = new System.Drawing.Size(81, 59);
+            this.completedQuantityLb.TabIndex = 1;
+            this.completedQuantityLb.Text = "30";
             // 
             // label17
             // 
@@ -131,7 +131,7 @@ namespace GarageManagement.User_Control
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(13, 17);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(126, 19);
+            this.label17.Size = new System.Drawing.Size(155, 23);
             this.label17.TabIndex = 0;
             this.label17.Text = "Đã hoàn thành";
             // 
@@ -140,7 +140,7 @@ namespace GarageManagement.User_Control
             this.gunaGradient2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradient2Panel3.Controls.Add(this.pictureBox5);
             this.gunaGradient2Panel3.Controls.Add(this.viewInProgress);
-            this.gunaGradient2Panel3.Controls.Add(this.label12);
+            this.gunaGradient2Panel3.Controls.Add(this.inProgressQuantityLb);
             this.gunaGradient2Panel3.Controls.Add(this.label13);
             this.gunaGradient2Panel3.GradientColor1 = System.Drawing.Color.LimeGreen;
             this.gunaGradient2Panel3.GradientColor2 = System.Drawing.Color.Gold;
@@ -167,23 +167,23 @@ namespace GarageManagement.User_Control
             this.viewInProgress.ForeColor = System.Drawing.SystemColors.Window;
             this.viewInProgress.Location = new System.Drawing.Point(17, 106);
             this.viewInProgress.Name = "viewInProgress";
-            this.viewInProgress.Size = new System.Drawing.Size(101, 21);
+            this.viewInProgress.Size = new System.Drawing.Size(120, 23);
             this.viewInProgress.TabIndex = 2;
             this.viewInProgress.Text = "Xem chi tiết";
             this.viewInProgress.Click += new System.EventHandler(this.viewInProgress_Click);
             this.viewInProgress.MouseLeave += new System.EventHandler(this.viewInProgress_MouseLeave);
             this.viewInProgress.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewInProgress_MouseMove);
             // 
-            // label12
+            // inProgressQuantityLb
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(7, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 47);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "15";
+            this.inProgressQuantityLb.AutoSize = true;
+            this.inProgressQuantityLb.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inProgressQuantityLb.ForeColor = System.Drawing.Color.White;
+            this.inProgressQuantityLb.Location = new System.Drawing.Point(7, 47);
+            this.inProgressQuantityLb.Name = "inProgressQuantityLb";
+            this.inProgressQuantityLb.Size = new System.Drawing.Size(81, 59);
+            this.inProgressQuantityLb.TabIndex = 1;
+            this.inProgressQuantityLb.Text = "15";
             // 
             // label13
             // 
@@ -192,7 +192,7 @@ namespace GarageManagement.User_Control
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(13, 17);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 19);
+            this.label13.Size = new System.Drawing.Size(101, 23);
             this.label13.TabIndex = 0;
             this.label13.Text = "Đang sửa";
             // 
@@ -201,7 +201,7 @@ namespace GarageManagement.User_Control
             this.gunaGradient2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradient2Panel2.Controls.Add(this.pictureBox4);
             this.gunaGradient2Panel2.Controls.Add(this.viewOrdered);
-            this.gunaGradient2Panel2.Controls.Add(this.label9);
+            this.gunaGradient2Panel2.Controls.Add(this.orderedQuantityLb);
             this.gunaGradient2Panel2.Controls.Add(this.label10);
             this.gunaGradient2Panel2.GradientColor1 = System.Drawing.Color.DeepSkyBlue;
             this.gunaGradient2Panel2.GradientColor2 = System.Drawing.Color.DarkViolet;
@@ -228,23 +228,23 @@ namespace GarageManagement.User_Control
             this.viewOrdered.ForeColor = System.Drawing.SystemColors.Window;
             this.viewOrdered.Location = new System.Drawing.Point(17, 106);
             this.viewOrdered.Name = "viewOrdered";
-            this.viewOrdered.Size = new System.Drawing.Size(101, 21);
+            this.viewOrdered.Size = new System.Drawing.Size(120, 23);
             this.viewOrdered.TabIndex = 2;
             this.viewOrdered.Text = "Xem chi tiết";
             this.viewOrdered.Click += new System.EventHandler(this.viewOrdered_Click);
             this.viewOrdered.MouseLeave += new System.EventHandler(this.viewOrdered_MouseLeave);
             this.viewOrdered.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewOrdered_MouseMove);
             // 
-            // label9
+            // orderedQuantityLb
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(7, 47);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 47);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "30";
+            this.orderedQuantityLb.AutoSize = true;
+            this.orderedQuantityLb.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderedQuantityLb.ForeColor = System.Drawing.Color.White;
+            this.orderedQuantityLb.Location = new System.Drawing.Point(7, 47);
+            this.orderedQuantityLb.Name = "orderedQuantityLb";
+            this.orderedQuantityLb.Size = new System.Drawing.Size(81, 59);
+            this.orderedQuantityLb.TabIndex = 1;
+            this.orderedQuantityLb.Text = "30";
             // 
             // label10
             // 
@@ -253,7 +253,7 @@ namespace GarageManagement.User_Control
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(13, 17);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 19);
+            this.label10.Size = new System.Drawing.Size(130, 23);
             this.label10.TabIndex = 0;
             this.label10.Text = "Đã tiếp nhận";
             // 
@@ -288,7 +288,7 @@ namespace GarageManagement.User_Control
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(9, 53);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 38);
+            this.label7.Size = new System.Drawing.Size(111, 47);
             this.label7.TabIndex = 1;
             this.label7.Text = "$30K";
             // 
@@ -299,7 +299,7 @@ namespace GarageManagement.User_Control
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(13, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 19);
+            this.label6.Size = new System.Drawing.Size(110, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "Doanh thu";
             // 
@@ -319,7 +319,7 @@ namespace GarageManagement.User_Control
             this.viewDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewDetail.Location = new System.Drawing.Point(639, 20);
             this.viewDetail.Name = "viewDetail";
-            this.viewDetail.Size = new System.Drawing.Size(103, 18);
+            this.viewDetail.Size = new System.Drawing.Size(128, 20);
             this.viewDetail.TabIndex = 2;
             this.viewDetail.Text = "Xem chi tiết xe";
             this.viewDetail.Click += new System.EventHandler(this.viewDetail_Click);
@@ -371,17 +371,17 @@ namespace GarageManagement.User_Control
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label viewCompleted;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label completedQuantityLb;
         private System.Windows.Forms.Label label17;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label viewInProgress;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label inProgressQuantityLb;
         private System.Windows.Forms.Label label13;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label viewOrdered;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label orderedQuantityLb;
         private System.Windows.Forms.Label label10;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
         private System.Windows.Forms.PictureBox pictureBox3;

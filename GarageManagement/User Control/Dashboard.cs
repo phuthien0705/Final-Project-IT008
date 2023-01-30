@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DAL;
 
 namespace GarageManagement.User_Control
 {
@@ -14,6 +15,7 @@ namespace GarageManagement.User_Control
         public Dashboard()
         {
             InitializeComponent();
+            LoadNumberOfStatusCar();
         }
 
         private void viewOrdered_Click(object sender, EventArgs e)
@@ -92,6 +94,13 @@ namespace GarageManagement.User_Control
         {
             viewDetail.Font = new Font(viewDetail.Font, FontStyle.Underline);
             Cursor.Current = Cursors.Hand;
+        }
+
+        void LoadNumberOfStatusCar()
+        {
+            orderedQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(1).ToString();
+            inProgressQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(2).ToString();
+            completedQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(3).ToString();
         }
     }
 }
