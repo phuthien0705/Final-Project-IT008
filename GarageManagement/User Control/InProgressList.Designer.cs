@@ -87,7 +87,7 @@ namespace GarageManagement.User_Control
             this.backToAllBtn.Name = "backToAllBtn";
             this.backToAllBtn.Size = new System.Drawing.Size(106, 23);
             this.backToAllBtn.TabIndex = 15;
-            this.backToAllBtn.Text = "Back to All";
+            this.backToAllBtn.Text = "Quay lại";
             this.backToAllBtn.Click += new System.EventHandler(this.backToAllBtn_Click);
             this.backToAllBtn.MouseLeave += new System.EventHandler(this.backToAllBtn_MouseLeave);
             this.backToAllBtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.backToAllBtn_MouseMove);

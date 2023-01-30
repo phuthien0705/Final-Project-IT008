@@ -46,7 +46,7 @@ namespace GarageManagement.User_Control
         void LoadOrderedCar()
         {
             orderedList = XE_DAL.Instance.LoadCarListOnStatus(1);
-            InOrderedLv.Columns.Add("ID", 50);
+            InOrderedLv.Columns.Add("STT", 50);
             InOrderedLv.Columns.Add("Biển số", 120);
             InOrderedLv.Columns.Add("Hãng xe", 100);
             InOrderedLv.Columns.Add("Tình trạng", 120);

@@ -32,7 +32,7 @@ namespace GarageManagement.User_Control
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompletedList));
             this.backToAllBtn = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.completedLv = new System.Windows.Forms.ListView();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContainerControl1.SuspendLayout();
@@ -45,7 +45,7 @@ namespace GarageManagement.User_Control
             this.backToAllBtn.Name = "backToAllBtn";
             this.backToAllBtn.Size = new System.Drawing.Size(106, 23);
             this.backToAllBtn.TabIndex = 19;
-            this.backToAllBtn.Text = "Back to All";
+            this.backToAllBtn.Text = "Quay lại";
             this.backToAllBtn.Click += new System.EventHandler(this.backToAllBtn_Click);
             this.backToAllBtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.backToAllBtn_MouseMove);
             // 
@@ -59,24 +59,24 @@ namespace GarageManagement.User_Control
             this.label15.TabIndex = 17;
             this.label15.Text = "Đã hoàn thành |";
             // 
-            // listView1
+            // completedLv
             // 
-            this.listView1.AutoArrange = false;
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 13);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(968, 269);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.completedLv.AutoArrange = false;
+            this.completedLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.completedLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.completedLv.FullRowSelect = true;
+            this.completedLv.HideSelection = false;
+            this.completedLv.Location = new System.Drawing.Point(3, 3);
+            this.completedLv.Name = "completedLv";
+            this.completedLv.Size = new System.Drawing.Size(994, 290);
+            this.completedLv.TabIndex = 6;
+            this.completedLv.UseCompatibleStateImageBehavior = false;
+            this.completedLv.View = System.Windows.Forms.View.Details;
             // 
             // guna2ContainerControl1
             // 
             this.guna2ContainerControl1.BorderRadius = 15;
-            this.guna2ContainerControl1.Controls.Add(this.listView1);
+            this.guna2ContainerControl1.Controls.Add(this.completedLv);
             this.guna2ContainerControl1.Location = new System.Drawing.Point(32, 58);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1000, 296);
@@ -127,7 +127,7 @@ namespace GarageManagement.User_Control
 
         private System.Windows.Forms.Label backToAllBtn;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView completedLv;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
