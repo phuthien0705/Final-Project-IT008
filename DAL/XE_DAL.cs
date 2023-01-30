@@ -20,7 +20,7 @@ namespace DAL
 
         public DataTable LoadCarList()
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT MaXe, BienSo, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE WHERE XE.MaHX = HIEUXE.MaHX ORDER BY NgayTiepNhan DESC");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT MaXe, BienSo, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE WHERE XE.MaHX = HIEUXE.MaHX AND TrangThai IN (1,2,3) ORDER BY NgayTiepNhan DESC");
             return data;
         }
 

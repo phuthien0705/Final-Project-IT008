@@ -6,22 +6,21 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DAL;
 
 namespace GarageManagement.User_Control
 {
     public partial class OrderList : UserControl
     {
-        Dashboard db = new Dashboard();
+        public DataTable orderedList;
 
-        public OrderList()
-        {
-            InitializeComponent();
-        }
+        Dashboard db = new Dashboard();
 
         public OrderList(Dashboard db)
         {
             this.db = db;
             InitializeComponent();
+            LoadOrderedCar();
         }
 
         private void backToAllBtn_Click(object sender, EventArgs e)
@@ -44,14 +43,55 @@ namespace GarageManagement.User_Control
             Cursor.Current = Cursors.Default;
         }
 
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        void LoadOrderedCar()
         {
+            orderedList = XE_DAL.Instance.LoadCarListOnStatus(1);
+            InOrderedLv.Columns.Add("ID", 50);
+            InOrderedLv.Columns.Add("Biển số", 120);
+            InOrderedLv.Columns.Add("Hãng xe", 100);
+            InOrderedLv.Columns.Add("Tình trạng", 120);
+            InOrderedLv.Columns.Add("Ngày tiếp nhận", 200);
+            for (int i = 0; i < orderedList.Rows.Count; i++)
+            {
+                ListViewItem item = new ListViewItem(i + 1 + "");
+                InOrderedLv.Items.Add(item);
 
-        }
+                // add PlateNumber to carLv
+                string plateNumber = orderedList.Rows[i]["BienSo"].ToString();
+                ListViewItem.ListViewSubItem plateNumberItem = new ListViewItem.ListViewSubItem(item, plateNumber);
+                item.SubItems.Add(plateNumberItem);
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+                // add Brand to carLv
+                string brand = orderedList.Rows[i]["TenHieuXe"].ToString();
+                ListViewItem.ListViewSubItem brandItem = new ListViewItem.ListViewSubItem(item, brand);
+                item.SubItems.Add(brandItem);
 
+                // add Status to carLv
+                string status = "";
+                string statusValue = orderedList.Rows[i]["TrangThai"].ToString();
+                switch (statusValue)
+                {
+                    case "1":
+                        status = "Đã tiếp nhận";
+                        break;
+                    case "2":
+                        status = "Đang sửa";
+                        break;
+                    case "3":
+                        status = "Đã hoàn thành";
+                        break;
+                    default:
+                        status = "Đã hủy";
+                        break;
+                }
+                ListViewItem.ListViewSubItem statusItem = new ListViewItem.ListViewSubItem(item, status);
+                item.SubItems.Add(statusItem);
+
+                // add orderDatetime to carLv
+                string orderDatetime = orderedList.Rows[i]["NgayTiepNhan"].ToString();
+                ListViewItem.ListViewSubItem orderDatetimeItem = new ListViewItem.ListViewSubItem(item, orderDatetime);
+                item.SubItems.Add(orderDatetimeItem);
+            }
         }
     }
 }
