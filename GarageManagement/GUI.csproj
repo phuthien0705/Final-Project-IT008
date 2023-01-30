@@ -139,12 +139,6 @@
     <Compile Include="User Control\RepairForm.Designer.cs">
       <DependentUpon>RepairForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\Search.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Control\Search.Designer.cs">
-      <DependentUpon>Search.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CarDetail.resx">
       <DependentUpon>CarDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\RepairForm.resx">
       <DependentUpon>RepairForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Control\Search.resx">
-      <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />

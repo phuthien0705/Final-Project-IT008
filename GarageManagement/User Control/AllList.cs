@@ -106,8 +106,11 @@ namespace GarageManagement.User_Control
             if (e.KeyChar == (char)Keys.Return)
             {
                 carLv.Clear();
+
                 string keywords = searchTb.Text;
+                title.Text = String.Format(@"Kết quả cho từ khóa '{0}'",keywords);
                 carList = XE_DAL.Instance.SearchForCar(keywords);
+
                 carLv.Columns.Add("STT", 50);
                 carLv.Columns.Add("Biển số", 120);
                 carLv.Columns.Add("Hãng xe", 100);

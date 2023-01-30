@@ -32,7 +32,7 @@ namespace GarageManagement.User_Control
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllList));
             this.carLv = new System.Windows.Forms.ListView();
-            this.label15 = new System.Windows.Forms.Label();
+            this.title = new System.Windows.Forms.Label();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.searchTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -55,15 +55,15 @@ namespace GarageManagement.User_Control
             this.carLv.UseCompatibleStateImageBehavior = false;
             this.carLv.View = System.Windows.Forms.View.Details;
             // 
-            // label15
+            // title
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(28, 23);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 23);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Tất cả";
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Location = new System.Drawing.Point(28, 23);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(63, 23);
+            this.title.TabIndex = 9;
+            this.title.Text = "Tất cả";
             // 
             // gunaElipse1
             // 
@@ -89,7 +89,7 @@ namespace GarageManagement.User_Control
             this.searchTb.Location = new System.Drawing.Point(747, 11);
             this.searchTb.Name = "searchTb";
             this.searchTb.PasswordChar = '\0';
-            this.searchTb.PlaceholderText = "Search for all";
+            this.searchTb.PlaceholderText = "Gõ từ khóa cần tìm";
             this.searchTb.SelectedText = "";
             this.searchTb.Size = new System.Drawing.Size(285, 35);
             this.searchTb.TabIndex = 11;
@@ -124,7 +124,7 @@ namespace GarageManagement.User_Control
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.viewDetail);
             this.Controls.Add(this.searchTb);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.title);
             this.Controls.Add(this.guna2ContainerControl1);
             this.Name = "AllList";
             this.Size = new System.Drawing.Size(1069, 387);
@@ -137,7 +137,7 @@ namespace GarageManagement.User_Control
         #endregion
 
         private System.Windows.Forms.ListView carLv;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label title;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI2.WinForms.Guna2TextBox searchTb;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;

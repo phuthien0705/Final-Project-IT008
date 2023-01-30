@@ -40,11 +40,11 @@ namespace GarageManagement.User_Control
             // backToAllBtn
             // 
             this.backToAllBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToAllBtn.Location = new System.Drawing.Point(168, 23);
+            this.backToAllBtn.Location = new System.Drawing.Point(168, 31);
             this.backToAllBtn.Name = "backToAllBtn";
             this.backToAllBtn.Size = new System.Drawing.Size(106, 23);
             this.backToAllBtn.TabIndex = 19;
-            this.backToAllBtn.Text = "Quay lại";
+            this.backToAllBtn.Text = "Tất cả";
             this.backToAllBtn.Click += new System.EventHandler(this.backToAllBtn_Click);
             this.backToAllBtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.backToAllBtn_MouseMove);
             // 
@@ -52,7 +52,7 @@ namespace GarageManagement.User_Control
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(30, 23);
+            this.label15.Location = new System.Drawing.Point(30, 31);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(173, 23);
             this.label15.TabIndex = 17;
@@ -86,7 +86,7 @@ namespace GarageManagement.User_Control
             // 
             this.viewDetail.BackColor = System.Drawing.Color.Transparent;
             this.viewDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewDetail.Location = new System.Drawing.Point(901, 26);
+            this.viewDetail.Location = new System.Drawing.Point(901, 32);
             this.viewDetail.Name = "viewDetail";
             this.viewDetail.Size = new System.Drawing.Size(128, 20);
             this.viewDetail.TabIndex = 21;
