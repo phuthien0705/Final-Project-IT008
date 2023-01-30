@@ -20,13 +20,13 @@ namespace DAL
 
         public DataTable LoadCarList()
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT MaXe, BienSo, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE WHERE XE.MaHX = HIEUXE.MaHX AND TrangThai IN (1,2,3) ORDER BY NgayTiepNhan DESC");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT MaXe, BienSo, TrangThai, TenKH, DienThoai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND TrangThai IN (1,2,3) ORDER BY NgayTiepNhan DESC");
             return data;
         }
 
         public DataTable LoadCarListOnStatus(int TrangThai)
         {
-            string query = String.Format("SELECT MaXe, BienSo, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE WHERE XE.MaHX = HIEUXE.MaHX AND TrangThai = {0} ORDER BY NgayTiepNhan DESC", TrangThai);
+            string query = String.Format("SELECT MaXe, BienSo, TenKH, DienThoai, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND TrangThai = {0} AND XE.MaKH = KHACHHANG.MaKH ORDER BY NgayTiepNhan DESC", TrangThai);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -64,6 +64,12 @@ namespace DAL
         {
             string query = String.Format("SELECT COUNT(*) FROM XE WHERE TrangThai = {0}", TrangThai);
             return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
+
+        public DataTable SearchForCar(string keywords)
+        {
+            string query = String.Format("SELECT MaXe, BienSo, TenKH, DienThoai, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND (TenHieuXe LIKE '%{0}%' OR BienSo LIKE '%{1}%' OR TenKH LIKE '%{2}%' OR DienThoai LIKE '%{3}%') AND TrangThai IN (1,2,3) ORDER BY NgayTiepNhan DESC", keywords, keywords, keywords, keywords);
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

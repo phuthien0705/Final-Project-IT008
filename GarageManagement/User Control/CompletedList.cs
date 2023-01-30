@@ -50,6 +50,8 @@ namespace GarageManagement.User_Control
             completedLv.Columns.Add("STT", 50);
             completedLv.Columns.Add("Biển số", 120);
             completedLv.Columns.Add("Hãng xe", 100);
+            completedLv.Columns.Add("Tên chủ xe", 150);
+            completedLv.Columns.Add("Số điện thoại", 120);
             completedLv.Columns.Add("Tình trạng", 120);
             completedLv.Columns.Add("Ngày tiếp nhận", 200);
             for (int i = 0; i < completedList.Rows.Count; i++)
@@ -66,6 +68,16 @@ namespace GarageManagement.User_Control
                 string brand = completedList.Rows[i]["TenHieuXe"].ToString();
                 ListViewItem.ListViewSubItem brandItem = new ListViewItem.ListViewSubItem(item, brand);
                 item.SubItems.Add(brandItem);
+
+                // add customer to carLv
+                string customer = completedList.Rows[i]["TenKH"].ToString();
+                ListViewItem.ListViewSubItem customerItem = new ListViewItem.ListViewSubItem(item, customer);
+                item.SubItems.Add(customerItem);
+
+                // add phoneNumber to carLv
+                string phoneNumber = completedList.Rows[i]["DienThoai"].ToString();
+                ListViewItem.ListViewSubItem phoneNumberItem = new ListViewItem.ListViewSubItem(item, phoneNumber);
+                item.SubItems.Add(phoneNumberItem);
 
                 // add Status to carLv
                 string status = "";
@@ -93,6 +105,24 @@ namespace GarageManagement.User_Control
                 ListViewItem.ListViewSubItem orderDatetimeItem = new ListViewItem.ListViewSubItem(item, orderDatetime);
                 item.SubItems.Add(orderDatetimeItem);
             }
+        }
+
+        private void viewDetail_Click(object sender, EventArgs e)
+        {
+            CarDetail carDetail = new CarDetail();
+            carDetail.Show();
+        }
+
+        private void viewDetail_MouseLeave(object sender, EventArgs e)
+        {
+            viewDetail.Font = new Font(viewDetail.Font, FontStyle.Regular);
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void viewDetail_MouseMove(object sender, MouseEventArgs e)
+        {
+            viewDetail.Font = new Font(viewDetail.Font, FontStyle.Underline);
+            Cursor.Current = Cursors.Hand;
         }
     }
 }

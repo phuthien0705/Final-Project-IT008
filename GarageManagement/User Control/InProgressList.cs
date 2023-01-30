@@ -49,6 +49,8 @@ namespace GarageManagement.User_Control
             inProgressLv.Columns.Add("STT", 50);
             inProgressLv.Columns.Add("Biển số", 120);
             inProgressLv.Columns.Add("Hãng xe", 100);
+            inProgressLv.Columns.Add("Tên chủ xe", 150);
+            inProgressLv.Columns.Add("Số điện thoại", 120);
             inProgressLv.Columns.Add("Tình trạng", 120);
             inProgressLv.Columns.Add("Ngày tiếp nhận", 200);
             for (int i = 0; i < inProgressList.Rows.Count; i++)
@@ -65,6 +67,16 @@ namespace GarageManagement.User_Control
                 string brand = inProgressList.Rows[i]["TenHieuXe"].ToString();
                 ListViewItem.ListViewSubItem brandItem = new ListViewItem.ListViewSubItem(item, brand);
                 item.SubItems.Add(brandItem);
+
+                // add customer to carLv
+                string customer = inProgressList.Rows[i]["TenKH"].ToString();
+                ListViewItem.ListViewSubItem customerItem = new ListViewItem.ListViewSubItem(item, customer);
+                item.SubItems.Add(customerItem);
+
+                // add phoneNumber to carLv
+                string phoneNumber = inProgressList.Rows[i]["DienThoai"].ToString();
+                ListViewItem.ListViewSubItem phoneNumberItem = new ListViewItem.ListViewSubItem(item, phoneNumber);
+                item.SubItems.Add(phoneNumberItem);
 
                 // add Status to carLv
                 string status = "";
@@ -93,5 +105,24 @@ namespace GarageManagement.User_Control
                 item.SubItems.Add(orderDatetimeItem);
             }
         }
+
+        private void viewDetail_Click(object sender, EventArgs e)
+        {
+            CarDetail carDetail = new CarDetail();
+            carDetail.Show();
+        }
+
+        private void viewDetail_MouseLeave(object sender, EventArgs e)
+        {
+            viewDetail.Font = new Font(viewDetail.Font, FontStyle.Regular);
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void viewDetail_MouseMove(object sender, MouseEventArgs e)
+        {
+            viewDetail.Font = new Font(viewDetail.Font, FontStyle.Underline);
+            Cursor.Current = Cursors.Hand;
+        }
+
     }
 }
