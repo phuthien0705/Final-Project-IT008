@@ -46,9 +46,9 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(28, 23);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 23);
+            this.label15.Size = new System.Drawing.Size(148, 23);
             this.label15.TabIndex = 5;
-            this.label15.Text = "Ordered |";
+            this.label15.Text = "Đã tiếp nhận |";
             // 
             // gunaElipse1
             // 
@@ -62,9 +62,9 @@ namespace GarageManagement.User_Control
             this.InOrderedLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InOrderedLv.FullRowSelect = true;
             this.InOrderedLv.HideSelection = false;
-            this.InOrderedLv.Location = new System.Drawing.Point(12, 13);
+            this.InOrderedLv.Location = new System.Drawing.Point(3, 3);
             this.InOrderedLv.Name = "InOrderedLv";
-            this.InOrderedLv.Size = new System.Drawing.Size(968, 269);
+            this.InOrderedLv.Size = new System.Drawing.Size(994, 290);
             this.InOrderedLv.TabIndex = 6;
             this.InOrderedLv.UseCompatibleStateImageBehavior = false;
             this.InOrderedLv.View = System.Windows.Forms.View.Details;
@@ -97,7 +97,7 @@ namespace GarageManagement.User_Control
             // backToAllBtn
             // 
             this.backToAllBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToAllBtn.Location = new System.Drawing.Point(111, 23);
+            this.backToAllBtn.Location = new System.Drawing.Point(146, 23);
             this.backToAllBtn.Name = "backToAllBtn";
             this.backToAllBtn.Size = new System.Drawing.Size(106, 23);
             this.backToAllBtn.TabIndex = 14;

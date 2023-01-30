@@ -31,26 +31,12 @@ namespace GarageManagement.User_Control
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InProgressList));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "29A-091.22"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Roll-Royce"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Ordered", System.Drawing.SystemColors.HotTrack, System.Drawing.SystemColors.Window, new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))))}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "90A-167.57",
-            "Bentley",
-            "Ordered"}, -1);
             this.label15 = new System.Windows.Forms.Label();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.backToAllBtn = new System.Windows.Forms.Label();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.plateNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.brand = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.inProgressLv = new System.Windows.Forms.ListView();
             this.guna2ContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,13 +46,14 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(30, 23);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(132, 23);
+            this.label15.Size = new System.Drawing.Size(119, 23);
             this.label15.TabIndex = 7;
-            this.label15.Text = "In Progress |";
+            this.label15.Text = "Đang sửa |";
             // 
             // gunaElipse1
             // 
             this.gunaElipse1.Radius = 15;
+            this.gunaElipse1.TargetControl = this;
             // 
             // guna2TextBox1
             // 
@@ -96,7 +83,7 @@ namespace GarageManagement.User_Control
             // backToAllBtn
             // 
             this.backToAllBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToAllBtn.Location = new System.Drawing.Point(129, 23);
+            this.backToAllBtn.Location = new System.Drawing.Point(121, 23);
             this.backToAllBtn.Name = "backToAllBtn";
             this.backToAllBtn.Size = new System.Drawing.Size(106, 23);
             this.backToAllBtn.TabIndex = 15;
@@ -108,54 +95,26 @@ namespace GarageManagement.User_Control
             // guna2ContainerControl1
             // 
             this.guna2ContainerControl1.BorderRadius = 15;
-            this.guna2ContainerControl1.Controls.Add(this.listView1);
+            this.guna2ContainerControl1.Controls.Add(this.inProgressLv);
             this.guna2ContainerControl1.Location = new System.Drawing.Point(32, 58);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1000, 296);
             this.guna2ContainerControl1.TabIndex = 16;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
-            // listView1
+            // inProgressLv
             // 
-            this.listView1.AutoArrange = false;
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.plateNumber,
-            this.brand,
-            this.status});
-            this.listView1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
-            this.listView1.Location = new System.Drawing.Point(12, 13);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(968, 269);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // id
-            // 
-            this.id.Text = "ID";
-            this.id.Width = 50;
-            // 
-            // plateNumber
-            // 
-            this.plateNumber.Text = "Plate Number";
-            this.plateNumber.Width = 150;
-            // 
-            // brand
-            // 
-            this.brand.Text = "Brand";
-            this.brand.Width = 150;
-            // 
-            // status
-            // 
-            this.status.Text = "Status";
-            this.status.Width = 100;
+            this.inProgressLv.AutoArrange = false;
+            this.inProgressLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.inProgressLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inProgressLv.FullRowSelect = true;
+            this.inProgressLv.HideSelection = false;
+            this.inProgressLv.Location = new System.Drawing.Point(3, 0);
+            this.inProgressLv.Name = "inProgressLv";
+            this.inProgressLv.Size = new System.Drawing.Size(994, 293);
+            this.inProgressLv.TabIndex = 6;
+            this.inProgressLv.UseCompatibleStateImageBehavior = false;
+            this.inProgressLv.View = System.Windows.Forms.View.Details;
             // 
             // InProgressList
             // 
@@ -178,10 +137,6 @@ namespace GarageManagement.User_Control
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label backToAllBtn;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader id;
-        private System.Windows.Forms.ColumnHeader plateNumber;
-        private System.Windows.Forms.ColumnHeader brand;
-        private System.Windows.Forms.ColumnHeader status;
+        private System.Windows.Forms.ListView inProgressLv;
     }
 }
