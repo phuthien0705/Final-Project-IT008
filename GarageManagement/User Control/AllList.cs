@@ -14,6 +14,8 @@ namespace GarageManagement.User_Control
     {
         public DataTable carList;
 
+        public CarDetail carDetail;
+
         public AllList()
         {
             InitializeComponent();
@@ -89,13 +91,20 @@ namespace GarageManagement.User_Control
             {
                 ListViewItem carItem = carLv.SelectedItems[0];
                 int MaXe = Int32.Parse(carList.Rows[carItem.Index]["MaXe"].ToString());
-                CarDetail carDetail = new CarDetail(MaXe);
+                carDetail = new CarDetail(MaXe);
                 carDetail.Show();
+                carDetail.FormClosed += CarDetail_FormClosed;
             }
             else
             {
                 MessageBox.Show("Cần chọn xe để xem chi tiết !!");
             }
+        }
+
+        private void CarDetail_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            carLv.Clear();
+            LoadCarListView();
         }
 
         private void viewDetail_MouseLeave(object sender, EventArgs e)

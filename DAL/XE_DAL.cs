@@ -53,6 +53,13 @@ namespace DAL
             return result > 0;
         }
 
+        public bool SoftDeleteCar(int MaXe)
+        {
+            string query = String.Format("UPDATE XE SET TrangThai = 0 WHERE MaXe = {0}", MaXe);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
         public bool UpdateCar(int MaXe, string BienSo, int MaHX, int TrangThai)
         {
             string query = String.Format("UPDATE XE SET BienSo = '{0}', MaHX = {1}, TrangThai = {2} WHERE MaXe = '{3}'", BienSo, MaHX, TrangThai, MaXe);

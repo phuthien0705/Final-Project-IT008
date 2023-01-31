@@ -55,7 +55,19 @@ namespace GarageManagement
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn chắc chắn sẽ xóa xe này ?", "delete car", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn sẽ xóa xe này ?", "delete car", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (XE_DAL.Instance.SoftDeleteCar(this.MaXe))
+                {
+                    MessageBox.Show("Xóa xe thành công !!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa xe thất bại !! Thử lại");
+                }
+            }
         }
 
         void LoadCarDeTail()
