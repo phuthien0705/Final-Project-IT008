@@ -48,11 +48,6 @@ namespace GarageManagement
             
         }
 
-        private void CarDetail_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn sẽ xóa xe này ?", "delete car", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
