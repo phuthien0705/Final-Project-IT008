@@ -49,6 +49,7 @@ namespace GarageManagement.User_Control
             this.carLv.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.carLv.HideSelection = false;
             this.carLv.Location = new System.Drawing.Point(3, 3);
+            this.carLv.MultiSelect = false;
             this.carLv.Name = "carLv";
             this.carLv.Size = new System.Drawing.Size(994, 283);
             this.carLv.TabIndex = 10;

@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
 
 namespace GarageManagement
 {
     public partial class CarDetail : Form
     {
-        public CarDetail()
+        private DataTable data;
+
+        private int MaXe;
+
+        public CarDetail(int MaXe)
         {
+            this.MaXe = MaXe;
             InitializeComponent();
+            LoadCarDeTail();
         }
 
         private void chooseImgBtn_Click(object sender, EventArgs e)
@@ -48,7 +55,31 @@ namespace GarageManagement
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Do you want to delete this car ?", "delete car", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            MessageBox.Show("Bạn chắc chắn sẽ xóa xe này ?", "delete car", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+        }
+
+        void LoadCarDeTail()
+        {
+            data = XE_DAL.Instance.GetCarDetail(this.MaXe);
+
+            string BienSo = data.Rows[0]["BienSo"].ToString();
+            string TenHieuXe = data.Rows[0]["TenHieuXe"].ToString();
+            string TrangThai = data.Rows[0]["TrangThai"].ToString();
+            string TenKH = data.Rows[0]["TenKH"].ToString();
+            string GioiTinh = data.Rows[0]["GioiTinh"].ToString();
+            string DienThoai = data.Rows[0]["DienThoai"].ToString();
+            string DiaChi = data.Rows[0]["DiaChi"].ToString();
+            string NgayTiepNhan = data.Rows[0]["NgayTiepNhan"].ToString();
+
+            this.Text = BienSo + " | " + TenHieuXe;
+            plateNumberTb.Text = BienSo;
+            brandTb.Text = TenHieuXe;
+            statusCb.SelectedIndex = Int32.Parse(TrangThai) - 1;
+            orderedDateTb.Text = NgayTiepNhan;
+            nameTb.Text = TenKH;
+            genderCb.SelectedIndex = GioiTinh == "Nam" ? 0 : 1;
+            phoneNumberTb.Text = DienThoai;
+            addressTb.Text = DiaChi;
         }
     }
 }

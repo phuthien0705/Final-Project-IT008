@@ -109,7 +109,9 @@ namespace GarageManagement.User_Control
 
         private void viewDetail_Click(object sender, EventArgs e)
         {
-            CarDetail carDetail = new CarDetail();
+            ListViewItem carItem = completedLv.SelectedItems[0];
+            int MaXe = Int32.Parse(completedList.Rows[carItem.Index]["MaXe"].ToString());
+            CarDetail carDetail = new CarDetail(MaXe);
             carDetail.Show();
         }
 

@@ -23,7 +23,7 @@ namespace GarageManagement.User_Control
         void LoadCarListView()
         {
             carList = XE_DAL.Instance.LoadCarList();
-            carLv.Columns.Add("ID", 50);
+            carLv.Columns.Add("STT", 50);
             carLv.Columns.Add("Biển số", 120);
             carLv.Columns.Add("Hãng xe", 100);
             carLv.Columns.Add("Tên chủ xe", 150);
@@ -85,8 +85,17 @@ namespace GarageManagement.User_Control
 
         private void viewDetail_Click(object sender, EventArgs e)
         {
-            CarDetail carDetail = new CarDetail();
-            carDetail.Show();
+            if (carLv.SelectedItems.Count > 0)
+            {
+                ListViewItem carItem = carLv.SelectedItems[0];
+                int MaXe = Int32.Parse(carList.Rows[carItem.Index]["MaXe"].ToString());
+                CarDetail carDetail = new CarDetail(MaXe);
+                carDetail.Show();
+            }
+            else
+            {
+                MessageBox.Show("Cần chọn xe để xem chi tiết !!");
+            }
         }
 
         private void viewDetail_MouseLeave(object sender, EventArgs e)
