@@ -14,6 +14,8 @@ namespace GarageManagement.User_Control
     {
         public DataTable orderedList;
 
+        public CarDetail carDetail;
+
         Dashboard db = new Dashboard();
 
         public OrderList(Dashboard db)
@@ -108,10 +110,24 @@ namespace GarageManagement.User_Control
 
         private void viewDetail_Click(object sender, EventArgs e)
         {
-            ListViewItem carItem = InOrderedLv.SelectedItems[0];
-            int MaXe = Int32.Parse(orderedList.Rows[carItem.Index]["MaXe"].ToString());
-            CarDetail carDetail = new CarDetail(MaXe);
-            carDetail.Show();
+            if (InOrderedLv.SelectedItems.Count > 0)
+            {
+                ListViewItem carItem = InOrderedLv.SelectedItems[0];
+                int MaXe = Int32.Parse(orderedList.Rows[carItem.Index]["MaXe"].ToString());
+                carDetail = new CarDetail(MaXe);
+                carDetail.Show();
+                carDetail.FormClosed += CarDetail_FormClosed;
+            }
+            else
+            {
+                MessageBox.Show("Cần chọn xe để xem chi tiết !!");
+            }
+        }
+
+        private void CarDetail_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            InOrderedLv.Clear();
+            LoadOrderedCar();
         }
 
         private void viewDetail_MouseLeave(object sender, EventArgs e)

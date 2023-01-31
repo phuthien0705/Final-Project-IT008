@@ -31,29 +31,29 @@ namespace GarageManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarDetail));
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Indicator",
             "200",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Insulation film",
             "450",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Disk brake",
             "150",
@@ -68,7 +68,6 @@ namespace GarageManagement
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.brandTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.nameTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.plateNumberTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.deleteBtn = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -93,6 +92,7 @@ namespace GarageManagement
             this.price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quanity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.brandCb = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -226,31 +226,6 @@ namespace GarageManagement
             this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 51;
             this.label1.Text = "Biển số";
-            // 
-            // brandTb
-            // 
-            this.brandTb.BorderColor = System.Drawing.SystemColors.Desktop;
-            this.brandTb.BorderRadius = 15;
-            this.brandTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.brandTb.DefaultText = "";
-            this.brandTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.brandTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.brandTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.brandTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.brandTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.brandTb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brandTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.brandTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.brandTb.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.brandTb.Location = new System.Drawing.Point(156, 134);
-            this.brandTb.Margin = new System.Windows.Forms.Padding(4);
-            this.brandTb.Name = "brandTb";
-            this.brandTb.PasswordChar = '\0';
-            this.brandTb.PlaceholderText = "Type for brand";
-            this.brandTb.SelectedText = "";
-            this.brandTb.Size = new System.Drawing.Size(131, 31);
-            this.brandTb.TabIndex = 46;
-            this.brandTb.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // nameTb
             // 
@@ -483,9 +458,9 @@ namespace GarageManagement
             this.problemLv.FullRowSelect = true;
             this.problemLv.HideSelection = false;
             this.problemLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.problemLv.Location = new System.Drawing.Point(209, 283);
             this.problemLv.Name = "problemLv";
             this.problemLv.Size = new System.Drawing.Size(594, 101);
@@ -525,9 +500,9 @@ namespace GarageManagement
             this.kitOrderedLv.FullRowSelect = true;
             this.kitOrderedLv.HideSelection = false;
             this.kitOrderedLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem16,
-            listViewItem17,
-            listViewItem18});
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.kitOrderedLv.Location = new System.Drawing.Point(209, 427);
             this.kitOrderedLv.Name = "kitOrderedLv";
             this.kitOrderedLv.Size = new System.Drawing.Size(594, 105);
@@ -560,10 +535,29 @@ namespace GarageManagement
             this.gunaElipse2.Radius = 15;
             this.gunaElipse2.TargetControl = this.kitOrderedLv;
             // 
+            // brandCb
+            // 
+            this.brandCb.BackColor = System.Drawing.Color.Transparent;
+            this.brandCb.BorderColor = System.Drawing.SystemColors.Desktop;
+            this.brandCb.BorderRadius = 15;
+            this.brandCb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.brandCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.brandCb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.brandCb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.brandCb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brandCb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.brandCb.ItemHeight = 25;
+            this.brandCb.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brandCb.Location = new System.Drawing.Point(158, 133);
+            this.brandCb.Name = "brandCb";
+            this.brandCb.Size = new System.Drawing.Size(123, 31);
+            this.brandCb.TabIndex = 74;
+            // 
             // CarDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(844, 625);
+            this.Controls.Add(this.brandCb);
             this.Controls.Add(this.kitOrderedLv);
             this.Controls.Add(this.problemLv);
             this.Controls.Add(this.label12);
@@ -586,7 +580,6 @@ namespace GarageManagement
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.brandTb);
             this.Controls.Add(this.nameTb);
             this.Controls.Add(this.plateNumberTb);
             this.Controls.Add(this.carImg);
@@ -611,7 +604,6 @@ namespace GarageManagement
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox brandTb;
         private Guna.UI2.WinForms.Guna2TextBox nameTb;
         private Guna.UI2.WinForms.Guna2TextBox plateNumberTb;
         private Guna.UI2.WinForms.Guna2GradientButton deleteBtn;
@@ -636,5 +628,6 @@ namespace GarageManagement
         private System.Windows.Forms.ColumnHeader price;
         private System.Windows.Forms.ColumnHeader quanity;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI2.WinForms.Guna2ComboBox brandCb;
     }
 }

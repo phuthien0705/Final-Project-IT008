@@ -45,7 +45,23 @@ namespace GarageManagement
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            
+            int MaKH = XE_DAL.Instance.GetCustomerFromCar(this.MaXe);
+
+            string BienSo = plateNumberTb.Text;
+            int MaHX = brandCb.SelectedIndex + 1;
+            int TrangThai = statusCb.SelectedIndex + 1;
+            string TenKH = nameTb.Text;
+            string GioiTinh = genderCb.SelectedIndex == 0 ? "Nam" : "Nữ";
+            string DienThoai = phoneNumberTb.Text;
+            string DiaChi = addressTb.Text;
+            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaHX, TrangThai) && XE_DAL.Instance.UpdateCustomer(MaKH, TenKH, DienThoai, GioiTinh, DiaChi)) 
+            {
+                MessageBox.Show("Cập nhật thành công !!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại !! Vui lòng thử lại.");
+            }
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -68,8 +84,10 @@ namespace GarageManagement
         void LoadCarDeTail()
         {
             data = XE_DAL.Instance.GetCarDetail(this.MaXe);
+            LoadAllBrand();
 
             string BienSo = data.Rows[0]["BienSo"].ToString();
+            int MaHX = Int32.Parse(data.Rows[0]["MaHX"].ToString());
             string TenHieuXe = data.Rows[0]["TenHieuXe"].ToString();
             string TrangThai = data.Rows[0]["TrangThai"].ToString();
             string TenKH = data.Rows[0]["TenKH"].ToString();
@@ -80,13 +98,22 @@ namespace GarageManagement
 
             this.Text = BienSo + " | " + TenHieuXe;
             plateNumberTb.Text = BienSo;
-            brandTb.Text = TenHieuXe;
+            brandCb.SelectedIndex = MaHX - 1;
             statusCb.SelectedIndex = Int32.Parse(TrangThai) - 1;
             orderedDateTb.Text = NgayTiepNhan;
             nameTb.Text = TenKH;
             genderCb.SelectedIndex = GioiTinh == "Nam" ? 0 : 1;
             phoneNumberTb.Text = DienThoai;
             addressTb.Text = DiaChi;
+        }
+
+        void LoadAllBrand()
+        {
+            DataTable allBrand = HIEUXE_DAL.Instance.LoadBrandList();
+            for (int i = 0; i < allBrand.Rows.Count; i++)
+            {
+                brandCb.Items.Add(allBrand.Rows[i]["TenHieuXe"].ToString());
+            }
         }
     }
 }

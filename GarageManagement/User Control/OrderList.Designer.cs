@@ -45,7 +45,7 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(28, 30);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(148, 23);
+            this.label15.Size = new System.Drawing.Size(121, 19);
             this.label15.TabIndex = 5;
             this.label15.Text = "Đã tiếp nhận |";
             // 
@@ -94,9 +94,9 @@ namespace GarageManagement.User_Control
             // 
             this.viewDetail.BackColor = System.Drawing.Color.Transparent;
             this.viewDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewDetail.Location = new System.Drawing.Point(904, 31);
+            this.viewDetail.Location = new System.Drawing.Point(926, 30);
             this.viewDetail.Name = "viewDetail";
-            this.viewDetail.Size = new System.Drawing.Size(128, 20);
+            this.viewDetail.Size = new System.Drawing.Size(103, 18);
             this.viewDetail.TabIndex = 22;
             this.viewDetail.Text = "Xem chi tiết xe";
             this.viewDetail.Click += new System.EventHandler(this.viewDetail_Click);

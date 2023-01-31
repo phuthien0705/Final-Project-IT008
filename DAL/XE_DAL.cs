@@ -20,7 +20,7 @@ namespace DAL
 
         public DataTable LoadCarList()
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT MaXe, BienSo, TrangThai, TenKH, DienThoai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND TrangThai IN (1,2,3) ORDER BY NgayTiepNhan DESC");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT MaXe, BienSo, TrangThai, TenKH, DienThoai, NgayTiepNhan, XE.MaHX, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND TrangThai IN (1,2,3) ORDER BY NgayTiepNhan DESC");
             return data;
         }
 
@@ -33,7 +33,7 @@ namespace DAL
 
         public DataTable GetCarDetail(int MaXe)
         {
-            string query = String.Format("SELECT MaXe, BienSo, TenKH, GioiTinh, DienThoai, DiaChi, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND MaXe = {0}", MaXe);
+            string query = String.Format("SELECT MaXe, BienSo, TenKH, GioiTinh, DienThoai, DiaChi, TrangThai, NgayTiepNhan, TenHieuXe, XE.MaHX FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND MaXe = {0}", MaXe);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -75,8 +75,22 @@ namespace DAL
 
         public DataTable SearchForCar(string keywords)
         {
-            string query = String.Format("SELECT MaXe, BienSo, TenKH, DienThoai, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND (TenHieuXe LIKE '%{0}%' OR BienSo LIKE '%{1}%' OR TenKH LIKE '%{2}%' OR DienThoai LIKE '%{3}%') AND TrangThai IN (1,2,3) ORDER BY NgayTiepNhan DESC", keywords, keywords, keywords, keywords);
+            string query = String.Format("SELECT MaXe, BienSo, TenKH, DienThoai, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND (TenHieuXe LIKE '%{0}%' OR BienSo LIKE '%{1}%' OR TenKH LIKE N'%{2}%' OR DienThoai LIKE '%{3}%') AND TrangThai IN (1,2,3) ORDER BY NgayTiepNhan DESC", keywords, keywords, keywords, keywords);
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public int GetCustomerFromCar(int MaXe)
+        {
+            string query = String.Format("SELECT MaKH FROM XE WHERE MaXe = {0}", MaXe);
+            return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
+
+        public bool UpdateCustomer(int MaKH, string TenKH, string DienThoai, string GioiTinh, string DiaChi)
+        {
+            string query = String.Format("UPDATE KHACHHANG SET TenKH = N'{0}', DienThoai = '{1}', GioiTinh = '{2}', DiaChi = N'{3}' WHERE MaKH = {4}", TenKH, DienThoai, GioiTinh, DiaChi, MaKH);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
     }
 }

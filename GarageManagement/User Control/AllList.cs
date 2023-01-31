@@ -105,6 +105,7 @@ namespace GarageManagement.User_Control
         {
             carLv.Clear();
             LoadCarListView();
+            
         }
 
         private void viewDetail_MouseLeave(object sender, EventArgs e)
@@ -126,7 +127,7 @@ namespace GarageManagement.User_Control
                 carLv.Clear();
 
                 string keywords = searchTb.Text;
-                title.Text = String.Format(@"Kết quả cho từ khóa '{0}'",keywords);
+                title.Text = searchTb.Text != "" ? String.Format(@"Kết quả cho từ khóa '{0}'",keywords) : "Tất cả";
                 carList = XE_DAL.Instance.SearchForCar(keywords);
 
                 carLv.Columns.Add("STT", 50);
