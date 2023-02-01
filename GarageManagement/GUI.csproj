@@ -196,6 +196,10 @@
       <Project>{9fefcbdf-49a5-444d-9fb8-e58ecf50582f}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{504FEBC5-1DDE-41D3-BF57-A579677F6772}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{572dfdd7-0f8c-4880-a5f4-62218f36de1c}</Project>
       <Name>DTO</Name>
