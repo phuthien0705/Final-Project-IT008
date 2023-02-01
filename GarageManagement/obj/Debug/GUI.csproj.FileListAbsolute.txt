@@ -171,3 +171,6 @@ D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\Garage
 >>>>>>> 4bf04b33cfb36b1410938afd829ee1217d18339d
 D:\Git clone test\Final-Project-IT008\GarageManagement\bin\Debug\DAL.dll
 D:\Git clone test\Final-Project-IT008\GarageManagement\bin\Debug\DAL.pdb
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\DAL.dll
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\DAL.pdb
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.CustomerDetail.resources
