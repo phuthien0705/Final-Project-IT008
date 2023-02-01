@@ -127,12 +127,6 @@
     <Compile Include="User Control\OrderList.Designer.cs">
       <DependentUpon>OrderList.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\ReceiptInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Control\ReceiptInfo.Designer.cs">
-      <DependentUpon>ReceiptInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="User Control\RepairForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,9 +176,6 @@
     <EmbeddedResource Include="User Control\OrderList.resx">
       <DependentUpon>OrderList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\ReceiptInfo.resx">
-      <DependentUpon>ReceiptInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User Control\RepairForm.resx">
       <DependentUpon>RepairForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +195,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{9fefcbdf-49a5-444d-9fb8-e58ecf50582f}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{504febc5-1dde-41d3-bf57-a579677f6772}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{572dfdd7-0f8c-4880-a5f4-62218f36de1c}</Project>
