@@ -135,3 +135,5 @@ C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\
 C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.pdb
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.CarDetail.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CompletedList.resources
+D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.CustomerForm.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CustomerForm.resources

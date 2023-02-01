@@ -51,9 +51,9 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(24, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 19);
+            this.label3.Size = new System.Drawing.Size(201, 23);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Choose the car to checkout";
+            this.label3.Text = "Chọn xe thanh toán";
             // 
             // guna2ComboBox2
             // 
@@ -101,7 +101,7 @@ namespace GarageManagement.User_Control
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(186, 136);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(140, 17);
+            this.label16.Size = new System.Drawing.Size(160, 20);
             this.label16.TabIndex = 22;
             this.label16.Text = "2022/03/31 11:02:15";
             // 
@@ -111,7 +111,7 @@ namespace GarageManagement.User_Control
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(186, 105);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 17);
+            this.label14.Size = new System.Drawing.Size(128, 20);
             this.label14.TabIndex = 22;
             this.label14.Text = "Mercedes-Benz";
             // 
@@ -121,7 +121,7 @@ namespace GarageManagement.User_Control
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(186, 74);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 17);
+            this.label13.Size = new System.Drawing.Size(93, 20);
             this.label13.TabIndex = 22;
             this.label13.Text = "51A-256.21";
             // 
@@ -131,7 +131,7 @@ namespace GarageManagement.User_Control
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(186, 43);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 17);
+            this.label12.Size = new System.Drawing.Size(161, 20);
             this.label12.TabIndex = 22;
             this.label12.Text = "25 Ballaire, Houston";
             // 
@@ -141,9 +141,9 @@ namespace GarageManagement.User_Control
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(23, 104);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 17);
+            this.label7.Size = new System.Drawing.Size(79, 20);
             this.label7.TabIndex = 21;
-            this.label7.Text = "Car brand:";
+            this.label7.Text = "Hiệu xe:";
             // 
             // label6
             // 
@@ -151,9 +151,9 @@ namespace GarageManagement.User_Control
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(23, 74);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 17);
+            this.label6.Size = new System.Drawing.Size(104, 20);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Car plate number:";
+            this.label6.Text = "Biển số xe:";
             // 
             // label9
             // 
@@ -161,9 +161,9 @@ namespace GarageManagement.User_Control
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(23, 134);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 17);
+            this.label9.Size = new System.Drawing.Size(103, 20);
             this.label9.TabIndex = 21;
-            this.label9.Text = "Entry date:";
+            this.label9.Text = "Ngày nhận:";
             // 
             // label4
             // 
@@ -171,9 +171,9 @@ namespace GarageManagement.User_Control
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(23, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Address:";
+            this.label4.Text = "Địa chỉ:";
             // 
             // label11
             // 
@@ -181,7 +181,7 @@ namespace GarageManagement.User_Control
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(186, 12);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 17);
+            this.label11.Size = new System.Drawing.Size(117, 20);
             this.label11.TabIndex = 21;
             this.label11.Text = "Callum Wilson";
             // 
@@ -191,9 +191,9 @@ namespace GarageManagement.User_Control
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(23, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Customer:";
+            this.label2.Text = "Khách hàng:";
             // 
             // ReceiptInfo
             // 

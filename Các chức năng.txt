@@ -1,3 +1,4 @@
+=== DAO ===
 - XE_DAO: (Phú)
 + Danh sách các xe có trong Garage (DataTable)
 + Xem chi tiết xe
@@ -34,3 +35,12 @@ NgayTiepNhan = Datetime.Now, TrangThai = Ordered)
 + Thêm phiếu thu tiền
 --> có nên xóa phiếu thu tiền ?? --> ko xóa
 Deadline: mùng 4 tết 
+=== GUI ===
+- Trung đổi NgayTiepNhan của XE -> PHIEUSUACHUA, thêm IDENTITY(1,1) ở PRIMARY KEY
+- Dashboard: (đọc số lượng xe, doanh thu, xem danh sách xe, xem chi tiết xe, tìm kiếm xe) --> Phú
+- Car Form: Phú
+- Customer Form: Trung
+- Kit Form: Phúc
+- Checkout Form: Thiên
+- Repair Form: Trung
+Deadline: 1/2/2023
