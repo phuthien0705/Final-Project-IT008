@@ -68,7 +68,6 @@ D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\Garage
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.InProgressList.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.KitForm.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.OrderList.resources
-D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.ReceiptInfo.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.RepairForm.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.GenerateResource.cache
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.CoreCompileInputs.cache
