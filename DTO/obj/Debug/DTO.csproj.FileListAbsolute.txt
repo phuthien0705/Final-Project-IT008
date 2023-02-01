@@ -28,3 +28,9 @@ C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.As
 C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\obj\Debug\DTO.dll
 C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\DTO\obj\Debug\DTO.pdb
+D:\Git clone test\Final-Project-IT008\DTO\bin\Debug\DTO.dll
+D:\Git clone test\Final-Project-IT008\DTO\bin\Debug\DTO.pdb
+D:\Git clone test\Final-Project-IT008\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Git clone test\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Git clone test\Final-Project-IT008\DTO\obj\Debug\DTO.dll
+D:\Git clone test\Final-Project-IT008\DTO\obj\Debug\DTO.pdb

@@ -17,7 +17,7 @@ namespace DTO
         public PHIEUTHUTIEN()
         {
             MaPhieuThuTien = 0;
-            MaKH = 0;
+            MaKH = 0;   
             TienThu = 0;
             NgayThuTien = DateTime.Now;
         }
