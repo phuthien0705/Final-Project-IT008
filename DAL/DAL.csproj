@@ -46,6 +46,7 @@
     <Compile Include="CHITIETTIENCONG_DAL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="KHACHHANG_DAL.cs" />
+    <Compile Include="HIEUXE_DAL.cs" />
     <Compile Include="KHO_DAL.cs" />
     <Compile Include="PHIEUSUACHUA_DAL.cs" />
     <Compile Include="PHIEUTHUTIEN_DAL.cs" />
