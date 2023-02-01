@@ -290,8 +290,7 @@ namespace GarageManagement
             // 
             // CustomerDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(617, 361);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.createdTb);
@@ -309,6 +308,7 @@ namespace GarageManagement
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nameTb);
             this.Name = "CustomerDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerDetail";
             this.Load += new System.EventHandler(this.CustomerDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).EndInit();

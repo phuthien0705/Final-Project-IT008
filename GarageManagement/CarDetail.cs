@@ -50,11 +50,7 @@ namespace GarageManagement
             string BienSo = plateNumberTb.Text;
             int MaHX = brandCb.SelectedIndex + 1;
             int TrangThai = statusCb.SelectedIndex + 1;
-            string TenKH = nameTb.Text;
-            string GioiTinh = genderCb.SelectedIndex == 0 ? "Nam" : "Nữ";
-            string DienThoai = phoneNumberTb.Text;
-            string DiaChi = addressTb.Text;
-            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaHX, TrangThai) && XE_DAL.Instance.UpdateCustomer(MaKH, TenKH, DienThoai, GioiTinh, DiaChi)) 
+            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaHX, TrangThai)) 
             {
                 MessageBox.Show("Cập nhật thành công !!");
             }
@@ -85,26 +81,22 @@ namespace GarageManagement
         {
             data = XE_DAL.Instance.GetCarDetail(this.MaXe);
             LoadAllBrand();
+            LoadAllCustomer();
 
             string BienSo = data.Rows[0]["BienSo"].ToString();
             int MaHX = Int32.Parse(data.Rows[0]["MaHX"].ToString());
+            int MaKH = Int32.Parse(data.Rows[0]["MaKH"].ToString());
             string TenHieuXe = data.Rows[0]["TenHieuXe"].ToString();
             string TrangThai = data.Rows[0]["TrangThai"].ToString();
-            string TenKH = data.Rows[0]["TenKH"].ToString();
-            string GioiTinh = data.Rows[0]["GioiTinh"].ToString();
-            string DienThoai = data.Rows[0]["DienThoai"].ToString();
-            string DiaChi = data.Rows[0]["DiaChi"].ToString();
             string NgayTiepNhan = data.Rows[0]["NgayTiepNhan"].ToString();
 
             this.Text = BienSo + " | " + TenHieuXe;
+
+            customerCb.SelectedIndex = MaKH - 1;
             plateNumberTb.Text = BienSo;
             brandCb.SelectedIndex = MaHX - 1;
             statusCb.SelectedIndex = Int32.Parse(TrangThai) - 1;
             orderedDateTb.Text = NgayTiepNhan;
-            nameTb.Text = TenKH;
-            genderCb.SelectedIndex = GioiTinh == "Nam" ? 0 : 1;
-            phoneNumberTb.Text = DienThoai;
-            addressTb.Text = DiaChi;
         }
 
         void LoadAllBrand()
@@ -113,6 +105,17 @@ namespace GarageManagement
             for (int i = 0; i < allBrand.Rows.Count; i++)
             {
                 brandCb.Items.Add(allBrand.Rows[i]["TenHieuXe"].ToString());
+            }
+        }
+
+        void LoadAllCustomer()
+        {
+            DataTable allCustomer = XE_DAL.Instance.LoadCustomerList();
+            for (int i = 0; i < allCustomer.Rows.Count; i++)
+            {
+                string TenKH = allCustomer.Rows[i]["TenKH"].ToString();
+                string DienThoai = allCustomer.Rows[i]["DienThoai"].ToString();
+                customerCb.Items.Add(TenKH + " | " + DienThoai);
             }
         }
 

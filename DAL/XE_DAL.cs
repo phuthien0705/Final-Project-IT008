@@ -33,7 +33,7 @@ namespace DAL
 
         public DataTable GetCarDetail(int MaXe)
         {
-            string query = String.Format("SELECT MaXe, BienSo, TenKH, GioiTinh, DienThoai, DiaChi, TrangThai, NgayTiepNhan, TenHieuXe, XE.MaHX FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND KHACHHANG.MaKH = XE.MaKH AND MaXe = {0}", MaXe);
+            string query = String.Format("SELECT MaXe, BienSo, MaKH, TrangThai, NgayTiepNhan, TenHieuXe, XE.MaHX FROM XE, HIEUXE WHERE XE.MaHX = HIEUXE.MaHX AND MaXe = {0}", MaXe);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
