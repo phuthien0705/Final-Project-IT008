@@ -31,29 +31,17 @@ namespace GarageManagement.User_Control
         {
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
-            "Ngô Ngọc Hưng",
-            "2022/12/29 12:20:35 AM"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "Lê Trung Anh",
-            "2023/01/01 09:32:12 AM"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "3",
-            "Nguyễn Thị Mỹ Hạnh",
-            "2023/01/19 04:52:38 PM"}, -1);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarForm));
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarForm));
             this.label15 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,18 +52,15 @@ namespace GarageManagement.User_Control
             this.guna2GradientCircleButton3 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientCircleButton2 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.customerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.createdAt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.customerLv = new System.Windows.Forms.ListView();
             this.brandCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             this.SuspendLayout();
@@ -219,49 +204,26 @@ namespace GarageManagement.User_Control
             this.guna2ContainerControl1.BorderColor = System.Drawing.Color.DarkOrange;
             this.guna2ContainerControl1.BorderRadius = 15;
             this.guna2ContainerControl1.BorderThickness = 1;
-            this.guna2ContainerControl1.Controls.Add(this.listView1);
+            this.guna2ContainerControl1.Controls.Add(this.customerLv);
             this.guna2ContainerControl1.Location = new System.Drawing.Point(478, 118);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(499, 399);
             this.guna2ContainerControl1.TabIndex = 26;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
-            // listView1
+            // customerLv
             // 
-            this.listView1.AutoArrange = false;
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.customerName,
-            this.createdAt});
-            this.listView1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.listView1.Location = new System.Drawing.Point(6, 10);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(490, 375);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // id
-            // 
-            this.id.Text = "STT";
-            this.id.Width = 50;
-            // 
-            // customerName
-            // 
-            this.customerName.Text = "Họ và tên";
-            this.customerName.Width = 224;
-            // 
-            // createdAt
-            // 
-            this.createdAt.Text = "Thời gian đăng ký";
-            this.createdAt.Width = 215;
+            this.customerLv.AutoArrange = false;
+            this.customerLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customerLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerLv.FullRowSelect = true;
+            this.customerLv.HideSelection = false;
+            this.customerLv.Location = new System.Drawing.Point(5, 8);
+            this.customerLv.Name = "customerLv";
+            this.customerLv.Size = new System.Drawing.Size(490, 382);
+            this.customerLv.TabIndex = 6;
+            this.customerLv.UseCompatibleStateImageBehavior = false;
+            this.customerLv.View = System.Windows.Forms.View.Details;
             // 
             // brandCb
             // 
@@ -294,7 +256,6 @@ namespace GarageManagement.User_Control
             this.label3.Size = new System.Drawing.Size(214, 21);
             this.label3.TabIndex = 47;
             this.label3.Text = "Chọn vấn đề xe gặp phải";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // guna2ContainerControl2
             // 
@@ -307,6 +268,43 @@ namespace GarageManagement.User_Control
             this.guna2ContainerControl2.Size = new System.Drawing.Size(353, 237);
             this.guna2ContainerControl2.TabIndex = 27;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
+            // 
+            // listView2
+            // 
+            this.listView2.AutoArrange = false;
+            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.FullRowSelect = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
+            this.listView2.Location = new System.Drawing.Point(3, 8);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(347, 220);
+            this.listView2.TabIndex = 7;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 34;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Problem";
+            this.columnHeader2.Width = 201;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Fee($)";
+            this.columnHeader3.Width = 112;
             // 
             // guna2TextBox2
             // 
@@ -332,43 +330,6 @@ namespace GarageManagement.User_Control
             this.guna2TextBox2.Size = new System.Drawing.Size(193, 25);
             this.guna2TextBox2.TabIndex = 48;
             this.guna2TextBox2.TextOffset = new System.Drawing.Point(5, 0);
-            // 
-            // listView2
-            // 
-            this.listView2.AutoArrange = false;
-            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.FullRowSelect = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
-            this.listView2.Location = new System.Drawing.Point(3, 8);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(347, 220);
-            this.listView2.TabIndex = 7;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 34;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Problem";
-            this.columnHeader2.Width = 201;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Fee($)";
-            this.columnHeader3.Width = 112;
             // 
             // CarForm
             // 
@@ -409,10 +370,7 @@ namespace GarageManagement.User_Control
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton3;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton2;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader id;
-        private System.Windows.Forms.ColumnHeader customerName;
-        private System.Windows.Forms.ColumnHeader createdAt;
+        private System.Windows.Forms.ListView customerLv;
         private Guna.UI2.WinForms.Guna2ComboBox brandCb;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;

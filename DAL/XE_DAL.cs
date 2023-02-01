@@ -92,5 +92,10 @@ namespace DAL
             return result > 0;
         }
 
+        public DataTable LoadCustomerList()
+        {
+            string query = "SELECT * FROM KHACHHANG";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

@@ -11,7 +11,8 @@ using DAL;
 namespace GarageManagement.User_Control
 {
     public partial class Dashboard : UserControl
-    {
+    { 
+
         public Dashboard()
         {
             InitializeComponent();
