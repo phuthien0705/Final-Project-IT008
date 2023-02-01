@@ -68,7 +68,6 @@ D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\Garage
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.InProgressList.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.KitForm.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.OrderList.resources
-D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.ReceiptInfo.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.RepairForm.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.GenerateResource.cache
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GUI.csproj.CoreCompileInputs.cache
@@ -136,3 +135,4 @@ C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\GarageManagement\obj\Debug\
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.CarDetail.resources
 D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CompletedList.resources
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.User_Control.CustomerForm.resources
+D:\UIT\Lap-trinh-truc-quan\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagement.User_Control.CustomerForm.resources

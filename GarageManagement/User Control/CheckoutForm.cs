@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,35 @@ namespace GarageManagement.User_Control
         {
             InitializeComponent();
         }
-
+        private void loadCartComboBox() {
+            DataTable listCar = new XE_DAL.Instance
+        }
         private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receiptInfo1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void policyCb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void carComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
