@@ -35,5 +35,10 @@ namespace GarageManagement.User_Control
         {
 
         }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
