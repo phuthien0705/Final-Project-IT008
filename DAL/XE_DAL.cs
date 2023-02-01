@@ -97,5 +97,11 @@ namespace DAL
             string query = "SELECT * FROM KHACHHANG";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public DataTable GetCustomerDetail(int MaKH)
+        {
+            string query = String.Format("SELECT * FROM KHACHHANG WHERE MaKH = {0}", MaKH);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

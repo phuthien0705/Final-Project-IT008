@@ -31,29 +31,29 @@ namespace GarageManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarDetail));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Indicator",
             "200",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Insulation film",
             "450",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Disk brake",
             "150",
@@ -93,6 +93,7 @@ namespace GarageManagement
             this.quanity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.brandCb = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.viewCustomerDetail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -355,7 +356,7 @@ namespace GarageManagement
             this.chooseImgBtn.Name = "chooseImgBtn";
             this.chooseImgBtn.Size = new System.Drawing.Size(71, 23);
             this.chooseImgBtn.TabIndex = 63;
-            this.chooseImgBtn.Text = "Upload";
+            this.chooseImgBtn.Text = "Tải ảnh lên";
             this.chooseImgBtn.UseVisualStyleBackColor = true;
             this.chooseImgBtn.Click += new System.EventHandler(this.chooseImgBtn_Click);
             // 
@@ -458,9 +459,9 @@ namespace GarageManagement
             this.problemLv.FullRowSelect = true;
             this.problemLv.HideSelection = false;
             this.problemLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem25,
+            listViewItem26,
+            listViewItem27});
             this.problemLv.Location = new System.Drawing.Point(209, 283);
             this.problemLv.Name = "problemLv";
             this.problemLv.Size = new System.Drawing.Size(594, 101);
@@ -500,9 +501,9 @@ namespace GarageManagement
             this.kitOrderedLv.FullRowSelect = true;
             this.kitOrderedLv.HideSelection = false;
             this.kitOrderedLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem28,
+            listViewItem29,
+            listViewItem30});
             this.kitOrderedLv.Location = new System.Drawing.Point(209, 427);
             this.kitOrderedLv.Name = "kitOrderedLv";
             this.kitOrderedLv.Size = new System.Drawing.Size(594, 105);
@@ -553,10 +554,24 @@ namespace GarageManagement
             this.brandCb.Size = new System.Drawing.Size(123, 31);
             this.brandCb.TabIndex = 74;
             // 
+            // viewCustomerDetail
+            // 
+            this.viewCustomerDetail.BackColor = System.Drawing.Color.Transparent;
+            this.viewCustomerDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewCustomerDetail.Location = new System.Drawing.Point(658, 259);
+            this.viewCustomerDetail.Name = "viewCustomerDetail";
+            this.viewCustomerDetail.Size = new System.Drawing.Size(145, 18);
+            this.viewCustomerDetail.TabIndex = 75;
+            this.viewCustomerDetail.Text = "Xem thông tin chủ xe";
+            this.viewCustomerDetail.Click += new System.EventHandler(this.viewCustomerDetail_Click);
+            this.viewCustomerDetail.MouseLeave += new System.EventHandler(this.viewCustomerDetail_MouseLeave);
+            this.viewCustomerDetail.MouseMove += new System.Windows.Forms.MouseEventHandler(this.viewCustomerDetail_MouseMove);
+            // 
             // CarDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(844, 625);
+            this.Controls.Add(this.viewCustomerDetail);
             this.Controls.Add(this.brandCb);
             this.Controls.Add(this.kitOrderedLv);
             this.Controls.Add(this.problemLv);
@@ -629,5 +644,6 @@ namespace GarageManagement
         private System.Windows.Forms.ColumnHeader quanity;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
         private Guna.UI2.WinForms.Guna2ComboBox brandCb;
+        private Guna.UI2.WinForms.Guna2HtmlLabel viewCustomerDetail;
     }
 }

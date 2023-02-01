@@ -115,5 +115,24 @@ namespace GarageManagement
                 brandCb.Items.Add(allBrand.Rows[i]["TenHieuXe"].ToString());
             }
         }
+
+        private void viewCustomerDetail_Click(object sender, EventArgs e)
+        {
+            int MaKH = XE_DAL.Instance.GetCustomerFromCar(MaXe);
+            CustomerDetail customerDetail = new CustomerDetail(MaKH);
+            customerDetail.Show();
+        }
+
+        private void viewCustomerDetail_MouseLeave(object sender, EventArgs e)
+        {
+            viewCustomerDetail.Font = new Font(viewCustomerDetail.Font, FontStyle.Regular);
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void viewCustomerDetail_MouseMove(object sender, MouseEventArgs e)
+        {
+            viewCustomerDetail.Font = new Font(viewCustomerDetail.Font, FontStyle.Underline);
+            Cursor.Current = Cursors.Hand;
+        }
     }
 }
