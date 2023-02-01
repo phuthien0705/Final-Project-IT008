@@ -32,7 +32,7 @@ namespace GarageManagement.User_Control
 
         void LoadCutomerList()
         {
-            customerList = XE_DAL.Instance.LoadCustomerList();
+            customerList = KHACHHANG_DAL.Instance.LoadCustomerList();
             customerLv.Columns.Add("STT", 50);
             customerLv.Columns.Add("Họ và tên", 225);
             customerLv.Columns.Add("Số điện thoại", 215);

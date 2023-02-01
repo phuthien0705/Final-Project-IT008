@@ -31,29 +31,29 @@ namespace GarageManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarDetail));
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Indicator",
             "200",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Insulation film",
             "450",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Disk brake",
             "150",
@@ -242,11 +242,11 @@ namespace GarageManagement
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(35, 251);
+            this.label9.Location = new System.Drawing.Point(19, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 19);
+            this.label9.Size = new System.Drawing.Size(136, 19);
             this.label9.TabIndex = 66;
-            this.label9.Text = "Vấn đề của xe";
+            this.label9.Text = "Dịch vụ đã chọn";
             // 
             // label10
             // 
@@ -306,9 +306,9 @@ namespace GarageManagement
             this.problemLv.FullRowSelect = true;
             this.problemLv.HideSelection = false;
             this.problemLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.problemLv.Location = new System.Drawing.Point(161, 212);
             this.problemLv.Name = "problemLv";
             this.problemLv.Size = new System.Drawing.Size(381, 101);
@@ -348,9 +348,9 @@ namespace GarageManagement
             this.kitOrderedLv.FullRowSelect = true;
             this.kitOrderedLv.HideSelection = false;
             this.kitOrderedLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem16,
-            listViewItem17,
-            listViewItem18});
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.kitOrderedLv.Location = new System.Drawing.Point(161, 356);
             this.kitOrderedLv.Name = "kitOrderedLv";
             this.kitOrderedLv.Size = new System.Drawing.Size(381, 105);

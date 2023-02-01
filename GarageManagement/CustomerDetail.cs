@@ -23,7 +23,7 @@ namespace GarageManagement
 
         private void CustomerDetail_Load(object sender, EventArgs e)
         {
-            DataTable customerDetail = XE_DAL.Instance.GetCustomerDetail(MaKH);
+            DataTable customerDetail = KHACHHANG_DAL.Instance.GetCustomerDetail(MaKH);
 
             string TenKH = customerDetail.Rows[0]["TenKH"].ToString();
             string GioiTinh = customerDetail.Rows[0]["GioiTinh"].ToString();

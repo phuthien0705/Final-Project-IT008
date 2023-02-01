@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class KHACHHANG_DAL
+    public class KHACHHANG_DAL
     {
         public static KHACHHANG_DAL instance;
         public static KHACHHANG_DAL Instance
@@ -47,6 +47,12 @@ namespace DAL
             string query = String.Format("UPDATE KHACHHANG SET TenKH = '{0}', DienThoai = '{1}', DiaChi = '{2}', GioiTinh = {3}, NgayDangKy = '{4}'  WHERE MaKH = {5}", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime, MaKhachHang);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
+        }
+
+        public DataTable GetCustomerDetail(int MaKH)
+        {
+            string query = String.Format("SELECT * FROM KHACHHANG WHERE MaKH = {0}", MaKH);
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

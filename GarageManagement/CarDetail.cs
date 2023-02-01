@@ -45,12 +45,11 @@ namespace GarageManagement
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            int MaKH = XE_DAL.Instance.GetCustomerFromCar(this.MaXe);
-
+            int MaKH = customerCb.SelectedIndex + 1;
             string BienSo = plateNumberTb.Text;
             int MaHX = brandCb.SelectedIndex + 1;
             int TrangThai = statusCb.SelectedIndex + 1;
-            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaHX, TrangThai)) 
+            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaKH, MaHX, TrangThai)) 
             {
                 MessageBox.Show("Cập nhật thành công !!");
             }
@@ -110,7 +109,7 @@ namespace GarageManagement
 
         void LoadAllCustomer()
         {
-            DataTable allCustomer = XE_DAL.Instance.LoadCustomerList();
+            DataTable allCustomer = KHACHHANG_DAL.Instance.LoadCustomerList();
             for (int i = 0; i < allCustomer.Rows.Count; i++)
             {
                 string TenKH = allCustomer.Rows[i]["TenKH"].ToString();
