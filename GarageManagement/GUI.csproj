@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>GarageManagement</RootNamespace>
     <AssemblyName>GarageManagement</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -64,6 +64,12 @@
     </Compile>
     <Compile Include="CarDetail.Designer.cs">
       <DependentUpon>CarDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDetail.Designer.cs">
+      <DependentUpon>CustomerDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -136,6 +142,9 @@
     <EmbeddedResource Include="CarDetail.resx">
       <DependentUpon>CarDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerDetail.resx">
+      <DependentUpon>CustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +204,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{9fefcbdf-49a5-444d-9fb8-e58ecf50582f}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{504febc5-1dde-41d3-bf57-a579677f6772}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{572dfdd7-0f8c-4880-a5f4-62218f36de1c}</Project>

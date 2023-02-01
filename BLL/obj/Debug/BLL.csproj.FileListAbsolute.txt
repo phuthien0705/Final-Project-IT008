@@ -53,3 +53,14 @@ C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.Co
 C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\BLL\obj\Debug\BLL.dll
 C:\Users\LENOVO\Documents\GitHub\Final-Project-IT008\BLL\obj\Debug\BLL.pdb
+D:\Git clone test\Final-Project-IT008\BLL\bin\Debug\BLL.dll
+D:\Git clone test\Final-Project-IT008\BLL\bin\Debug\BLL.pdb
+D:\Git clone test\Final-Project-IT008\BLL\bin\Debug\DAL.dll
+D:\Git clone test\Final-Project-IT008\BLL\bin\Debug\DTO.dll
+D:\Git clone test\Final-Project-IT008\BLL\bin\Debug\DAL.pdb
+D:\Git clone test\Final-Project-IT008\BLL\bin\Debug\DTO.pdb
+D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.dll
+D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.pdb

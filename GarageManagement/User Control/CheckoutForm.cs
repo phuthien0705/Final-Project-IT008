@@ -17,7 +17,7 @@ namespace GarageManagement.User_Control
             InitializeComponent();
         }
         private void loadCartComboBox() {
-            DataTable listCar = new XE_DAL.Instance
+            
         }
         private void label19_Click(object sender, EventArgs e)
         {
