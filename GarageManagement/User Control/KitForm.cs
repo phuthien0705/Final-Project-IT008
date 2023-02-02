@@ -166,7 +166,7 @@ namespace GarageManagement.User_Control
             }
             catch (Exception)
             {
-                MessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập price!");
+                MessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập price bên phần update!");
                 txtPrice2.Focus();
             }
         }
@@ -183,7 +183,7 @@ namespace GarageManagement.User_Control
             }
             catch (Exception)
             {
-                MessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập quantity!");
+                MessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập quantity bên phần update!");
                 txtQuantity2.Focus();
             }
         }
