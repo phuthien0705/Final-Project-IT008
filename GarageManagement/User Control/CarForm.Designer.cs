@@ -29,18 +29,6 @@ namespace GarageManagement.User_Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "Flat tires",
-            "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "Broken windows",
-            "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "3",
-            "Punctured tires",
-            "10"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarForm));
             this.label15 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,10 +44,7 @@ namespace GarageManagement.User_Control
             this.brandCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.problemLv = new System.Windows.Forms.ListView();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
@@ -71,7 +56,7 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(22, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(184, 29);
+            this.label15.Size = new System.Drawing.Size(231, 36);
             this.label15.TabIndex = 10;
             this.label15.Text = "Thêm xe mới";
             // 
@@ -106,7 +91,7 @@ namespace GarageManagement.User_Control
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(60, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 19);
+            this.label1.Size = new System.Drawing.Size(138, 21);
             this.label1.TabIndex = 13;
             this.label1.Text = "Nhập biển số xe";
             // 
@@ -116,7 +101,7 @@ namespace GarageManagement.User_Control
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(60, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 19);
+            this.label2.Size = new System.Drawing.Size(125, 21);
             this.label2.TabIndex = 13;
             this.label2.Text = "Chọn hãng xe";
             // 
@@ -126,7 +111,7 @@ namespace GarageManagement.User_Control
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(474, 93);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 19);
+            this.label5.Size = new System.Drawing.Size(158, 21);
             this.label5.TabIndex = 13;
             this.label5.Text = "Chọn khách hàng";
             // 
@@ -253,7 +238,7 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(60, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 19);
+            this.label3.Size = new System.Drawing.Size(120, 21);
             this.label3.TabIndex = 47;
             this.label3.Text = "Chọn dịch vụ";
             // 
@@ -262,49 +247,26 @@ namespace GarageManagement.User_Control
             this.guna2ContainerControl2.BorderColor = System.Drawing.Color.DarkOrange;
             this.guna2ContainerControl2.BorderRadius = 15;
             this.guna2ContainerControl2.BorderThickness = 1;
-            this.guna2ContainerControl2.Controls.Add(this.listView2);
+            this.guna2ContainerControl2.Controls.Add(this.problemLv);
             this.guna2ContainerControl2.Location = new System.Drawing.Point(64, 280);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(353, 237);
             this.guna2ContainerControl2.TabIndex = 27;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
-            // listView2
+            // problemLv
             // 
-            this.listView2.AutoArrange = false;
-            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.FullRowSelect = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.listView2.Location = new System.Drawing.Point(3, 8);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(347, 220);
-            this.listView2.TabIndex = 7;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 34;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Problem";
-            this.columnHeader2.Width = 201;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Fee($)";
-            this.columnHeader3.Width = 112;
+            this.problemLv.AutoArrange = false;
+            this.problemLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.problemLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.problemLv.FullRowSelect = true;
+            this.problemLv.HideSelection = false;
+            this.problemLv.Location = new System.Drawing.Point(3, 8);
+            this.problemLv.Name = "problemLv";
+            this.problemLv.Size = new System.Drawing.Size(347, 220);
+            this.problemLv.TabIndex = 7;
+            this.problemLv.UseCompatibleStateImageBehavior = false;
+            this.problemLv.View = System.Windows.Forms.View.Details;
             // 
             // guna2TextBox2
             // 
@@ -376,9 +338,6 @@ namespace GarageManagement.User_Control
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ListView problemLv;
     }
 }

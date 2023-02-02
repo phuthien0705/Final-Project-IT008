@@ -14,6 +14,8 @@ namespace GarageManagement.User_Control
     {
         public DataTable customerList;
 
+        public DataTable problemList;
+
         public CarForm()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace GarageManagement.User_Control
             }
             brandCb.SelectedIndex = 0;
             LoadCutomerList();
+            LoadProblemList();
         }
 
         void LoadCutomerList()
@@ -50,6 +53,29 @@ namespace GarageManagement.User_Control
                 string phoneNumber = customerList.Rows[i]["DienThoai"].ToString();
                 ListViewItem.ListViewSubItem phoneNumberItem = new ListViewItem.ListViewSubItem(item, phoneNumber);
                 item.SubItems.Add(phoneNumberItem);
+            }
+        }
+
+        void LoadProblemList()
+        {
+            problemList = TIENCONG_DAL.Instance.LoadProblemList();
+            problemLv.Columns.Add("STT", 70);
+            problemLv.Columns.Add("Loại dịch vụ", 180);
+            problemLv.Columns.Add("Chi phí", 90);
+            for (int i = 0; i < problemList.Rows.Count; i++)
+            {
+                ListViewItem item = new ListViewItem(i + 1 + "");
+                problemLv.Items.Add(item);
+
+                // add problemName to carLv
+                string problemName = problemList.Rows[i]["TenTienCong"].ToString();
+                ListViewItem.ListViewSubItem problemNameItem = new ListViewItem.ListViewSubItem(item, problemName);
+                item.SubItems.Add(problemNameItem);
+
+                // add fee to carLv
+                string fee = problemList.Rows[i]["ChiPhi"].ToString();
+                ListViewItem.ListViewSubItem feeItem = new ListViewItem.ListViewSubItem(item, fee);
+                item.SubItems.Add(feeItem);
             }
         }
     }
