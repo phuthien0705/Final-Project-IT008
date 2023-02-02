@@ -100,6 +100,7 @@ namespace GarageManagement
 
         void LoadAllBrand()
         {
+            brandCb.Items.Clear();
             DataTable allBrand = HIEUXE_DAL.Instance.LoadBrandList();
             for (int i = 0; i < allBrand.Rows.Count; i++)
             {
@@ -109,6 +110,7 @@ namespace GarageManagement
 
         void LoadAllCustomer()
         {
+            customerCb.Items.Clear();
             DataTable allCustomer = KHACHHANG_DAL.Instance.LoadCustomerList();
             for (int i = 0; i < allCustomer.Rows.Count; i++)
             {
@@ -128,7 +130,7 @@ namespace GarageManagement
 
         private void CustomerDetail_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show("Đóng form");
+            LoadCarDeTail();
         }
 
         private void viewCustomerDetail_MouseLeave(object sender, EventArgs e)
