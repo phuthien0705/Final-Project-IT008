@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class PHIEUSUACHUA_DAL
+    public class PHIEUSUACHUA_DAL
     {
         public static PHIEUSUACHUA_DAL instance;
         public static PHIEUSUACHUA_DAL Instance

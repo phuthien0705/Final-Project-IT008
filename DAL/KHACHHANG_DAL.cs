@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class KHACHHANG_DAL
+    public class KHACHHANG_DAL
     {
         public static KHACHHANG_DAL instance;
         public static KHACHHANG_DAL Instance
