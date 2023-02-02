@@ -49,26 +49,27 @@ namespace GarageManagement.User_Control
             this.phoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtbxPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtbxAdrdess = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientCircleButton2 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientCircleButton3 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtbxName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.genderCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.signDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2ContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gender
             // 
+            this.gender.DisplayIndex = 2;
             this.gender.Text = "Giới tính";
-            this.gender.Width = 81;
             // 
             // customerName
             // 
@@ -87,9 +88,10 @@ namespace GarageManagement.User_Control
             this.customerLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.customerName,
-            this.gender,
+            this.phoneNumber,
             this.address,
-            this.phoneNumber});
+            this.gender,
+            this.signDate});
             this.customerLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerLv.FullRowSelect = true;
             this.customerLv.HideSelection = false;
@@ -106,10 +108,11 @@ namespace GarageManagement.User_Control
             // address
             // 
             this.address.Text = "Địa chỉ";
-            this.address.Width = 206;
+            this.address.Width = 150;
             // 
             // phoneNumber
             // 
+            this.phoneNumber.DisplayIndex = 4;
             this.phoneNumber.Text = "Số điện thoại";
             this.phoneNumber.Width = 115;
             // 
@@ -135,30 +138,30 @@ namespace GarageManagement.User_Control
             this.label6.TabIndex = 61;
             this.label6.Text = "Số điện thoại";
             // 
-            // guna2TextBox6
+            // txtbxPhone
             // 
-            this.guna2TextBox6.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2TextBox6.BorderRadius = 15;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox6.Location = new System.Drawing.Point(50, 400);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderText = "Type for customer phone number";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(295, 31);
-            this.guna2TextBox6.TabIndex = 60;
-            this.guna2TextBox6.TextOffset = new System.Drawing.Point(0, -1);
+            this.txtbxPhone.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.txtbxPhone.BorderRadius = 15;
+            this.txtbxPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbxPhone.DefaultText = "";
+            this.txtbxPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbxPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbxPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbxPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbxPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbxPhone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtbxPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbxPhone.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtbxPhone.Location = new System.Drawing.Point(50, 400);
+            this.txtbxPhone.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxPhone.Name = "txtbxPhone";
+            this.txtbxPhone.PasswordChar = '\0';
+            this.txtbxPhone.PlaceholderText = "Type for customer phone number";
+            this.txtbxPhone.SelectedText = "";
+            this.txtbxPhone.Size = new System.Drawing.Size(295, 31);
+            this.txtbxPhone.TabIndex = 60;
+            this.txtbxPhone.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // label3
             // 
@@ -170,30 +173,30 @@ namespace GarageManagement.User_Control
             this.label3.TabIndex = 59;
             this.label3.Text = "Địa chỉ";
             // 
-            // guna2TextBox5
+            // txtbxAdrdess
             // 
-            this.guna2TextBox5.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2TextBox5.BorderRadius = 15;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox5.Location = new System.Drawing.Point(50, 309);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "Type for customer address";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(295, 31);
-            this.guna2TextBox5.TabIndex = 58;
-            this.guna2TextBox5.TextOffset = new System.Drawing.Point(0, -1);
+            this.txtbxAdrdess.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.txtbxAdrdess.BorderRadius = 15;
+            this.txtbxAdrdess.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbxAdrdess.DefaultText = "";
+            this.txtbxAdrdess.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbxAdrdess.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbxAdrdess.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbxAdrdess.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbxAdrdess.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbxAdrdess.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxAdrdess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtbxAdrdess.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbxAdrdess.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtbxAdrdess.Location = new System.Drawing.Point(50, 309);
+            this.txtbxAdrdess.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxAdrdess.Name = "txtbxAdrdess";
+            this.txtbxAdrdess.PasswordChar = '\0';
+            this.txtbxAdrdess.PlaceholderText = "Type for customer address";
+            this.txtbxAdrdess.SelectedText = "";
+            this.txtbxAdrdess.Size = new System.Drawing.Size(295, 31);
+            this.txtbxAdrdess.TabIndex = 58;
+            this.txtbxAdrdess.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // guna2GradientCircleButton2
             // 
@@ -263,6 +266,7 @@ namespace GarageManagement.User_Control
             this.guna2GradientButton1.Size = new System.Drawing.Size(203, 30);
             this.guna2GradientButton1.TabIndex = 54;
             this.guna2GradientButton1.Text = "Thêm khách hàng";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // label5
             // 
@@ -284,30 +288,30 @@ namespace GarageManagement.User_Control
             this.label4.TabIndex = 51;
             this.label4.Text = "Họ và tên";
             // 
-            // guna2TextBox3
+            // txtbxName
             // 
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2TextBox3.BorderRadius = 15;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox3.Location = new System.Drawing.Point(50, 127);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "Type for customer name";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(295, 31);
-            this.guna2TextBox3.TabIndex = 48;
-            this.guna2TextBox3.TextOffset = new System.Drawing.Point(0, -1);
+            this.txtbxName.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.txtbxName.BorderRadius = 15;
+            this.txtbxName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbxName.DefaultText = "";
+            this.txtbxName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbxName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbxName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbxName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbxName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtbxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbxName.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtbxName.Location = new System.Drawing.Point(50, 127);
+            this.txtbxName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxName.Name = "txtbxName";
+            this.txtbxName.PasswordChar = '\0';
+            this.txtbxName.PlaceholderText = "Type for customer name";
+            this.txtbxName.SelectedText = "";
+            this.txtbxName.Size = new System.Drawing.Size(295, 31);
+            this.txtbxName.TabIndex = 48;
+            this.txtbxName.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // label15
             // 
@@ -318,7 +322,6 @@ namespace GarageManagement.User_Control
             this.label15.Size = new System.Drawing.Size(250, 29);
             this.label15.TabIndex = 47;
             this.label15.Text = "Thêm khách hàng";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // genderCb
             // 
@@ -353,6 +356,11 @@ namespace GarageManagement.User_Control
             this.label1.TabIndex = 66;
             this.label1.Text = "Giới tính";
             // 
+            // signDate
+            // 
+            this.signDate.Text = "Ngày Đăng Ký";
+            this.signDate.Width = 100;
+            // 
             // CustomerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -360,16 +368,16 @@ namespace GarageManagement.User_Control
             this.Controls.Add(this.genderCb);
             this.Controls.Add(this.guna2ContainerControl1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.guna2TextBox6);
+            this.Controls.Add(this.txtbxPhone);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2TextBox5);
+            this.Controls.Add(this.txtbxAdrdess);
             this.Controls.Add(this.guna2GradientCircleButton2);
             this.Controls.Add(this.guna2GradientCircleButton3);
             this.Controls.Add(this.guna2GradientCircleButton1);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2TextBox3);
+            this.Controls.Add(this.txtbxName);
             this.Controls.Add(this.label15);
             this.Name = "CustomerForm";
             this.Size = new System.Drawing.Size(1069, 622);
@@ -387,20 +395,21 @@ namespace GarageManagement.User_Control
         private System.Windows.Forms.ListView customerLv;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtbxPhone;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtbxAdrdess;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton2;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton3;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtbxName;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2ComboBox genderCb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader address;
         private System.Windows.Forms.ColumnHeader phoneNumber;
+        private System.Windows.Forms.ColumnHeader signDate;
     }
 }

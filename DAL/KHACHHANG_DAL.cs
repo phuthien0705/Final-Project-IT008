@@ -25,11 +25,11 @@ namespace DAL
             return data;
         }
 
-        public bool InsertCustomer(string HoVaTen, string SoDienThoai, string DiaChi, int GioiTinh)
+        public bool InsertCustomer(string HoVaTen, string SoDienThoai, string DiaChi, string GioiTinh)
         {
-            // Giới tính : 0 là nữ, 1 là nam
+            // Giới tính : f là nữ, m là nam
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,NgayDangKy) VALUES('{0}','{1}','{2}',{3},'{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
+            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,NgayDangKy) VALUES('{0}','{1}','{2}','{3}','{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -41,10 +41,10 @@ namespace DAL
             return result > 0;
         }
 
-        public bool UpdateCustomer(int MaKhachHang, string HoVaTen, string SoDienThoai, string DiaChi, int GioiTinh)
+        public bool UpdateCustomer(int MaKhachHang, string HoVaTen, string SoDienThoai, string DiaChi, string GioiTinh)
         {
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("UPDATE KHACHHANG SET TenKH = '{0}', DienThoai = '{1}', DiaChi = '{2}', GioiTinh = {3}, NgayDangKy = '{4}'  WHERE MaKH = {5}", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime, MaKhachHang);
+            string query = String.Format("UPDATE KHACHHANG SET TenKH = '{0}', DienThoai = '{1}', DiaChi = '{2}', GioiTinh = '{3}', NgayDangKy = '{4}'  WHERE MaKH = {5}", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime, MaKhachHang);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
