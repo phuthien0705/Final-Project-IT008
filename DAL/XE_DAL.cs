@@ -38,10 +38,10 @@ namespace DAL
             return data;
         }
 
-        public bool InsertCar(string BienSo, int MaHX)
+        public bool InsertCar(string BienSo, int MaHX, int MaKH)
         {
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("INSERT INTO XE(BienSo,MaHX,MaKH,TrangThai,NgayTiepNhan) VALUES('{0}',{1}, 1, 1, '{2}')", BienSo, MaHX, currentTime);
+            string query = String.Format("INSERT INTO XE(BienSo,MaHX,MaKH,TrangThai,NgayTiepNhan) VALUES('{0}',{1}, {2}, 1, '{3}')", BienSo, MaHX, MaKH, currentTime);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

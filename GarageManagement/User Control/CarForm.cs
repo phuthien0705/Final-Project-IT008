@@ -16,6 +16,8 @@ namespace GarageManagement.User_Control
 
         public DataTable problemList;
 
+        public DataTable brandList;
+
         public CarForm()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace GarageManagement.User_Control
             brandCb.SelectedIndex = 0;
             LoadCutomerList();
             LoadProblemList();
+            LoadBrandList();
         }
 
         void LoadCutomerList()
@@ -76,6 +79,33 @@ namespace GarageManagement.User_Control
                 string fee = problemList.Rows[i]["ChiPhi"].ToString();
                 ListViewItem.ListViewSubItem feeItem = new ListViewItem.ListViewSubItem(item, fee);
                 item.SubItems.Add(feeItem);
+            }
+        }
+
+        void LoadBrandList()
+        {
+            brandCb.Items.Clear();
+            brandList = HIEUXE_DAL.Instance.LoadBrandList();
+            for (int i = 0; i < brandList.Rows.Count; i++)
+            {
+                brandCb.Items.Add(brandList.Rows[i]["TenHieuXe"].ToString());
+            }
+            brandCb.SelectedIndex = 0;
+        }
+
+        private void addCarBtn_Click(object sender, EventArgs e)
+        {
+            string BienSo = plateNumberTb.Text;
+            int MaHX = brandCb.SelectedIndex + 1;
+            int MaKH = Int32.Parse(customerLv.SelectedItems[0].Text);
+
+            if (XE_DAL.Instance.InsertCar(BienSo, MaHX, MaKH))
+            {
+                MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedValue + " thành công!!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedValue + " thất bại!!");
             }
         }
     }

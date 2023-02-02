@@ -31,11 +31,11 @@ namespace GarageManagement.User_Control
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarForm));
             this.label15 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.plateNumberTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.addCarBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientCircleButton3 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientCircleButton2 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
@@ -60,30 +60,30 @@ namespace GarageManagement.User_Control
             this.label15.TabIndex = 10;
             this.label15.Text = "Thêm xe mới";
             // 
-            // guna2TextBox1
+            // plateNumberTb
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.DarkOrange;
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox1.Location = new System.Drawing.Point(64, 118);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Type for plate number";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(353, 31);
-            this.guna2TextBox1.TabIndex = 12;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(0, -1);
+            this.plateNumberTb.BorderColor = System.Drawing.Color.DarkOrange;
+            this.plateNumberTb.BorderRadius = 15;
+            this.plateNumberTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.plateNumberTb.DefaultText = "";
+            this.plateNumberTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.plateNumberTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.plateNumberTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.plateNumberTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.plateNumberTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.plateNumberTb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plateNumberTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.plateNumberTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.plateNumberTb.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.plateNumberTb.Location = new System.Drawing.Point(64, 118);
+            this.plateNumberTb.Margin = new System.Windows.Forms.Padding(4);
+            this.plateNumberTb.Name = "plateNumberTb";
+            this.plateNumberTb.PasswordChar = '\0';
+            this.plateNumberTb.PlaceholderText = "Type for plate number";
+            this.plateNumberTb.SelectedText = "";
+            this.plateNumberTb.Size = new System.Drawing.Size(353, 31);
+            this.plateNumberTb.TabIndex = 12;
+            this.plateNumberTb.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // label1
             // 
@@ -115,23 +115,24 @@ namespace GarageManagement.User_Control
             this.label5.TabIndex = 13;
             this.label5.Text = "Chọn khách hàng";
             // 
-            // guna2GradientButton1
+            // addCarBtn
             // 
-            this.guna2GradientButton1.BorderRadius = 15;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.OrangeRed;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.DarkOrange;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(845, 535);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(132, 30);
-            this.guna2GradientButton1.TabIndex = 17;
-            this.guna2GradientButton1.Text = "Thêm xe";
+            this.addCarBtn.BorderRadius = 15;
+            this.addCarBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addCarBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addCarBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addCarBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addCarBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addCarBtn.FillColor = System.Drawing.Color.OrangeRed;
+            this.addCarBtn.FillColor2 = System.Drawing.Color.DarkOrange;
+            this.addCarBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
+            this.addCarBtn.ForeColor = System.Drawing.Color.White;
+            this.addCarBtn.Location = new System.Drawing.Point(845, 535);
+            this.addCarBtn.Name = "addCarBtn";
+            this.addCarBtn.Size = new System.Drawing.Size(132, 30);
+            this.addCarBtn.TabIndex = 17;
+            this.addCarBtn.Text = "Thêm xe";
+            this.addCarBtn.Click += new System.EventHandler(this.addCarBtn_Click);
             // 
             // guna2GradientCircleButton1
             // 
@@ -204,6 +205,7 @@ namespace GarageManagement.User_Control
             this.customerLv.FullRowSelect = true;
             this.customerLv.HideSelection = false;
             this.customerLv.Location = new System.Drawing.Point(5, 8);
+            this.customerLv.MultiSelect = false;
             this.customerLv.Name = "customerLv";
             this.customerLv.Size = new System.Drawing.Size(490, 382);
             this.customerLv.TabIndex = 6;
@@ -222,10 +224,6 @@ namespace GarageManagement.User_Control
             this.brandCb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brandCb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.brandCb.ItemHeight = 25;
-            this.brandCb.Items.AddRange(new object[] {
-            "Nissan",
-            "Subaru",
-            "Honda"});
             this.brandCb.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brandCb.Location = new System.Drawing.Point(64, 191);
             this.brandCb.Name = "brandCb";
@@ -305,11 +303,11 @@ namespace GarageManagement.User_Control
             this.Controls.Add(this.guna2GradientCircleButton2);
             this.Controls.Add(this.guna2GradientCircleButton3);
             this.Controls.Add(this.guna2GradientCircleButton1);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.addCarBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.plateNumberTb);
             this.Controls.Add(this.label15);
             this.Name = "CarForm";
             this.Size = new System.Drawing.Size(1069, 622);
@@ -324,11 +322,11 @@ namespace GarageManagement.User_Control
         #endregion
 
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox plateNumberTb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton addCarBtn;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton3;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton2;
