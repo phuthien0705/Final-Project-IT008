@@ -44,14 +44,15 @@ namespace GarageManagement.User_Control
             // 
             this.carLv.AutoArrange = false;
             this.carLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.carLv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.carLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carLv.FullRowSelect = true;
             this.carLv.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.carLv.HideSelection = false;
-            this.carLv.Location = new System.Drawing.Point(3, 3);
+            this.carLv.Location = new System.Drawing.Point(0, 0);
             this.carLv.MultiSelect = false;
             this.carLv.Name = "carLv";
-            this.carLv.Size = new System.Drawing.Size(994, 283);
+            this.carLv.Size = new System.Drawing.Size(1000, 286);
             this.carLv.TabIndex = 10;
             this.carLv.UseCompatibleStateImageBehavior = false;
             this.carLv.View = System.Windows.Forms.View.Details;
@@ -99,6 +100,7 @@ namespace GarageManagement.User_Control
             // 
             // guna2ContainerControl1
             // 
+            this.guna2ContainerControl1.BorderColor = System.Drawing.Color.DarkOrange;
             this.guna2ContainerControl1.BorderRadius = 15;
             this.guna2ContainerControl1.Controls.Add(this.carLv);
             this.guna2ContainerControl1.Location = new System.Drawing.Point(32, 58);
