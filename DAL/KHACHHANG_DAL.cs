@@ -41,10 +41,9 @@ namespace DAL
             return result > 0;
         }
 
-        public bool UpdateCustomer(int MaKhachHang, string HoVaTen, string SoDienThoai, string DiaChi, int GioiTinh)
+        public bool UpdateCustomer(int MaKH, string TenKH, string DienThoai, string GioiTinh, string DiaChi)
         {
-            string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("UPDATE KHACHHANG SET TenKH = '{0}', DienThoai = '{1}', DiaChi = '{2}', GioiTinh = {3}, NgayDangKy = '{4}'  WHERE MaKH = {5}", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime, MaKhachHang);
+            string query = String.Format("UPDATE KHACHHANG SET TenKH = N'{0}', DienThoai = '{1}', GioiTinh = '{2}', DiaChi = N'{3}' WHERE MaKH = {4}", TenKH, DienThoai, GioiTinh, DiaChi, MaKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

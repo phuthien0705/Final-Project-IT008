@@ -123,6 +123,12 @@ namespace GarageManagement
             int MaKH = XE_DAL.Instance.GetCustomerFromCar(MaXe);
             CustomerDetail customerDetail = new CustomerDetail(MaKH);
             customerDetail.Show();
+            customerDetail.FormClosed += CustomerDetail_FormClosed;
+        }
+
+        private void CustomerDetail_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("Đóng form");
         }
 
         private void viewCustomerDetail_MouseLeave(object sender, EventArgs e)

@@ -39,5 +39,23 @@ namespace GarageManagement
             addressTb.Text = DiaChi;
             createdTb.Text = ThoiGianDangKy;
         }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            string TenKH = nameTb.Text;
+            string GioiTinh = genderCb.SelectedIndex == 0 ? "Nam" : "Nữ";
+            string DienThoai = phoneNumberTb.Text;
+            string DiaChi = addressTb.Text;
+            
+            if (KHACHHANG_DAL.Instance.UpdateCustomer(MaKH, TenKH, DienThoai, GioiTinh, DiaChi))
+            {
+                MessageBox.Show("Cập nhật khách hàng thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật khách hàng thất bại");
+            }
+            this.Close();
+        }
     }
 }
