@@ -64,3 +64,14 @@ D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CoreCompileInputs
 D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.dll
 D:\Git clone test\Final-Project-IT008\BLL\obj\Debug\BLL.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Debug\BLL.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Debug\BLL.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Debug\DAL.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Debug\DTO.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Debug\DAL.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Debug\DTO.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Debug\BLL.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Debug\BLL.pdb
