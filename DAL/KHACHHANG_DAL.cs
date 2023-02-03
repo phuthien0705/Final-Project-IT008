@@ -56,7 +56,7 @@ namespace DAL
 
         public DataTable SearchForCustomer(string keyword)
         {
-            string query = String.Format("SELECT * FROM KHACHHANG WHERE TenKH LIKE '%{0}%' OR DienThoai LIKE '%{1}%'", keyword, keyword);
+            string query = String.Format("SELECT * FROM KHACHHANG WHERE TenKH LIKE N'%{0}%' OR DienThoai LIKE N'%{1}%'", keyword, keyword);
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }
