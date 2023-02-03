@@ -51,6 +51,7 @@
     <Compile Include="PHIEUSUACHUA_DAL.cs" />
     <Compile Include="PHIEUTHUTIEN_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TIENCONG_DAL.cs" />
     <Compile Include="XE_DAL.cs" />
   </ItemGroup>
   <ItemGroup>

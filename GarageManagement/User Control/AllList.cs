@@ -105,7 +105,6 @@ namespace GarageManagement.User_Control
         {
             carLv.Clear();
             LoadCarListView();
-            
         }
 
         private void viewDetail_MouseLeave(object sender, EventArgs e)
