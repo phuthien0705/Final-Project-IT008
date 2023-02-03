@@ -54,7 +54,7 @@ namespace GarageManagement
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(141, 127);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 19);
+            this.label11.Size = new System.Drawing.Size(111, 21);
             this.label11.TabIndex = 78;
             this.label11.Text = "Số điện thoại";
             // 
@@ -85,7 +85,7 @@ namespace GarageManagement
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(212, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(204, 19);
+            this.label8.Size = new System.Drawing.Size(260, 23);
             this.label8.TabIndex = 76;
             this.label8.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
@@ -95,7 +95,7 @@ namespace GarageManagement
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(23, 203);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 19);
+            this.label6.Size = new System.Drawing.Size(69, 21);
             this.label6.TabIndex = 75;
             this.label6.Text = "Địa chỉ";
             // 
@@ -130,7 +130,7 @@ namespace GarageManagement
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 19);
+            this.label3.Size = new System.Drawing.Size(75, 21);
             this.label3.TabIndex = 73;
             this.label3.Text = "Giới tính";
             // 
@@ -165,7 +165,7 @@ namespace GarageManagement
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(23, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
+            this.label4.Size = new System.Drawing.Size(92, 21);
             this.label4.TabIndex = 71;
             this.label4.Text = "Họ và tên";
             // 
@@ -232,6 +232,7 @@ namespace GarageManagement
             this.updateBtn.Size = new System.Drawing.Size(110, 30);
             this.updateBtn.TabIndex = 81;
             this.updateBtn.Text = "Update";
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // deleteBtn
             // 
@@ -258,7 +259,7 @@ namespace GarageManagement
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(23, 280);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 19);
+            this.label12.Size = new System.Drawing.Size(153, 21);
             this.label12.TabIndex = 84;
             this.label12.Text = "Thời gian đăng ký";
             // 

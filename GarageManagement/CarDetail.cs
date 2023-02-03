@@ -45,12 +45,11 @@ namespace GarageManagement
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            int MaKH = XE_DAL.Instance.GetCustomerFromCar(this.MaXe);
-
+            int MaKH = customerCb.SelectedIndex + 1;
             string BienSo = plateNumberTb.Text;
             int MaHX = brandCb.SelectedIndex + 1;
             int TrangThai = statusCb.SelectedIndex + 1;
-            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaHX, TrangThai)) 
+            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaKH, MaHX, TrangThai)) 
             {
                 MessageBox.Show("Cập nhật thành công !!");
             }
@@ -101,6 +100,7 @@ namespace GarageManagement
 
         void LoadAllBrand()
         {
+            brandCb.Items.Clear();
             DataTable allBrand = HIEUXE_DAL.Instance.LoadBrandList();
             for (int i = 0; i < allBrand.Rows.Count; i++)
             {
@@ -110,7 +110,8 @@ namespace GarageManagement
 
         void LoadAllCustomer()
         {
-            DataTable allCustomer = XE_DAL.Instance.LoadCustomerList();
+            customerCb.Items.Clear();
+            DataTable allCustomer = KHACHHANG_DAL.Instance.LoadCustomerList();
             for (int i = 0; i < allCustomer.Rows.Count; i++)
             {
                 string TenKH = allCustomer.Rows[i]["TenKH"].ToString();
@@ -124,6 +125,12 @@ namespace GarageManagement
             int MaKH = XE_DAL.Instance.GetCustomerFromCar(MaXe);
             CustomerDetail customerDetail = new CustomerDetail(MaKH);
             customerDetail.Show();
+            customerDetail.FormClosed += CustomerDetail_FormClosed;
+        }
+
+        private void CustomerDetail_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoadCarDeTail();
         }
 
         private void viewCustomerDetail_MouseLeave(object sender, EventArgs e)
