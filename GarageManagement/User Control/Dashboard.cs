@@ -84,6 +84,45 @@ namespace GarageManagement.User_Control
             orderedQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(1).ToString();
             inProgressQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(2).ToString();
             completedQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(3).ToString();
+            revenueLb.Text = FormatMoney(PHIEUTHUTIEN_DAL.Instance.GetTotalRevenue());
+        }
+
+        string FormatMoney(int money)
+        {
+            List<string> all = new List<string>();
+            while (money != 0)
+            {
+                int remainder = (money % 1000);
+                string part = "";
+                if (remainder < 10)
+                {
+                    part = "00" + remainder;
+                }
+                else if (remainder < 100)
+                {
+                    part = "0" + remainder;
+                }
+                else if (remainder < 1000)
+                {
+                    part = "" + remainder;
+                }
+                all.Add(part);
+                money /= 1000;
+            }
+            string formatedMoney = "";
+            all[all.Count - 1] = (Int32.Parse(all[all.Count - 1])).ToString();
+            for (int i = all.Count - 1; i >= 0; i--)
+            {
+                if (i == 0)
+                {
+                    formatedMoney += all[i];
+                }
+                else
+                {
+                    formatedMoney += all[i] + ".";
+                }
+            }
+            return formatedMoney;
         }
     }
 }

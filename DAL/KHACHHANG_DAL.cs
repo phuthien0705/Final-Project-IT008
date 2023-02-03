@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class KHACHHANG_DAL
+    public class KHACHHANG_DAL
     {
         public static KHACHHANG_DAL instance;
         public static KHACHHANG_DAL Instance
@@ -25,11 +25,11 @@ namespace DAL
             return data;
         }
 
-        public bool InsertCustomer(string HoVaTen, string SoDienThoai, string DiaChi, int GioiTinh)
+        public bool InsertCustomer(string HoVaTen, string SoDienThoai, string DiaChi, string GioiTinh)
         {
-            // Giới tính : 0 là nữ, 1 là nam
+            // Giới tính : f là nữ, m là nam
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,NgayDangKy) VALUES('{0}','{1}','{2}',{3},'{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
+            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,NgayDangKy) VALUES('{0}','{1}','{2}','{3}','{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -41,12 +41,23 @@ namespace DAL
             return result > 0;
         }
 
-        public bool UpdateCustomer(int MaKhachHang, string HoVaTen, string SoDienThoai, string DiaChi, int GioiTinh)
+        public bool UpdateCustomer(int MaKH, string TenKH, string DienThoai, string GioiTinh, string DiaChi)
         {
-            string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("UPDATE KHACHHANG SET TenKH = '{0}', DienThoai = '{1}', DiaChi = '{2}', GioiTinh = {3}, NgayDangKy = '{4}'  WHERE MaKH = {5}", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime, MaKhachHang);
+            string query = String.Format("UPDATE KHACHHANG SET TenKH = N'{0}', DienThoai = '{1}', GioiTinh = '{2}', DiaChi = N'{3}' WHERE MaKH = {4}", TenKH, DienThoai, GioiTinh, DiaChi, MaKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
+        }
+
+        public DataTable GetCustomerDetail(int MaKH)
+        {
+            string query = String.Format("SELECT * FROM KHACHHANG WHERE MaKH = {0}", MaKH);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable SearchForCustomer(string keyword)
+        {
+            string query = String.Format("SELECT * FROM KHACHHANG WHERE TenKH LIKE '%{0}%' OR DienThoai LIKE '%{1}%'", keyword, keyword);
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

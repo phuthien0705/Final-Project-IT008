@@ -34,3 +34,9 @@ D:\Git clone test\Final-Project-IT008\DTO\obj\Debug\DTO.csprojAssemblyReference.
 D:\Git clone test\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Git clone test\Final-Project-IT008\DTO\obj\Debug\DTO.dll
 D:\Git clone test\Final-Project-IT008\DTO\obj\Debug\DTO.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\bin\Debug\DTO.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\bin\Debug\DTO.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\obj\Debug\DTO.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\obj\Debug\DTO.pdb

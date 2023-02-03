@@ -25,10 +25,10 @@ namespace DAL
             return data;
         }
         // this function is use to add accessory
-        public void addAccessory(int MaPhuTung, string TenVatTuPhuTung,
+        public void addAccessory(string TenVatTuPhuTung,
             int SoLuong, int DonGia)
         {
-            string query = $"INSERT dbo.KHO (MaPhuTung,TenVatTuPhuTung,SoLuong,DonGia) VALUES (N'{MaPhuTung}',N'{TenVatTuPhuTung}',N'{SoLuong}',N'{DonGia}')";
+            string query = $"INSERT dbo.KHO (TenVatTuPhuTung,SoLuong,DonGia) VALUES (N'{TenVatTuPhuTung}',N'{SoLuong}',N'{DonGia})'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         // this function is use to delete accessory

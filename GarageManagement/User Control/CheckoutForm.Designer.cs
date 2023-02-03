@@ -30,31 +30,31 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Indicator",
             "200",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Insulation film",
             "450",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Disk brake",
             "150",
             "1"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutForm));
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
@@ -67,7 +67,7 @@ namespace GarageManagement.User_Control
             this.quanity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.totalPn = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.submitBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
@@ -81,7 +81,7 @@ namespace GarageManagement.User_Control
             this.label2 = new System.Windows.Forms.Label();
             this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.addBillPn = new Guna.UI2.WinForms.Guna2Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.confirmCheckbox = new System.Windows.Forms.CheckBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -103,6 +103,7 @@ namespace GarageManagement.User_Control
             this.fee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.test = new System.Windows.Forms.TextBox();
             this.guna2ContainerControl1.SuspendLayout();
             this.totalPn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,9 +139,9 @@ namespace GarageManagement.User_Control
             this.orderDetailLv.FullRowSelect = true;
             this.orderDetailLv.HideSelection = false;
             this.orderDetailLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8,
-            listViewItem9});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.orderDetailLv.Location = new System.Drawing.Point(12, 9);
             this.orderDetailLv.Name = "orderDetailLv";
             this.orderDetailLv.Size = new System.Drawing.Size(661, 128);
@@ -173,7 +174,7 @@ namespace GarageManagement.User_Control
             this.totalPn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.totalPn.BorderRadius = 15;
             this.totalPn.Controls.Add(this.pictureBox1);
-            this.totalPn.Controls.Add(this.guna2GradientButton1);
+            this.totalPn.Controls.Add(this.submitBtn);
             this.totalPn.Controls.Add(this.guna2ComboBox1);
             this.totalPn.Controls.Add(this.label12);
             this.totalPn.Controls.Add(this.gunaLinePanel1);
@@ -200,23 +201,25 @@ namespace GarageManagement.User_Control
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2GradientButton1
+            // submitBtn
             // 
-            this.guna2GradientButton1.BorderRadius = 15;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.Orchid;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.DarkOrchid;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(24, 494);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(239, 30);
-            this.guna2GradientButton1.TabIndex = 36;
-            this.guna2GradientButton1.Text = "Thanh toán";
+            this.submitBtn.BorderRadius = 15;
+            this.submitBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.submitBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.submitBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.submitBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.submitBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.submitBtn.Enabled = false;
+            this.submitBtn.FillColor = System.Drawing.Color.Orchid;
+            this.submitBtn.FillColor2 = System.Drawing.Color.DarkOrchid;
+            this.submitBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtn.ForeColor = System.Drawing.Color.White;
+            this.submitBtn.Location = new System.Drawing.Point(24, 494);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(239, 30);
+            this.submitBtn.TabIndex = 36;
+            this.submitBtn.Text = "Thanh toán";
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // guna2ComboBox1
             // 
@@ -352,7 +355,8 @@ namespace GarageManagement.User_Control
             // 
             this.addBillPn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.addBillPn.BorderRadius = 15;
-            this.addBillPn.Controls.Add(this.checkBox1);
+            this.addBillPn.Controls.Add(this.test);
+            this.addBillPn.Controls.Add(this.confirmCheckbox);
             this.addBillPn.Controls.Add(this.guna2Panel1);
             this.addBillPn.Controls.Add(this.carComboBox);
             this.addBillPn.Controls.Add(this.label8);
@@ -361,15 +365,16 @@ namespace GarageManagement.User_Control
             this.addBillPn.Size = new System.Drawing.Size(691, 202);
             this.addBillPn.TabIndex = 3;
             // 
-            // checkBox1
+            // confirmCheckbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(29, 86);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(226, 36);
-            this.checkBox1.TabIndex = 22;
-            this.checkBox1.Text = "Khách hàng chấp nhận mọi chính \r\nsách của doanh nghiệp";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.confirmCheckbox.AutoSize = true;
+            this.confirmCheckbox.Location = new System.Drawing.Point(29, 86);
+            this.confirmCheckbox.Name = "confirmCheckbox";
+            this.confirmCheckbox.Size = new System.Drawing.Size(226, 36);
+            this.confirmCheckbox.TabIndex = 22;
+            this.confirmCheckbox.Text = "Khách hàng chấp nhận mọi chính \r\nsách của doanh nghiệp";
+            this.confirmCheckbox.UseVisualStyleBackColor = true;
+            this.confirmCheckbox.CheckedChanged += new System.EventHandler(this.confirmCheckbox_CheckedChanged);
             // 
             // guna2Panel1
             // 
@@ -503,8 +508,6 @@ namespace GarageManagement.User_Control
             this.carComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.carComboBox.ItemHeight = 25;
-            this.carComboBox.Items.AddRange(new object[] {
-            "44A-156.23 | Mazda"});
             this.carComboBox.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carComboBox.Location = new System.Drawing.Point(29, 44);
             this.carComboBox.Name = "carComboBox";
@@ -549,9 +552,9 @@ namespace GarageManagement.User_Control
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.listView1.Location = new System.Drawing.Point(12, 8);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(661, 114);
@@ -595,6 +598,13 @@ namespace GarageManagement.User_Control
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(36, 151);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(100, 22);
+            this.test.TabIndex = 23;
+            // 
             // CheckoutForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -606,6 +616,7 @@ namespace GarageManagement.User_Control
             this.Controls.Add(this.totalPn);
             this.Name = "CheckoutForm";
             this.Size = new System.Drawing.Size(1069, 622);
+            this.Load += new System.EventHandler(this.CheckoutForm_Load);
             this.guna2ContainerControl1.ResumeLayout(false);
             this.totalPn.ResumeLayout(false);
             this.totalPn.PerformLayout();
@@ -635,7 +646,7 @@ namespace GarageManagement.User_Control
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton submitBtn;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private System.Windows.Forms.ListView orderDetailLv;
         private System.Windows.Forms.ColumnHeader id;
@@ -664,6 +675,7 @@ namespace GarageManagement.User_Control
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox confirmCheckbox;
+        private System.Windows.Forms.TextBox test;
     }
 }

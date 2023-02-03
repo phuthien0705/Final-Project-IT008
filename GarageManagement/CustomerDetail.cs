@@ -23,7 +23,7 @@ namespace GarageManagement
 
         private void CustomerDetail_Load(object sender, EventArgs e)
         {
-            DataTable customerDetail = XE_DAL.Instance.GetCustomerDetail(MaKH);
+            DataTable customerDetail = KHACHHANG_DAL.Instance.GetCustomerDetail(MaKH);
 
             string TenKH = customerDetail.Rows[0]["TenKH"].ToString();
             string GioiTinh = customerDetail.Rows[0]["GioiTinh"].ToString();
@@ -38,6 +38,24 @@ namespace GarageManagement
             phoneNumberTb.Text = DienThoai;
             addressTb.Text = DiaChi;
             createdTb.Text = ThoiGianDangKy;
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            string TenKH = nameTb.Text;
+            string GioiTinh = genderCb.SelectedIndex == 0 ? "Nam" : "Nữ";
+            string DienThoai = phoneNumberTb.Text;
+            string DiaChi = addressTb.Text;
+            
+            if (KHACHHANG_DAL.Instance.UpdateCustomer(MaKH, TenKH, DienThoai, GioiTinh, DiaChi))
+            {
+                MessageBox.Show("Cập nhật khách hàng thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật khách hàng thất bại");
+            }
+            this.Close();
         }
     }
 }
