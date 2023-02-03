@@ -93,16 +93,21 @@ namespace GarageManagement.User_Control
             brandCb.SelectedIndex = 0;
         }
 
+        int GetTableIndexFromListViewSelectedIndex(ListView listView, DataTable dataTable, string fieldName)
+        {
+            int selectedIndex = listView.SelectedItems[0].Index;
+            return (int) dataTable.Rows[selectedIndex][fieldName];
+        }
+
         private void addCarBtn_Click(object sender, EventArgs e)
         {
             string BienSo = plateNumberTb.Text;
             int MaHX = brandCb.SelectedIndex + 1;
+            int MaKH = GetTableIndexFromListViewSelectedIndex(customerLv, customerList, "MaKH");
             if (BienSo != "")
             {
                 if (customerLv.SelectedItems.Count > 0)
                 {
-                    int MaKH = Int32.Parse(customerLv.SelectedItems[0].Text);
-
                     if (XE_DAL.Instance.InsertCar(BienSo, MaHX, MaKH))
                     {
                         MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedItem + " thành công!!");

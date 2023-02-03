@@ -15,6 +15,8 @@ namespace GarageManagement
     {
         private DataTable data;
 
+        private DataTable allCustomer;
+
         private int MaXe;
 
         public CarDetail(int MaXe)
@@ -45,7 +47,7 @@ namespace GarageManagement
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            int MaKH = customerCb.SelectedIndex + 1;
+            int MaKH = GetTableIndexFromComboboxIndex(customerCb, allCustomer, "MaKH");
             string BienSo = plateNumberTb.Text;
             int MaHX = brandCb.SelectedIndex + 1;
             int TrangThai = statusCb.SelectedIndex + 1;
@@ -91,7 +93,7 @@ namespace GarageManagement
 
             this.Text = BienSo + " | " + TenHieuXe;
 
-            customerCb.SelectedIndex = MaKH - 1;
+            customerCb.SelectedIndex = GetComboboxIndexFromTableIndex(allCustomer, MaKH, "MaKH");
             plateNumberTb.Text = BienSo;
             brandCb.SelectedIndex = MaHX - 1;
             statusCb.SelectedIndex = Int32.Parse(TrangThai) - 1;
@@ -111,7 +113,7 @@ namespace GarageManagement
         void LoadAllCustomer()
         {
             customerCb.Items.Clear();
-            DataTable allCustomer = KHACHHANG_DAL.Instance.LoadCustomerList();
+            allCustomer = KHACHHANG_DAL.Instance.LoadCustomerList();
             for (int i = 0; i < allCustomer.Rows.Count; i++)
             {
                 string TenKH = allCustomer.Rows[i]["TenKH"].ToString();
@@ -130,7 +132,15 @@ namespace GarageManagement
 
         private void CustomerDetail_FormClosed(object sender, FormClosedEventArgs e)
         {
-            LoadCarDeTail();
+            CustomerDetail cd = (CustomerDetail)sender;
+            if (!cd.deleted)
+            {
+                LoadCarDeTail();
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void viewCustomerDetail_MouseLeave(object sender, EventArgs e)
@@ -143,6 +153,20 @@ namespace GarageManagement
         {
             viewCustomerDetail.Font = new Font(viewCustomerDetail.Font, FontStyle.Underline);
             Cursor.Current = Cursors.Hand;
+        }
+
+        int GetComboboxIndexFromTableIndex(DataTable dataTable, int tableIndex, string fieldName)
+        {
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                if ((int)dataTable.Rows[i][fieldName] == tableIndex) return i;
+            }
+            return 0;
+        }
+
+        int GetTableIndexFromComboboxIndex(ComboBox comboBox, DataTable dataTable, string fieldName)
+        {
+            return (int) dataTable.Rows[comboBox.SelectedIndex][fieldName];
         }
     }
 }

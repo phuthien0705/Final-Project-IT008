@@ -14,25 +14,55 @@ namespace GarageManagement.User_Control
     public partial class CustomerForm : UserControl
     {
         DataTable dtCustomer;
-        int index;
         public CustomerForm()
         {
             InitializeComponent();
+            LoadCustomerList();
         }
 
-        public DataTable createTable()
+        void LoadCustomerList()
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("MaKH");
-            dt.Columns.Add("TenKH");
-            dt.Columns.Add("DienThoai");
-            dt.Columns.Add("DiaChi");
-            dt.Columns.Add("Gioitinh");
-            dt.Columns.Add("NgayDangKy");
-            return dt;
+            customerLv.Clear();
+            dtCustomer = KHACHHANG_DAL.Instance.LoadCustomerList();
+            customerLv.Columns.Add("STT", 50);
+            customerLv.Columns.Add("Họ và tên", 180);
+            customerLv.Columns.Add("Giới tính", 100);
+            customerLv.Columns.Add("Số điện thoại", 150);
+            customerLv.Columns.Add("Địa chỉ", 300);
+            customerLv.Columns.Add("Ngày đăng ký", 200);
+            for (int i = 0; i < dtCustomer.Rows.Count; i++)
+            {
+                ListViewItem item = new ListViewItem(i + 1 + "");
+                customerLv.Items.Add(item);
+
+                // add customerName to carLv
+                string customerName = dtCustomer.Rows[i]["TenKH"].ToString();
+                ListViewItem.ListViewSubItem customerNameItem = new ListViewItem.ListViewSubItem(item, customerName);
+                item.SubItems.Add(customerNameItem);
+
+                // add gender to carLv
+                string gender = dtCustomer.Rows[i]["GioiTinh"].ToString();
+                ListViewItem.ListViewSubItem genderItem = new ListViewItem.ListViewSubItem(item, gender);
+                item.SubItems.Add(genderItem);
+
+                // add phoneNumber to carLv
+                string phoneNumber = dtCustomer.Rows[i]["DienThoai"].ToString();
+                ListViewItem.ListViewSubItem phoneNumberItem = new ListViewItem.ListViewSubItem(item, phoneNumber);
+                item.SubItems.Add(phoneNumberItem);
+
+                // add address to carLv
+                string address = dtCustomer.Rows[i]["DiaChi"].ToString();
+                ListViewItem.ListViewSubItem addressItem = new ListViewItem.ListViewSubItem(item, address);
+                item.SubItems.Add(addressItem);
+
+                // add registerTime to carLv
+                string registerTime = dtCustomer.Rows[i]["ThoiGianDangKy"].ToString();
+                ListViewItem.ListViewSubItem registerTimeItem = new ListViewItem.ListViewSubItem(item, registerTime);
+                item.SubItems.Add(registerTimeItem);
+            }
         }
 
-        static void BindingData(DataTable data, ListView listview)
+        void BindingData(DataTable data, ListView listview)
         {
             listview.Items.Clear();
             foreach (DataRow row in data.Rows)
@@ -46,23 +76,22 @@ namespace GarageManagement.User_Control
             }
         }
 
-        private void CustomerForm_Load(object sender, EventArgs e)
-        {
-            genderCb.SelectedIndex = 0;
-
-            dtCustomer = KHACHHANG_DAL.Instance.LoadCustomerList();
-            BindingData(dtCustomer, customerLv);
-            customerLv.Refresh();
-        }
-
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void insertBtn_Click(object sender, EventArgs e)
         {
             String name = txtbxName.Text.Trim();
             String gender = genderCb.SelectedItem.ToString();
             String address = txtbxAdrdess.Text.Trim();
             String phone = txtbxPhone.Text.Trim();
 
-            KHACHHANG_DAL.Instance.InsertCustomer(name, phone, address, gender);
+            if (KHACHHANG_DAL.Instance.InsertCustomer(name, phone, address, gender))
+            {
+                MessageBox.Show("Thêm khách hàng " + name + " | " + phone + " thành công!!");
+                LoadCustomerList();
+            }
+            else
+            {
+                MessageBox.Show("Thêm khách hàng " + name + " | " + phone + " thất bại!!");
+            }
         }
     }
 }

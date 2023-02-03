@@ -29,7 +29,7 @@ namespace DAL
         {
             // Giới tính : f là nữ, m là nam
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,NgayDangKy) VALUES('{0}','{1}','{2}','{3}','{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
+            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,ThoiGianDangKy) VALUES(N'{0}','{1}',N'{2}',N'{3}','{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

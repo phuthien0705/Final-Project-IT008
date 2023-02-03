@@ -29,24 +29,7 @@ namespace GarageManagement.User_Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "Hồ Minh Hiếu",
-            "Nam",
-            "265 Trần Hưng Đạo, P3, Q1, TP.HCM",
-            "0915224103"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "Đặng Thị Mỹ Dung",
-            "Nữ",
-            "16 Trần Bình Trọng, P.12, Q5, TP.HCM",
-            "01552328157"}, -1);
-            this.gender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.customerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.customerLv = new System.Windows.Forms.ListView();
-            this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.phoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label6 = new System.Windows.Forms.Label();
             this.txtbxPhone = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,66 +38,29 @@ namespace GarageManagement.User_Control
             this.guna2GradientCircleButton2 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientCircleButton3 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.insertBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtbxName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.genderCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.signDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2ContainerControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gender
-            // 
-            this.gender.DisplayIndex = 2;
-            this.gender.Text = "Giới tính";
-            // 
-            // customerName
-            // 
-            this.customerName.Text = "Họ và tên";
-            this.customerName.Width = 141;
-            // 
-            // id
-            // 
-            this.id.Text = "STT";
-            this.id.Width = 50;
             // 
             // customerLv
             // 
             this.customerLv.AutoArrange = false;
             this.customerLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.customerLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.customerName,
-            this.phoneNumber,
-            this.address,
-            this.gender,
-            this.signDate});
             this.customerLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerLv.FullRowSelect = true;
             this.customerLv.HideSelection = false;
-            this.customerLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
             this.customerLv.Location = new System.Drawing.Point(3, 10);
             this.customerLv.Name = "customerLv";
             this.customerLv.Size = new System.Drawing.Size(598, 335);
             this.customerLv.TabIndex = 6;
             this.customerLv.UseCompatibleStateImageBehavior = false;
             this.customerLv.View = System.Windows.Forms.View.Details;
-            // 
-            // address
-            // 
-            this.address.Text = "Địa chỉ";
-            this.address.Width = 150;
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.DisplayIndex = 4;
-            this.phoneNumber.Text = "Số điện thoại";
-            this.phoneNumber.Width = 115;
             // 
             // guna2ContainerControl1
             // 
@@ -134,7 +80,7 @@ namespace GarageManagement.User_Control
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(46, 375);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 19);
+            this.label6.Size = new System.Drawing.Size(111, 21);
             this.label6.TabIndex = 61;
             this.label6.Text = "Số điện thoại";
             // 
@@ -169,7 +115,7 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(46, 283);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 19);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 59;
             this.label3.Text = "Địa chỉ";
             // 
@@ -249,24 +195,24 @@ namespace GarageManagement.User_Control
             this.guna2GradientCircleButton1.Size = new System.Drawing.Size(148, 148);
             this.guna2GradientCircleButton1.TabIndex = 55;
             // 
-            // guna2GradientButton1
+            // insertBtn
             // 
-            this.guna2GradientButton1.BorderRadius = 15;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.RoyalBlue;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(96, 459);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(203, 30);
-            this.guna2GradientButton1.TabIndex = 54;
-            this.guna2GradientButton1.Text = "Thêm khách hàng";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            this.insertBtn.BorderRadius = 15;
+            this.insertBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.insertBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.insertBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.insertBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.insertBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.insertBtn.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.insertBtn.FillColor2 = System.Drawing.Color.RoyalBlue;
+            this.insertBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertBtn.ForeColor = System.Drawing.Color.White;
+            this.insertBtn.Location = new System.Drawing.Point(96, 459);
+            this.insertBtn.Name = "insertBtn";
+            this.insertBtn.Size = new System.Drawing.Size(203, 30);
+            this.insertBtn.TabIndex = 54;
+            this.insertBtn.Text = "Thêm khách hàng";
+            this.insertBtn.Click += new System.EventHandler(this.insertBtn_Click);
             // 
             // label5
             // 
@@ -274,7 +220,7 @@ namespace GarageManagement.User_Control
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(406, 99);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 19);
+            this.label5.Size = new System.Drawing.Size(205, 21);
             this.label5.TabIndex = 53;
             this.label5.Text = "Danh sách khách hàng";
             // 
@@ -284,7 +230,7 @@ namespace GarageManagement.User_Control
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(46, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
+            this.label4.Size = new System.Drawing.Size(92, 21);
             this.label4.TabIndex = 51;
             this.label4.Text = "Họ và tên";
             // 
@@ -319,7 +265,7 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(31, 27);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(250, 29);
+            this.label15.Size = new System.Drawing.Size(311, 36);
             this.label15.TabIndex = 47;
             this.label15.Text = "Thêm khách hàng";
             // 
@@ -352,14 +298,9 @@ namespace GarageManagement.User_Control
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(46, 191);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 19);
+            this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 66;
             this.label1.Text = "Giới tính";
-            // 
-            // signDate
-            // 
-            this.signDate.Text = "Ngày Đăng Ký";
-            this.signDate.Width = 100;
             // 
             // CustomerForm
             // 
@@ -374,14 +315,13 @@ namespace GarageManagement.User_Control
             this.Controls.Add(this.guna2GradientCircleButton2);
             this.Controls.Add(this.guna2GradientCircleButton3);
             this.Controls.Add(this.guna2GradientCircleButton1);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.insertBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtbxName);
             this.Controls.Add(this.label15);
             this.Name = "CustomerForm";
             this.Size = new System.Drawing.Size(1069, 622);
-            this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.guna2ContainerControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -389,9 +329,6 @@ namespace GarageManagement.User_Control
         }
 
         #endregion
-        private System.Windows.Forms.ColumnHeader gender;
-        private System.Windows.Forms.ColumnHeader customerName;
-        private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ListView customerLv;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private System.Windows.Forms.Label label6;
@@ -401,15 +338,12 @@ namespace GarageManagement.User_Control
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton2;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton3;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton insertBtn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtbxName;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2ComboBox genderCb;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ColumnHeader address;
-        private System.Windows.Forms.ColumnHeader phoneNumber;
-        private System.Windows.Forms.ColumnHeader signDate;
     }
 }
