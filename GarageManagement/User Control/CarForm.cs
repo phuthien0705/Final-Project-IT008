@@ -97,15 +97,55 @@ namespace GarageManagement.User_Control
         {
             string BienSo = plateNumberTb.Text;
             int MaHX = brandCb.SelectedIndex + 1;
-            int MaKH = Int32.Parse(customerLv.SelectedItems[0].Text);
+            if (BienSo != "")
+            {
+                if (customerLv.SelectedItems.Count > 0)
+                {
+                    int MaKH = Int32.Parse(customerLv.SelectedItems[0].Text);
 
-            if (XE_DAL.Instance.InsertCar(BienSo, MaHX, MaKH))
+                    if (XE_DAL.Instance.InsertCar(BienSo, MaHX, MaKH))
+                    {
+                        MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedItem + " thành công!!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedItem + " thất bại!!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn chủ xe !!");
+                }
+            } else
             {
-                MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedValue + " thành công!!");
+                MessageBox.Show("Vui lòng điền biển số xe !!");
             }
-            else
+        }
+
+        private void searchCustomerTb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char) Keys.Return)
             {
-                MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedValue + " thất bại!!");
+                customerLv.Items.Clear();
+
+                string keyword = searchCustomerTb.Text;
+                DataTable result = KHACHHANG_DAL.Instance.SearchForCustomer(keyword);
+
+                for (int i = 0; i < result.Rows.Count; i++)
+                {
+                    ListViewItem item = new ListViewItem(i + 1 + "");
+                    customerLv.Items.Add(item);
+
+                    // add customerName to carLv
+                    string customerName = result.Rows[i]["TenKH"].ToString();
+                    ListViewItem.ListViewSubItem customerNameItem = new ListViewItem.ListViewSubItem(item, customerName);
+                    item.SubItems.Add(customerNameItem);
+
+                    // add phoneNumber to carLv
+                    string phoneNumber = result.Rows[i]["DienThoai"].ToString();
+                    ListViewItem.ListViewSubItem phoneNumberItem = new ListViewItem.ListViewSubItem(item, phoneNumber);
+                    item.SubItems.Add(phoneNumberItem);
+                }
             }
         }
     }

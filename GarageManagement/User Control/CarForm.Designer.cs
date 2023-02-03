@@ -45,7 +45,7 @@ namespace GarageManagement.User_Control
             this.label3 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.problemLv = new System.Windows.Forms.ListView();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.searchCustomerTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             this.SuspendLayout();
@@ -266,36 +266,37 @@ namespace GarageManagement.User_Control
             this.problemLv.UseCompatibleStateImageBehavior = false;
             this.problemLv.View = System.Windows.Forms.View.Details;
             // 
-            // guna2TextBox2
+            // searchCustomerTb
             // 
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.DarkOrange;
-            this.guna2TextBox2.BorderRadius = 15;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconLeft")));
-            this.guna2TextBox2.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.guna2TextBox2.Location = new System.Drawing.Point(781, 87);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Tìm kiếm khách hàng";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(193, 25);
-            this.guna2TextBox2.TabIndex = 48;
-            this.guna2TextBox2.TextOffset = new System.Drawing.Point(5, 0);
+            this.searchCustomerTb.BorderColor = System.Drawing.Color.DarkOrange;
+            this.searchCustomerTb.BorderRadius = 15;
+            this.searchCustomerTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchCustomerTb.DefaultText = "";
+            this.searchCustomerTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchCustomerTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchCustomerTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchCustomerTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchCustomerTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchCustomerTb.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchCustomerTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchCustomerTb.IconLeft = ((System.Drawing.Image)(resources.GetObject("searchCustomerTb.IconLeft")));
+            this.searchCustomerTb.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.searchCustomerTb.IconLeftSize = new System.Drawing.Size(15, 15);
+            this.searchCustomerTb.Location = new System.Drawing.Point(781, 87);
+            this.searchCustomerTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchCustomerTb.Name = "searchCustomerTb";
+            this.searchCustomerTb.PasswordChar = '\0';
+            this.searchCustomerTb.PlaceholderText = "Tìm kiếm khách hàng";
+            this.searchCustomerTb.SelectedText = "";
+            this.searchCustomerTb.Size = new System.Drawing.Size(193, 25);
+            this.searchCustomerTb.TabIndex = 48;
+            this.searchCustomerTb.TextOffset = new System.Drawing.Point(5, 0);
+            this.searchCustomerTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchCustomerTb_KeyPress);
             // 
             // CarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.searchCustomerTb);
             this.Controls.Add(this.guna2ContainerControl2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.brandCb);
@@ -335,7 +336,7 @@ namespace GarageManagement.User_Control
         private Guna.UI2.WinForms.Guna2ComboBox brandCb;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox searchCustomerTb;
         private System.Windows.Forms.ListView problemLv;
     }
 }

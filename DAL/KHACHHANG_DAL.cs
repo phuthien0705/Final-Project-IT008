@@ -53,5 +53,11 @@ namespace DAL
             string query = String.Format("SELECT * FROM KHACHHANG WHERE MaKH = {0}", MaKH);
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public DataTable SearchForCustomer(string keyword)
+        {
+            string query = String.Format("SELECT * FROM KHACHHANG WHERE TenKH LIKE '%{0}%' OR DienThoai LIKE '%{1}%'", keyword, keyword);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
