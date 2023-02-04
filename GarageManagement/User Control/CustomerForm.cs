@@ -93,5 +93,36 @@ namespace GarageManagement.User_Control
                 MessageBox.Show("Thêm khách hàng " + name + " | " + phone + " thất bại!!");
             }
         }
+
+        private void viewCustomerDetail_Click(object sender, EventArgs e)
+        {
+            if (customerLv.SelectedItems.Count > 0)
+            {
+                int MaKH = (int) dtCustomer.Rows[customerLv.SelectedItems[0].Index]["MaKH"];
+                CustomerDetail customerDetail = new CustomerDetail(MaKH);
+                customerDetail.Show();
+                customerDetail.FormClosed += CustomerDetail_FormClosed;
+            } else
+            {
+                MessageBox.Show("Vui lòng chọn khách hàng để xem thông tin !!");
+            }
+        }
+
+        private void CustomerDetail_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoadCustomerList();
+        }
+
+        private void viewCustomerDetail_MouseMove(object sender, MouseEventArgs e)
+        {
+            viewCustomerDetail.Font = new Font(viewCustomerDetail.Font, FontStyle.Underline);
+            Cursor.Current = Cursors.Hand;
+        }
+
+        private void viewCustomerDetail_MouseLeave(object sender, EventArgs e)
+        {
+            viewCustomerDetail.Font = new Font(viewCustomerDetail.Font, FontStyle.Regular);
+            Cursor.Current = Cursors.Default;
+        }
     }
 }
