@@ -134,20 +134,20 @@ namespace GarageManagement.User_Control
                 customerLv.Items.Clear();
 
                 string keyword = searchCustomerTb.Text;
-                DataTable result = KHACHHANG_DAL.Instance.SearchForCustomer(keyword);
+                customerList = KHACHHANG_DAL.Instance.SearchForCustomer(keyword);
 
-                for (int i = 0; i < result.Rows.Count; i++)
+                for (int i = 0; i < customerList.Rows.Count; i++)
                 {
                     ListViewItem item = new ListViewItem(i + 1 + "");
                     customerLv.Items.Add(item);
 
                     // add customerName to carLv
-                    string customerName = result.Rows[i]["TenKH"].ToString();
+                    string customerName = customerList.Rows[i]["TenKH"].ToString();
                     ListViewItem.ListViewSubItem customerNameItem = new ListViewItem.ListViewSubItem(item, customerName);
                     item.SubItems.Add(customerNameItem);
 
                     // add phoneNumber to carLv
-                    string phoneNumber = result.Rows[i]["DienThoai"].ToString();
+                    string phoneNumber = customerList.Rows[i]["DienThoai"].ToString();
                     ListViewItem.ListViewSubItem phoneNumberItem = new ListViewItem.ListViewSubItem(item, phoneNumber);
                     item.SubItems.Add(phoneNumberItem);
                 }
