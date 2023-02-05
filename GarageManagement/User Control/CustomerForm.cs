@@ -20,17 +20,7 @@ namespace GarageManagement.User_Control
             InitializeComponent();
         }
 
-        public DataTable createTable()
-        {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("MaKH");
-            dt.Columns.Add("TenKH");
-            dt.Columns.Add("DienThoai");
-            dt.Columns.Add("DiaChi");
-            dt.Columns.Add("Gioitinh");
-            dt.Columns.Add("NgayDangKy");
-            return dt;
-        }
+      
 
         static void BindingData(DataTable data, ListView listview)
         {
