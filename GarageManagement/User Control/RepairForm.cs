@@ -49,9 +49,6 @@ namespace GarageManagement.User_Control
 
         }
 
-
-        
-
         private void RepairForm_Load(object sender, EventArgs e)
         {
             loadCartComboBox();
@@ -228,7 +225,7 @@ namespace GarageManagement.User_Control
                 {
                     if (dr2["MaPhuTung"].ToString() == dr["Id"].ToString())
                     {
-                        KHO_DAL.Instance.updateAccessory(Convert.ToInt32(dr2["MaPhuTung"]), dr2["TenVatTuPhuTung"].ToString(), Convert.ToInt32(dr2["SoLuong"]) - Convert.ToInt32(dr["Quantity"]), Convert.ToInt32(dr2["DonGia"]));
+                        KHO_DAL.Instance.updateAccessory(Convert.ToInt32(dr2["MaPhuTung"]), Convert.ToInt32(dr2["SoLuong"]) - Convert.ToInt32(dr["Quantity"]), Convert.ToInt32(dr2["DonGia"]));
                     }
                 }    
             }
