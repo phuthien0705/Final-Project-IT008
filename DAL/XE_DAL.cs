@@ -38,10 +38,10 @@ namespace DAL
             return data;
         }
 
-        public bool InsertCar(string BienSo, int MaHX)
+        public bool InsertCar(string BienSo, int MaHX, int MaKH)
         {
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("INSERT INTO XE(BienSo,MaHX,MaKH,TrangThai,NgayTiepNhan) VALUES('{0}',{1}, 1, 1, '{2}')", BienSo, MaHX, currentTime);
+            string query = String.Format("INSERT INTO XE(BienSo,MaHX,MaKH,TrangThai,NgayTiepNhan) VALUES('{0}',{1}, {2}, 1, '{3}')", BienSo, MaHX, MaKH, currentTime);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -60,9 +60,9 @@ namespace DAL
             return result > 0;
         }
 
-        public bool UpdateCar(int MaXe, string BienSo, int MaHX, int TrangThai)
+        public bool UpdateCar(int MaXe, string BienSo, int MaKH, int MaHX, int TrangThai)
         {
-            string query = String.Format("UPDATE XE SET BienSo = '{0}', MaHX = {1}, TrangThai = {2} WHERE MaXe = '{3}'", BienSo, MaHX, TrangThai, MaXe);
+            string query = String.Format("UPDATE XE SET BienSo = '{0}', MaHX = {1}, MaKH = {2},TrangThai = {3} WHERE MaXe = '{4}'", BienSo, MaHX, MaKH, TrangThai, MaXe);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -83,25 +83,6 @@ namespace DAL
         {
             string query = String.Format("SELECT MaKH FROM XE WHERE MaXe = {0}", MaXe);
             return (int)DataProvider.Instance.ExecuteScalar(query);
-        }
-
-        public bool UpdateCustomer(int MaKH, string TenKH, string DienThoai, string GioiTinh, string DiaChi)
-        {
-            string query = String.Format("UPDATE KHACHHANG SET TenKH = N'{0}', DienThoai = '{1}', GioiTinh = '{2}', DiaChi = N'{3}' WHERE MaKH = {4}", TenKH, DienThoai, GioiTinh, DiaChi, MaKH);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
-            return result > 0;
-        }
-
-        public DataTable LoadCustomerList()
-        {
-            string query = "SELECT * FROM KHACHHANG";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
-
-        public DataTable GetCustomerDetail(int MaKH)
-        {
-            string query = String.Format("SELECT * FROM KHACHHANG WHERE MaKH = {0}", MaKH);
-            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace DAL
 
         public DataTable LoadProblemDetail(int MaPhieuSuaChua)
         {
-            string query = String.Format("SELECT MaPhieuSuaChua, TenTienCong, ChiPhi FROM TIENCONG, CHITIETTIENCONG WHERE MaPhieuSuaChua = {0} AND CHITIETTIENCONG.MaTC = TIENCONG.MaTC", MaPhieuSuaChua);
+            string query = String.Format("SELECT CHITIETTIENCONG.MaTC,  MaPhieuSuaChua, TenTienCong, ChiPhi FROM TIENCONG, CHITIETTIENCONG WHERE MaPhieuSuaChua = {0} AND CHITIETTIENCONG.MaTC = TIENCONG.MaTC", MaPhieuSuaChua);
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

@@ -24,11 +24,18 @@ namespace DAL
             return data;
         }
         // this function is use to acc bill
-        public void addBill(int MaPhieuThuTien, int MaKH,
-            int TienThu, DateTime? NgayThuTien)
+        public void addBill(int MaPhieuThuTien, int MaKH, int TienThu, DateTime? NgayThuTien)
         {
             string query = $"INSERT dbo.KHO (MaPhieuThuTien,MaKH,TienThu,NgayThuTien) VALUES (N'{MaPhieuThuTien}',N'{MaKH}',N'{TienThu}',N'{NgayThuTien}')";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        public int GetTotalRevenue()
+        {
+            string query = "SELECT SUM(TienThu) FROM PHIEUTHUTIEN";
+            return (int) DataProvider.Instance.ExecuteScalar(query);
+        }
+
+
     }
 }
