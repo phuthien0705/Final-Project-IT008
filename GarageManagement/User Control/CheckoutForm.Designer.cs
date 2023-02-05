@@ -30,54 +30,54 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Indicator",
             "200",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Insulation film",
             "450",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Disk brake",
             "150",
             "1"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutForm));
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.orderDetailLv = new System.Windows.Forms.ListView();
+            this.orderDetailListView = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.kitName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quanity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.totalPn = new Guna.UI2.WinForms.Guna2Panel();
+            this.totalPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.submitBtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.paymentMethodComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.totalCostLabel = new System.Windows.Forms.Label();
+            this.taxLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.totalRepairCostLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.totalCostOfSquarePartLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.addBillPn = new Guna.UI2.WinForms.Guna2Panel();
@@ -104,7 +104,7 @@ namespace GarageManagement.User_Control
             this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2ContainerControl1.SuspendLayout();
-            this.totalPn.SuspendLayout();
+            this.totalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.addBillPn.SuspendLayout();
             this.customerPanel.SuspendLayout();
@@ -119,34 +119,34 @@ namespace GarageManagement.User_Control
             // guna2ContainerControl1
             // 
             this.guna2ContainerControl1.BorderRadius = 15;
-            this.guna2ContainerControl1.Controls.Add(this.orderDetailLv);
+            this.guna2ContainerControl1.Controls.Add(this.orderDetailListView);
             this.guna2ContainerControl1.Location = new System.Drawing.Point(24, 406);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(691, 184);
             this.guna2ContainerControl1.TabIndex = 2;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
-            // orderDetailLv
+            // orderDetailListView
             // 
-            this.orderDetailLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orderDetailLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.orderDetailListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderDetailListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.kitName,
             this.price,
             this.quanity});
-            this.orderDetailLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderDetailLv.FullRowSelect = true;
-            this.orderDetailLv.HideSelection = false;
-            this.orderDetailLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.orderDetailLv.Location = new System.Drawing.Point(12, 9);
-            this.orderDetailLv.Name = "orderDetailLv";
-            this.orderDetailLv.Size = new System.Drawing.Size(661, 128);
-            this.orderDetailLv.TabIndex = 2;
-            this.orderDetailLv.UseCompatibleStateImageBehavior = false;
-            this.orderDetailLv.View = System.Windows.Forms.View.Details;
+            this.orderDetailListView.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDetailListView.FullRowSelect = true;
+            this.orderDetailListView.HideSelection = false;
+            this.orderDetailListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem7,
+            listViewItem8,
+            listViewItem9});
+            this.orderDetailListView.Location = new System.Drawing.Point(12, 9);
+            this.orderDetailListView.Name = "orderDetailListView";
+            this.orderDetailListView.Size = new System.Drawing.Size(661, 128);
+            this.orderDetailListView.TabIndex = 2;
+            this.orderDetailListView.UseCompatibleStateImageBehavior = false;
+            this.orderDetailListView.View = System.Windows.Forms.View.Details;
             // 
             // id
             // 
@@ -168,27 +168,27 @@ namespace GarageManagement.User_Control
             this.quanity.Text = "Số lượng";
             this.quanity.Width = 132;
             // 
-            // totalPn
+            // totalPanel
             // 
-            this.totalPn.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.totalPn.BorderRadius = 15;
-            this.totalPn.Controls.Add(this.pictureBox1);
-            this.totalPn.Controls.Add(this.submitBtn);
-            this.totalPn.Controls.Add(this.guna2ComboBox1);
-            this.totalPn.Controls.Add(this.label12);
-            this.totalPn.Controls.Add(this.gunaLinePanel1);
-            this.totalPn.Controls.Add(this.label6);
-            this.totalPn.Controls.Add(this.label7);
-            this.totalPn.Controls.Add(this.label5);
-            this.totalPn.Controls.Add(this.label1);
-            this.totalPn.Controls.Add(this.label4);
-            this.totalPn.Controls.Add(this.label3);
-            this.totalPn.Controls.Add(this.label11);
-            this.totalPn.Controls.Add(this.label2);
-            this.totalPn.Location = new System.Drawing.Point(743, 19);
-            this.totalPn.Name = "totalPn";
-            this.totalPn.Size = new System.Drawing.Size(292, 571);
-            this.totalPn.TabIndex = 1;
+            this.totalPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.totalPanel.BorderRadius = 15;
+            this.totalPanel.Controls.Add(this.pictureBox1);
+            this.totalPanel.Controls.Add(this.submitBtn);
+            this.totalPanel.Controls.Add(this.paymentMethodComboBox);
+            this.totalPanel.Controls.Add(this.label12);
+            this.totalPanel.Controls.Add(this.gunaLinePanel1);
+            this.totalPanel.Controls.Add(this.totalCostLabel);
+            this.totalPanel.Controls.Add(this.taxLabel);
+            this.totalPanel.Controls.Add(this.label5);
+            this.totalPanel.Controls.Add(this.totalRepairCostLabel);
+            this.totalPanel.Controls.Add(this.label4);
+            this.totalPanel.Controls.Add(this.label3);
+            this.totalPanel.Controls.Add(this.totalCostOfSquarePartLabel);
+            this.totalPanel.Controls.Add(this.label2);
+            this.totalPanel.Location = new System.Drawing.Point(743, 19);
+            this.totalPanel.Name = "totalPanel";
+            this.totalPanel.Size = new System.Drawing.Size(292, 571);
+            this.totalPanel.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -220,29 +220,30 @@ namespace GarageManagement.User_Control
             this.submitBtn.Text = "Thanh toán";
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
-            // guna2ComboBox1
+            // paymentMethodComboBox
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.DarkOrchid;
-            this.guna2ComboBox1.BorderRadius = 15;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 20;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "On cash",
+            this.paymentMethodComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.paymentMethodComboBox.BorderColor = System.Drawing.Color.DarkOrchid;
+            this.paymentMethodComboBox.BorderRadius = 15;
+            this.paymentMethodComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.paymentMethodComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.paymentMethodComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.paymentMethodComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.paymentMethodComboBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentMethodComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.paymentMethodComboBox.ItemHeight = 20;
+            this.paymentMethodComboBox.Items.AddRange(new object[] {
+            "Tiền mặt",
             "PayPal",
             "Apple Pay",
             "Google Pay",
             "Visa"});
-            this.guna2ComboBox1.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.Location = new System.Drawing.Point(24, 427);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(239, 26);
-            this.guna2ComboBox1.TabIndex = 35;
+            this.paymentMethodComboBox.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentMethodComboBox.Location = new System.Drawing.Point(24, 427);
+            this.paymentMethodComboBox.Name = "paymentMethodComboBox";
+            this.paymentMethodComboBox.Size = new System.Drawing.Size(239, 26);
+            this.paymentMethodComboBox.TabIndex = 35;
+            this.paymentMethodComboBox.SelectedIndexChanged += new System.EventHandler(this.paymentMethodComboBox_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -265,25 +266,26 @@ namespace GarageManagement.User_Control
             this.gunaLinePanel1.Size = new System.Drawing.Size(240, 1);
             this.gunaLinePanel1.TabIndex = 29;
             // 
-            // label6
+            // totalCostLabel
             // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(122, 346);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 36);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "$1720";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.totalCostLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCostLabel.Location = new System.Drawing.Point(122, 346);
+            this.totalCostLabel.Name = "totalCostLabel";
+            this.totalCostLabel.Size = new System.Drawing.Size(145, 36);
+            this.totalCostLabel.TabIndex = 28;
+            this.totalCostLabel.Text = "$1720";
+            this.totalCostLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.totalCostLabel.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label7
+            // taxLabel
             // 
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(158, 304);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 23);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "10.00%";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.taxLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxLabel.Location = new System.Drawing.Point(158, 304);
+            this.taxLabel.Name = "taxLabel";
+            this.taxLabel.Size = new System.Drawing.Size(109, 23);
+            this.taxLabel.TabIndex = 27;
+            this.taxLabel.Text = "10.00%";
+            this.taxLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label5
             // 
@@ -295,15 +297,15 @@ namespace GarageManagement.User_Control
             this.label5.TabIndex = 26;
             this.label5.Text = "Tổng tiền:";
             // 
-            // label1
+            // totalRepairCostLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(158, 262);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 23);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "$200";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.totalRepairCostLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalRepairCostLabel.Location = new System.Drawing.Point(158, 262);
+            this.totalRepairCostLabel.Name = "totalRepairCostLabel";
+            this.totalRepairCostLabel.Size = new System.Drawing.Size(109, 23);
+            this.totalRepairCostLabel.TabIndex = 24;
+            this.totalRepairCostLabel.Text = "$200";
+            this.totalRepairCostLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label4
             // 
@@ -325,15 +327,15 @@ namespace GarageManagement.User_Control
             this.label3.TabIndex = 25;
             this.label3.Text = "Phí sửa chữa:";
             // 
-            // label11
+            // totalCostOfSquarePartLabel
             // 
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(154, 222);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 21);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "$1500";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.totalCostOfSquarePartLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCostOfSquarePartLabel.Location = new System.Drawing.Point(154, 222);
+            this.totalCostOfSquarePartLabel.Name = "totalCostOfSquarePartLabel";
+            this.totalCostOfSquarePartLabel.Size = new System.Drawing.Size(113, 21);
+            this.totalCostOfSquarePartLabel.TabIndex = 22;
+            this.totalCostOfSquarePartLabel.Text = "$1500";
+            this.totalCostOfSquarePartLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
@@ -348,7 +350,7 @@ namespace GarageManagement.User_Control
             // gunaElipse3
             // 
             this.gunaElipse3.Radius = 15;
-            this.gunaElipse3.TargetControl = this.totalPn;
+            this.gunaElipse3.TargetControl = this.totalPanel;
             // 
             // addBillPn
             // 
@@ -551,9 +553,9 @@ namespace GarageManagement.User_Control
             this.ProblemListView.FullRowSelect = true;
             this.ProblemListView.HideSelection = false;
             this.ProblemListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.ProblemListView.Location = new System.Drawing.Point(12, 8);
             this.ProblemListView.Name = "ProblemListView";
             this.ProblemListView.Size = new System.Drawing.Size(661, 114);
@@ -605,13 +607,13 @@ namespace GarageManagement.User_Control
             this.Controls.Add(this.problemPn);
             this.Controls.Add(this.addBillPn);
             this.Controls.Add(this.guna2ContainerControl1);
-            this.Controls.Add(this.totalPn);
+            this.Controls.Add(this.totalPanel);
             this.Name = "CheckoutForm";
             this.Size = new System.Drawing.Size(1069, 622);
             this.Load += new System.EventHandler(this.CheckoutForm_Load);
             this.guna2ContainerControl1.ResumeLayout(false);
-            this.totalPn.ResumeLayout(false);
-            this.totalPn.PerformLayout();
+            this.totalPanel.ResumeLayout(false);
+            this.totalPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.addBillPn.ResumeLayout(false);
             this.addBillPn.PerformLayout();
@@ -625,22 +627,22 @@ namespace GarageManagement.User_Control
         #endregion
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
-        private Guna.UI2.WinForms.Guna2Panel totalPn;
+        private Guna.UI2.WinForms.Guna2Panel totalPanel;
         private Guna.UI.WinForms.GunaElipse gunaElipse3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label totalCostLabel;
+        private System.Windows.Forms.Label taxLabel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label totalRepairCostLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label totalCostOfSquarePartLabel;
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox paymentMethodComboBox;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2GradientButton submitBtn;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
-        private System.Windows.Forms.ListView orderDetailLv;
+        private System.Windows.Forms.ListView orderDetailListView;
         private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ColumnHeader kitName;
         private System.Windows.Forms.ColumnHeader price;

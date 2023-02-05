@@ -26,7 +26,7 @@ namespace DAL
         }
         public DataTable GetRepairCardFromCarNotInPHIEUTHUTIEN(int MaXe)
         {
-            string query = String.Format("SELECT * FROM PHIEUSUACHUA t1 LEFT  WHERE t1.MaXe = {0} AND t1.MaXe NOT IN (SELECT MaXe FROM PHIEUTHUTIEN)", MaXe);
+            string query = String.Format("SELECT * FROM PHIEUSUACHUA t1  WHERE t1.MaXe = {0} AND t1.MaXe NOT IN (SELECT MaXe FROM PHIEUTHUTIEN)", MaXe);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }

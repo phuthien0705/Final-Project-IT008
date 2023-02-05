@@ -24,9 +24,9 @@ namespace DAL
             return data;
         }
         // this function is use to acc bill
-        public void addBill(int MaPhieuThuTien, int MaKH, int TienThu, DateTime? NgayThuTien)
+        public void addBill(int MaXe, double TienThu, DateTime? NgayThuTien)
         {
-            string query = $"INSERT dbo.KHO (MaPhieuThuTien,MaKH,TienThu,NgayThuTien) VALUES (N'{MaPhieuThuTien}',N'{MaKH}',N'{TienThu}',N'{NgayThuTien}')";
+            string query = $"INSERT INTO dbo.PHIEUTHUTIEN (MaXe,TienThu,NgayThuTien) VALUES (N'{MaXe}',N'{TienThu}',N'{NgayThuTien}')";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
