@@ -252,6 +252,7 @@ namespace GarageManagement
             this.deleteBtn.Size = new System.Drawing.Size(110, 30);
             this.deleteBtn.TabIndex = 82;
             this.deleteBtn.Text = "Delete";
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // label12
             // 

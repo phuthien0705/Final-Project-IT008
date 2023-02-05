@@ -51,7 +51,7 @@ namespace GarageManagement.User_Control
             InOrderedLv.Columns.Add("STT", 50);
             InOrderedLv.Columns.Add("Biển số", 120);
             InOrderedLv.Columns.Add("Hãng xe", 100);
-            InOrderedLv.Columns.Add("Tên chủ xe", 150);
+            InOrderedLv.Columns.Add("Tên chủ xe", 180);
             InOrderedLv.Columns.Add("Số điện thoại", 120);
             InOrderedLv.Columns.Add("Tình trạng", 120);
             InOrderedLv.Columns.Add("Ngày tiếp nhận", 200);

@@ -52,7 +52,7 @@ namespace GarageManagement.User_Control
             completedLv.Columns.Add("STT", 50);
             completedLv.Columns.Add("Biển số", 120);
             completedLv.Columns.Add("Hãng xe", 100);
-            completedLv.Columns.Add("Tên chủ xe", 150);
+            completedLv.Columns.Add("Tên chủ xe", 180);
             completedLv.Columns.Add("Số điện thoại", 120);
             completedLv.Columns.Add("Tình trạng", 120);
             completedLv.Columns.Add("Ngày tiếp nhận", 200);

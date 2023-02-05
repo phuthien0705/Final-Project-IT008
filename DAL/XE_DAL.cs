@@ -53,6 +53,13 @@ namespace DAL
             return result > 0;
         }
 
+        public bool DeleteAllCarOfCustomer(int MaKH)
+        {
+            string query = String.Format("DELETE FROM XE WHERE MaKH = {0}", MaKH);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
         public bool SoftDeleteCar(int MaXe)
         {
             string query = String.Format("UPDATE XE SET TrangThai = 0 WHERE MaXe = {0}", MaXe);
@@ -84,5 +91,6 @@ namespace DAL
             string query = String.Format("SELECT MaKH FROM XE WHERE MaXe = {0}", MaXe);
             return (int)DataProvider.Instance.ExecuteScalar(query);
         }
+
     }
 }

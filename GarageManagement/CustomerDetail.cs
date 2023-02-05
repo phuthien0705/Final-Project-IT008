@@ -14,6 +14,7 @@ namespace GarageManagement
     public partial class CustomerDetail : Form
     {
         private int MaKH;
+        public bool deleted = false;
 
         public CustomerDetail(int MaKH)
         {
@@ -56,6 +57,24 @@ namespace GarageManagement
                 MessageBox.Show("Cập nhật khách hàng thất bại");
             }
             this.Close();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn sẽ xóa khách hàng này ?", "delete customer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (XE_DAL.Instance.DeleteAllCarOfCustomer(this.MaKH) && KHACHHANG_DAL.Instance.DeleteCustomer(this.MaKH) )
+                {
+                    MessageBox.Show("Xóa khách hàng thành công!!");
+                    deleted = true;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa khách hàng thất bại !! Thử lại");
+                }
+            }
         }
     }
 }
