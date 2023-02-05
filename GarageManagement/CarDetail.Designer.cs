@@ -31,29 +31,29 @@ namespace GarageManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarDetail));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Indicator",
             "200",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Insulation film",
             "450",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Disk brake",
             "150",
@@ -107,7 +107,7 @@ namespace GarageManagement
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(219, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 28);
+            this.label7.Size = new System.Drawing.Size(137, 23);
             this.label7.TabIndex = 56;
             this.label7.Text = "THÔNG TIN XE";
             // 
@@ -117,7 +117,7 @@ namespace GarageManagement
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(35, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 49;
             this.label2.Text = "Hãng xe";
             // 
@@ -127,7 +127,7 @@ namespace GarageManagement
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(385, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 21);
+            this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 51;
             this.label1.Text = "Biển số";
             // 
@@ -182,7 +182,7 @@ namespace GarageManagement
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(172, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 21);
+            this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 61;
             this.label5.Text = "Tình trạng";
             // 
@@ -244,7 +244,7 @@ namespace GarageManagement
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(19, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 23);
+            this.label9.Size = new System.Drawing.Size(136, 19);
             this.label9.TabIndex = 66;
             this.label9.Text = "Dịch vụ đã chọn";
             // 
@@ -254,7 +254,7 @@ namespace GarageManagement
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(9, 402);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(177, 23);
+            this.label10.Size = new System.Drawing.Size(146, 19);
             this.label10.TabIndex = 67;
             this.label10.Text = "Phụ tùng đã chọn";
             // 
@@ -264,7 +264,7 @@ namespace GarageManagement
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(327, 112);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(161, 21);
+            this.label12.Size = new System.Drawing.Size(138, 19);
             this.label12.TabIndex = 71;
             this.label12.Text = "Thời gian tiếp nhận";
             // 
@@ -306,9 +306,9 @@ namespace GarageManagement
             this.problemLv.FullRowSelect = true;
             this.problemLv.HideSelection = false;
             this.problemLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem7,
+            listViewItem8,
+            listViewItem9});
             this.problemLv.Location = new System.Drawing.Point(161, 212);
             this.problemLv.Name = "problemLv";
             this.problemLv.Size = new System.Drawing.Size(381, 101);
@@ -348,9 +348,9 @@ namespace GarageManagement
             this.kitOrderedLv.FullRowSelect = true;
             this.kitOrderedLv.HideSelection = false;
             this.kitOrderedLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.kitOrderedLv.Location = new System.Drawing.Point(161, 356);
             this.kitOrderedLv.Name = "kitOrderedLv";
             this.kitOrderedLv.Size = new System.Drawing.Size(381, 105);
@@ -405,9 +405,10 @@ namespace GarageManagement
             // 
             this.viewCustomerDetail.BackColor = System.Drawing.Color.Transparent;
             this.viewCustomerDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewCustomerDetail.Location = new System.Drawing.Point(397, 188);
+            this.viewCustomerDetail.ForeColor = System.Drawing.Color.DarkOrange;
+            this.viewCustomerDetail.Location = new System.Drawing.Point(595, 252);
             this.viewCustomerDetail.Name = "viewCustomerDetail";
-            this.viewCustomerDetail.Size = new System.Drawing.Size(179, 20);
+            this.viewCustomerDetail.Size = new System.Drawing.Size(145, 18);
             this.viewCustomerDetail.TabIndex = 75;
             this.viewCustomerDetail.Text = "Xem thông tin chủ xe";
             this.viewCustomerDetail.Click += new System.EventHandler(this.viewCustomerDetail_Click);
@@ -438,7 +439,7 @@ namespace GarageManagement
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(35, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 21);
+            this.label3.Size = new System.Drawing.Size(57, 19);
             this.label3.TabIndex = 76;
             this.label3.Text = "Chủ xe";
             // 
