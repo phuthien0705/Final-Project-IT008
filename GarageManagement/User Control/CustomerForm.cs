@@ -18,6 +18,7 @@ namespace GarageManagement.User_Control
         {
             InitializeComponent();
             LoadCustomerList();
+            genderCb.SelectedIndex = 0;
         }
 
         void LoadCustomerList()
