@@ -92,5 +92,11 @@ namespace DAL
             return (int)DataProvider.Instance.ExecuteScalar(query);
         }
 
+        public int GetLatestCar()
+        {
+            string query = "SELECT TOP 1 MaXe FROM XE ORDER BY MaXe DESC";
+            return (int) DataProvider.Instance.ExecuteScalar(query);
+        }
+
     }
 }

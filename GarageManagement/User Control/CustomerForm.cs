@@ -63,20 +63,6 @@ namespace GarageManagement.User_Control
             }
         }
 
-        void BindingData(DataTable data, ListView listview)
-        {
-            listview.Items.Clear();
-            foreach (DataRow row in data.Rows)
-            {
-                ListViewItem item = new ListViewItem(row[0].ToString());
-                for (int i = 1; i < data.Columns.Count; i++)
-                {
-                    item.SubItems.Add(row[i].ToString());
-                }
-                listview.Items.Add(item);
-            }
-        }
-
         private void insertBtn_Click(object sender, EventArgs e)
         {
             String name = txtbxName.Text.Trim();

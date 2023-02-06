@@ -108,13 +108,24 @@ namespace GarageManagement.User_Control
             {
                 if (customerLv.SelectedItems.Count > 0)
                 {
-                    if (XE_DAL.Instance.InsertCar(BienSo, MaHX, MaKH))
+                    if (problemLv.SelectedItems.Count > 0)
                     {
-                        MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedItem + " thành công!!");
+                        if (XE_DAL.Instance.InsertCar(BienSo, MaHX, MaKH))
+                        {
+                            MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedItem + " thành công!!");
+                            int MaXe = XE_DAL.Instance.GetLatestCar();
+                            PHIEUSUACHUA_DAL.Instance.InsertRepairCard(MaXe, MaKH, 0, 0);
+                            int MaPhieuSuaChua = (int)(PHIEUSUACHUA_DAL.Instance.GetRepairCardFromCar(MaXe)).Rows[0]["MaPhieuSuaChua"];
+                            InsertProblem(MaPhieuSuaChua);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedItem + " thất bại!!");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Thêm xe " + BienSo + " | " + brandCb.SelectedItem + " thất bại!!");
+                        MessageBox.Show("Vui lòng chọn dịch vụ sửa chữa cho xe !!");
                     }
                 }
                 else
@@ -125,6 +136,19 @@ namespace GarageManagement.User_Control
             {
                 MessageBox.Show("Vui lòng điền biển số xe !!");
             }
+        }
+
+        void InsertProblem(int MaPhieuSuaChua)
+        {
+            int TongTienCong = 0;
+            foreach (ListViewItem item in problemLv.SelectedItems)
+            {
+                int MaTC = (int) problemList.Rows[item.Index]["MaTC"];
+                int ChiPhi = (int) problemList.Rows[item.Index]["ChiPhi"];
+                CHITIETTIENCONG_DAL.Instance.InsertProblem(MaPhieuSuaChua, MaTC);
+                TongTienCong += ChiPhi;
+            }
+            PHIEUSUACHUA_DAL.Instance.UpdateProblemFee(MaPhieuSuaChua, TongTienCong);
         }
 
         private void searchCustomerTb_KeyPress(object sender, KeyPressEventArgs e)
