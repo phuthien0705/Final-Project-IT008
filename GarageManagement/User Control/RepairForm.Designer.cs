@@ -128,6 +128,7 @@ namespace GarageManagement.User_Control
             this.kitChosenLv.FullRowSelect = true;
             this.kitChosenLv.HideSelection = false;
             this.kitChosenLv.Location = new System.Drawing.Point(28, 374);
+            this.kitChosenLv.MultiSelect = false;
             this.kitChosenLv.Name = "kitChosenLv";
             this.kitChosenLv.Size = new System.Drawing.Size(593, 180);
             this.kitChosenLv.TabIndex = 41;
@@ -195,11 +196,12 @@ namespace GarageManagement.User_Control
             this.updateBtn.FillColor2 = System.Drawing.Color.DeepSkyBlue;
             this.updateBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.White;
-            this.updateBtn.Location = new System.Drawing.Point(511, 570);
+            this.updateBtn.Location = new System.Drawing.Point(458, 570);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(113, 25);
+            this.updateBtn.Size = new System.Drawing.Size(166, 25);
             this.updateBtn.TabIndex = 37;
-            this.updateBtn.Text = "Cập nhật";
+            this.updateBtn.Text = "Cập nhật số lượng";
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // label6
             // 
@@ -241,11 +243,12 @@ namespace GarageManagement.User_Control
             this.removeBtn.FillColor2 = System.Drawing.Color.DeepPink;
             this.removeBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeBtn.ForeColor = System.Drawing.Color.White;
-            this.removeBtn.Location = new System.Drawing.Point(414, 570);
+            this.removeBtn.Location = new System.Drawing.Point(292, 570);
             this.removeBtn.Name = "removeBtn";
-            this.removeBtn.Size = new System.Drawing.Size(91, 25);
+            this.removeBtn.Size = new System.Drawing.Size(157, 25);
             this.removeBtn.TabIndex = 42;
-            this.removeBtn.Text = "Xóa";
+            this.removeBtn.Text = "Loại bỏ phụ tùng";
+            this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
             // problemLv
             // 

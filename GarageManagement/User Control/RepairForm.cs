@@ -111,8 +111,8 @@ namespace GarageManagement.User_Control
             int MaPhieuSuaChua = (int)PHIEUSUACHUA_DAL.Instance.GetRepairCardFromCar(MaXe).Rows[0]["MaPhieuSuaChua"];
             problemList = CHITIETTIENCONG_DAL.Instance.LoadProblemDetail(MaPhieuSuaChua);
             problemLv.Columns.Add("STT", 50);
-            problemLv.Columns.Add("Tên dịch vụ", 150);
-            problemLv.Columns.Add("Chi phí (VND)", 100);
+            problemLv.Columns.Add("Tên dịch vụ", 180);
+            problemLv.Columns.Add("Chi phí (VND)", 120);
             for (int i = 0; i < problemList.Rows.Count; i++)
             {
                 ListViewItem item = new ListViewItem(i + 1 + "");
@@ -143,7 +143,7 @@ namespace GarageManagement.User_Control
                     }
                     else
                     {
-                        MessageBox.Show("Phụ tùng nãy đã được chọn !!");
+                        MessageBox.Show("Phụ tùng "+ item.SubItems[1].Text + " đã được chọn !!");
                     }
                 }
                 LoadChoosenKitList();
@@ -167,6 +167,54 @@ namespace GarageManagement.User_Control
         {
             int MaXe = (int) carList.Rows[carCbb.SelectedIndex]["MaXe"];
             LoadProblemList(MaXe);
+        }
+
+        private void removeBtn_Click(object sender, EventArgs e)
+        {
+            if (kitChosenLv.SelectedItems.Count == 1)
+            {
+                chosenKitData.Rows.RemoveAt(kitChosenLv.SelectedItems[0].Index);
+                LoadChoosenKitList();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn phụ tùng để loại bỏ !!");
+            }
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {   
+            if (kitChosenLv.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn phụ tùng để cập nhật số lượng !!");
+            }
+            else
+            {
+                int isNumeric;
+                if (txtbxQuantity.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập số lượng phụ tùng muốn cập nhật !!");
+                }
+                else if (!Int32.TryParse(txtbxQuantity.Text, out isNumeric))
+                {
+                    MessageBox.Show("Vui lòng nhập đúng định dạng số !!");
+                }
+                else 
+                {
+                    int MaPhuTung = (int) chosenKitData.Rows[kitChosenLv.SelectedItems[0].Index]["MaPhuTung"];
+                    int quantityAvailable = (int) (KHO_DAL.Instance.getKitDetailOnKitIndex(MaPhuTung)).Rows[0]["SoLuong"];
+                    if (Int32.Parse(txtbxQuantity.Text) > quantityAvailable)
+                    {
+                        MessageBox.Show("Không thể chọn số lượng vượt quá số lượng phụ tùng có sẵn trong kho !!");
+                    }
+                    else
+                    {
+                        int quantity = Int32.Parse(txtbxQuantity.Text);
+                        chosenKitData.Rows[kitChosenLv.SelectedItems[0].Index]["SoLuong"] = quantity;
+                        LoadChoosenKitList();
+                    }
+                }
+            }
         }
     }
 }

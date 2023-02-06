@@ -37,6 +37,11 @@ namespace DAL
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+        public DataTable getKitDetailOnKitIndex(int MaPhuTung)
+        {
+            string query = String.Format("SELECT * FROM KHO WHERE MaPhuTung = {0}", MaPhuTung);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         // this function is use to get accessories in stock
         public DataTable getAccessoriesInStock()
         {
