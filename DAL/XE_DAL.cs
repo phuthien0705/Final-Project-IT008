@@ -26,7 +26,7 @@ namespace DAL
 
         public DataTable LoadCarListOnStatus(int TrangThai)
         {
-            string query = String.Format("SELECT MaXe, BienSo, TenKH, DienThoai, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND TrangThai = {0} AND XE.MaKH = KHACHHANG.MaKH ORDER BY NgayTiepNhan DESC", TrangThai);
+            string query = String.Format("SELECT MaXe,XE.MaKH, BienSo, TenKH, DienThoai, TrangThai, NgayTiepNhan, TenHieuXe FROM XE, HIEUXE, KHACHHANG WHERE XE.MaHX = HIEUXE.MaHX AND TrangThai = {0} AND XE.MaKH = KHACHHANG.MaKH ORDER BY NgayTiepNhan DESC", TrangThai);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -73,7 +73,12 @@ namespace DAL
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-
+        public bool UpdateCarStatus(int MaXe, int TrangThai)
+        {
+            string query = String.Format("UPDATE XE SET TrangThai = {0} WHERE MaXe = '{1}'", TrangThai, MaXe);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
         public int GetNumberOfTypeCar(int TrangThai)
         {
             string query = String.Format("SELECT COUNT(*) FROM XE WHERE TrangThai = {0}", TrangThai);

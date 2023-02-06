@@ -33,7 +33,11 @@ namespace DAL
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-
+        public DataTable GetCustomerById(string MaKH) {
+            string query = $"SELECT * FROM KHACHHANG WHERE MaKH=N'{MaKH}'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
         public bool DeleteCustomer(int MaKhachHang)
         {
             string query = String.Format("DELETE FROM KHACHHANG WHERE MaKH = {0}", MaKhachHang);
