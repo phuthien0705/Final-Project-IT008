@@ -111,7 +111,14 @@ namespace GarageManagement.User_Control
                 foreach (ListViewItem item in kitAvailableLv.SelectedItems)
                 {
                     int MaPhuTung = (int)availableKitData.Rows[item.Index]["MaPhuTung"];
-                    chosenKitData.Rows.Add(MaPhuTung, item.SubItems[1].Text, 1, Int32.Parse(item.SubItems[2].Text));
+                    if (!CheckExistKitInChoosenList(MaPhuTung))
+                    {
+                        chosenKitData.Rows.Add(MaPhuTung, item.SubItems[1].Text, 1, Int32.Parse(item.SubItems[2].Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Phụ tùng nãy đã được chọn !!");
+                    }
                 }
                 LoadChoosenKitList();
             }
@@ -119,6 +126,15 @@ namespace GarageManagement.User_Control
             {
                 MessageBox.Show("Vui lòng chọn phụ tùng !!");
             }
+        }
+
+        public bool CheckExistKitInChoosenList(int MaPhuTung)
+        {
+            foreach (DataRow row in chosenKitData.Rows)
+            {
+                if ((int)row["MaPhuTung"] == MaPhuTung) return true;
+            }
+            return false;
         }
     }
 }
