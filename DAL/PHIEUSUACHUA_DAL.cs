@@ -61,5 +61,13 @@ namespace DAL
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
+
+        public bool UpdateCustomer(int MaPhieuSuaChua, int MaKH)
+        {
+            string query = String.Format("UPDATE PHIEUSUACHUA SET MaKH = {0} WHERE MaPhieuSuaChua = {1}", MaKH, MaPhieuSuaChua);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

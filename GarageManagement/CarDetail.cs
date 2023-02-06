@@ -51,7 +51,8 @@ namespace GarageManagement
             string BienSo = plateNumberTb.Text;
             int MaHX = brandCb.SelectedIndex + 1;
             int TrangThai = statusCb.SelectedIndex + 1;
-            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaKH, MaHX, TrangThai)) 
+            int MaPhieuSuaChua = (int)(PHIEUSUACHUA_DAL.Instance.GetRepairCardFromCar(MaXe)).Rows[0]["MaPhieuSuaChua"];
+            if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaKH, MaHX, TrangThai) && PHIEUSUACHUA_DAL.Instance.UpdateCustomer(MaPhieuSuaChua, MaKH)) 
             {
                 MessageBox.Show("Cập nhật thành công !!");
             }
