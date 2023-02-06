@@ -55,5 +55,11 @@ namespace DAL
             int result = (int)DataProvider.Instance.ExecuteScalar(query);
             return result > 0;
         }
+
+        public int GetTotalPrice(int MaPhieuSuaChua)
+        {
+            string query = String.Format("SELECT SUM(SoLuongPhuTung * DonGia) FROM CHITIETPHIEUSUACHUA,KHO WHERE KHO.MaPhuTung = CHITIETPHIEUSUACHUA.MaPhuTung AND MaPhieuSuaChua = {0}", MaPhieuSuaChua);
+            return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
     }
 }

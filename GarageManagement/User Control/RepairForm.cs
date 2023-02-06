@@ -103,6 +103,7 @@ namespace GarageManagement.User_Control
                 string car = carList.Rows[i]["BienSo"].ToString() + " | " + carList.Rows[i]["TenHieuXe"].ToString();
                 carCbb.Items.Add(car);
             }
+            carCbb.SelectedIndex = 0;
         }
 
         void LoadProblemList(int MaXe)
@@ -227,6 +228,8 @@ namespace GarageManagement.User_Control
                 int SoLuong = (int)(KHO_DAL.Instance.getKitDetailOnKitIndex(MaPhuTung)).Rows[0]["SoLuong"];
                 int SoLuongPhuTung = (int)row["SoLuong"];
                 CHITIETPHIEUSUACHUA_DAL.Instance.InsertKit(MaPhieuSuaChua, MaPhuTung, SoLuongPhuTung);
+                int TienPhuTung = CHITIETPHIEUSUACHUA_DAL.Instance.GetTotalPrice(MaPhieuSuaChua);
+                PHIEUSUACHUA_DAL.Instance.UpdateTotalKitPrice(MaPhieuSuaChua, TienPhuTung);
                 KHO_DAL.Instance.UpdateKitAvailableQuantityAfterChoosing(MaPhuTung, SoLuong - SoLuongPhuTung);
             }
             XE_DAL.Instance.UpdateCarStatus(MaXe, 2);

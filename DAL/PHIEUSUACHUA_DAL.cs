@@ -54,6 +54,12 @@ namespace DAL
             return (int)DataProvider.Instance.ExecuteScalar(query);
         }
 
+        public int GetProblemTotalFee(int MaPhieuSuaChua)
+        {
+            string query = String.Format("SELECT TienCong FROM PHIEUSUACHUA WHERE MaPhieuSuaChua = {0}", MaPhieuSuaChua);
+            return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
+
         public bool UpdateProblemFee(int MaPhieuSuaChua, int TienCong)
         {
             int tongTien = TienCong + GetKitTotalPrice(MaPhieuSuaChua);
@@ -62,6 +68,13 @@ namespace DAL
             return result > 0;
         }
 
+        public bool UpdateTotalKitPrice(int MaPhieuSuaChua, int TienPhuTung)
+        {
+            int tongTien = TienPhuTung + GetProblemTotalFee(MaPhieuSuaChua);
+            string query = String.Format("UPDATE PHIEUSUACHUA SET TienPhuTung = {0}, TongTien = {1} WHERE MaPhieuSuaChua = {2}", TienPhuTung, tongTien, MaPhieuSuaChua);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
 
         public bool UpdateCustomer(int MaPhieuSuaChua, int MaKH)
         {
