@@ -78,9 +78,9 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(24, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 28);
+            this.label15.Size = new System.Drawing.Size(118, 28);
             this.label15.TabIndex = 11;
-            this.label15.Text = "Repair";
+            this.label15.Text = "Sửa chữa";
             // 
             // kitAvailableLv
             // 
@@ -107,33 +107,33 @@ namespace GarageManagement.User_Control
             // 
             // id
             // 
-            this.id.Text = "ID";
+            this.id.Text = "STT";
             this.id.Width = 50;
             // 
             // kit_name
             // 
-            this.kit_name.Text = "Name";
+            this.kit_name.Text = "Tên phụ tùng";
             this.kit_name.Width = 230;
             // 
             // price
             // 
-            this.price.Text = "Price($)";
+            this.price.Text = "Giá (VND)";
             this.price.Width = 150;
             // 
             // available
             // 
-            this.available.Text = "Available";
+            this.available.Text = "Số lượng sẵn có";
             this.available.Width = 162;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(375, 341);
+            this.label4.Location = new System.Drawing.Point(422, 341);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 19);
+            this.label4.Size = new System.Drawing.Size(108, 19);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Choose the quanity:";
+            this.label4.Text = "Chọn số lượng:";
             // 
             // txtbxQuantity
             // 
@@ -192,22 +192,22 @@ namespace GarageManagement.User_Control
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Text = "STT";
             this.columnHeader1.Width = 50;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Name";
+            this.columnHeader2.Text = "Tên phụ tùng";
             this.columnHeader2.Width = 230;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Price($)";
+            this.columnHeader3.Text = "Giá (VND)";
             this.columnHeader3.Width = 150;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Quantity";
+            this.columnHeader4.Text = "Số lượng";
             this.columnHeader4.Width = 162;
             // 
             // label2
@@ -216,9 +216,9 @@ namespace GarageManagement.User_Control
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.Size = new System.Drawing.Size(188, 17);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Kits available";
+            this.label2.Text = "Phụ tùng hiện có trong kho";
             // 
             // label3
             // 
@@ -226,9 +226,9 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(25, 343);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 17);
+            this.label3.Size = new System.Drawing.Size(126, 17);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Kits choosen for car";
+            this.label3.Text = "Phụ tùng đã chọn";
             // 
             // carCbb
             // 
@@ -275,11 +275,11 @@ namespace GarageManagement.User_Control
             this.updateBtn.FillColor2 = System.Drawing.Color.DeepSkyBlue;
             this.updateBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.White;
-            this.updateBtn.Location = new System.Drawing.Point(537, 570);
+            this.updateBtn.Location = new System.Drawing.Point(511, 570);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(87, 25);
+            this.updateBtn.Size = new System.Drawing.Size(113, 25);
             this.updateBtn.TabIndex = 37;
-            this.updateBtn.Text = "Update";
+            this.updateBtn.Text = "Cập nhật";
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // label6
@@ -323,11 +323,11 @@ namespace GarageManagement.User_Control
             this.removeBtn.FillColor2 = System.Drawing.Color.DeepPink;
             this.removeBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeBtn.ForeColor = System.Drawing.Color.White;
-            this.removeBtn.Location = new System.Drawing.Point(434, 570);
+            this.removeBtn.Location = new System.Drawing.Point(414, 570);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(91, 25);
             this.removeBtn.TabIndex = 42;
-            this.removeBtn.Text = "Remove";
+            this.removeBtn.Text = "Xóa";
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
             // problemLv
@@ -395,7 +395,7 @@ namespace GarageManagement.User_Control
             this.chooseBtn.Name = "chooseBtn";
             this.chooseBtn.Size = new System.Drawing.Size(87, 25);
             this.chooseBtn.TabIndex = 45;
-            this.chooseBtn.Text = "Choose";
+            this.chooseBtn.Text = "Chọn";
             this.chooseBtn.Click += new System.EventHandler(this.chooseBtn_Click);
             // 
             // RepairForm
