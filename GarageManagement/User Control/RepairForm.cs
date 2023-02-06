@@ -18,6 +18,7 @@ namespace GarageManagement.User_Control
         DataTable availableKitData;
         DataTable chosenKitData = new DataTable();
         DataTable carList;
+        DataTable problemList;
 
         public RepairForm()
         {
@@ -104,6 +105,31 @@ namespace GarageManagement.User_Control
             }
         }
 
+        void LoadProblemList(int MaXe)
+        {
+            problemLv.Clear();
+            int MaPhieuSuaChua = (int)PHIEUSUACHUA_DAL.Instance.GetRepairCardFromCar(MaXe).Rows[0]["MaPhieuSuaChua"];
+            problemList = CHITIETTIENCONG_DAL.Instance.LoadProblemDetail(MaPhieuSuaChua);
+            problemLv.Columns.Add("STT", 50);
+            problemLv.Columns.Add("Tên dịch vụ", 150);
+            problemLv.Columns.Add("Chi phí (VND)", 100);
+            for (int i = 0; i < problemList.Rows.Count; i++)
+            {
+                ListViewItem item = new ListViewItem(i + 1 + "");
+                problemLv.Items.Add(item);
+
+                // add problemName to carLv
+                string problemName = problemList.Rows[i]["TenTienCong"].ToString();
+                ListViewItem.ListViewSubItem problemNameItem = new ListViewItem.ListViewSubItem(item, problemName);
+                item.SubItems.Add(problemNameItem);
+
+                // add fee to carLv
+                string fee = problemList.Rows[i]["ChiPhi"].ToString();
+                ListViewItem.ListViewSubItem feeItem = new ListViewItem.ListViewSubItem(item, fee);
+                item.SubItems.Add(feeItem);
+            }
+        }
+
         private void chooseBtn_Click(object sender, EventArgs e)
         {
             if (kitAvailableLv.SelectedItems.Count > 0)
@@ -135,6 +161,12 @@ namespace GarageManagement.User_Control
                 if ((int)row["MaPhuTung"] == MaPhuTung) return true;
             }
             return false;
+        }
+
+        private void carCbb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int MaXe = (int) carList.Rows[carCbb.SelectedIndex]["MaXe"];
+            LoadProblemList(MaXe);
         }
     }
 }

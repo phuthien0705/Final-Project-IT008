@@ -62,9 +62,9 @@ namespace GarageManagement.User_Control
         void LoadProblemList()
         {
             problemList = TIENCONG_DAL.Instance.LoadProblemList();
-            problemLv.Columns.Add("STT", 70);
-            problemLv.Columns.Add("Loại dịch vụ", 180);
-            problemLv.Columns.Add("Chi phí", 90);
+            problemLv.Columns.Add("STT", 50);
+            problemLv.Columns.Add("Tên dịch vụ", 180);
+            problemLv.Columns.Add("Chi phí (VND)", 110);
             for (int i = 0; i < problemList.Rows.Count; i++)
             {
                 ListViewItem item = new ListViewItem(i + 1 + "");
