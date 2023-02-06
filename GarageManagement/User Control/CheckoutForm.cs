@@ -29,6 +29,7 @@ namespace GarageManagement.User_Control
         }
 
         private void loadCarComboBox() {
+            carComboBox.Items.Clear();
             DataTable listCar = XE_DAL.Instance.LoadCarListOnStatus(2);
             this.listCar = listCar;
             for (int i = 0; i < listCar.Rows.Count; i++) {
@@ -59,10 +60,9 @@ namespace GarageManagement.User_Control
             orderDetailListView.Items.Clear();
         }
         private void resetAllValue() {
-            this.listCar = null;
-            this.currentCar = null;
-            this.totalCostOfSquarePart = 0;
-            this.totalRepairCost = 0;
+            currentCar = null;
+            totalCostOfSquarePart = 0;
+            totalRepairCost = 0;
             totalCostLabel.Text = "";
             totalCostOfSquarePartLabel.Text = "";
             totalRepairCostLabel.Text = "";
@@ -72,12 +72,17 @@ namespace GarageManagement.User_Control
             carPlateLabel.Text = "";
             carBrandLabel.Text = "";
             receivedDayLabel.Text = "";
-            
+            carComboBox.SelectedIndex = -1;
+            paymentMethodComboBox.SelectedIndex = -1;
+            confirmCheckbox.Checked = false;
+            ProblemListView.Items.Clear();
+            orderDetailListView.Items.Clear();
         } 
         private void carComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string value = (string)carComboBox.SelectedItem;
-            int index = carComboBox.SelectedIndex;
+            if (carComboBox.SelectedIndex == -1) return;
+            int index = carComboBox.SelectedIndex > 0 ? carComboBox.SelectedIndex : 0;
             this.currentCar = this.listCar.Rows[index];
 
             checkCheckoutCondition();
@@ -108,8 +113,8 @@ namespace GarageManagement.User_Control
                 lvItem.SubItems.Add(row["TenTienCong"].ToString());
                 lvItem.SubItems.Add(row["ChiPhi"].ToString());
                 ProblemListView.Items.Add(lvItem);
-                // add cost of square part item to totalCostOfSquarePart
-                totalCostOfSquarePart += double.Parse(row["ChiPhi"].ToString());
+                // add cost of square part item to totalRepairCost
+                totalRepairCost += double.Parse(row["ChiPhi"].ToString());
             }
 
             // get list order detail
@@ -122,15 +127,15 @@ namespace GarageManagement.User_Control
                 lvItem.SubItems.Add(row["DonGia"].ToString());
                 lvItem.SubItems.Add(row["SoLuongPhuTung"].ToString());
                 orderDetailListView.Items.Add(lvItem);
-                // add repair cost item to totalRepairCost
-                totalRepairCost += double.Parse(row["DonGia"].ToString());
+                // add repair cost item to totalCostOfSquarePart
+                totalCostOfSquarePart += double.Parse(row["DonGia"].ToString()) * double.Parse(row["SoLuongPhuTung"].ToString());
             }
 
             loadDataToTotalPanel();
         }
         private void loadDataToTotalPanel() {
-            totalCostOfSquarePartLabel.Text = $"{totalCostOfSquarePart.ToString()}đ";
-            totalRepairCostLabel.Text = $"{totalRepairCost.ToString()}đ";
+            totalCostOfSquarePartLabel.Text = $"{totalCostOfSquarePart}đ";
+            totalRepairCostLabel.Text = $"{totalRepairCost}đ";
             totalCostLabel.Text = $"{((totalCostOfSquarePart + totalRepairCost) * 0.9).ToString()}đ";
             taxLabel.Text = "10.00%";
         }
