@@ -49,12 +49,6 @@ namespace DAL
             return (int)DataProvider.Instance.ExecuteScalar(query);
         }
 
-        public bool AddKitQuantity(int MaPhieuSuaChua, int MaPhuTung, int SoLuongPhuTung)
-        {
-            int SoLuong = GetQuantityOfKit(MaPhieuSuaChua, MaPhuTung);
-            return UpdateKitQuantity(MaPhieuSuaChua, MaPhuTung, SoLuongPhuTung + SoLuong);
-        }
-
         public bool ExistKit(int MaPhieuSuaChua, int MaPhuTung)
         {
             string query = String.Format("SELECT COUNT(*) FROM CHITIETPHIEUSUACHUA WHERE MaPhieuSuaChua = {0} AND MaPhuTung = {1}", MaPhieuSuaChua, MaPhuTung);

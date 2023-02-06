@@ -68,5 +68,12 @@ namespace DAL
             string query = $"UPDATE dbo.KHO SET SoLuong=N'{SoLuong}',DonGia=N'{DonGia}' WHERE MaPhuTung=N'{MaPhuTung}'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        public bool UpdateKitAvailableQuantityAfterChoosing(int MaPhuTung, int SoLuong) 
+        {
+            string query = String.Format("UPDATE KHO SET SoLuong = {0} WHERE MaPhuTung = {1}", SoLuong, MaPhuTung);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

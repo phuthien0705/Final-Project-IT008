@@ -97,7 +97,7 @@ namespace GarageManagement.User_Control
        
         void LoadCarCombobox()
         {
-            carList = XE_DAL.Instance.LoadCarList();
+            carList = XE_DAL.Instance.LoadCarListOnStatus(1);
             for (int i = 0; i < carList.Rows.Count; i++)
             {
                 string car = carList.Rows[i]["BienSo"].ToString() + " | " + carList.Rows[i]["TenHieuXe"].ToString();
@@ -215,6 +215,22 @@ namespace GarageManagement.User_Control
                     }
                 }
             }
+        }
+
+        private void confirmBtn_Click(object sender, EventArgs e)
+        {
+            int MaXe = (int)carList.Rows[carCbb.SelectedIndex]["MaXe"];
+            int MaPhieuSuaChua = (int)PHIEUSUACHUA_DAL.Instance.GetRepairCardFromCar(MaXe).Rows[0]["MaPhieuSuaChua"];
+            foreach (DataRow row in chosenKitData.Rows)
+            {
+                int MaPhuTung = (int) row["MaPhuTung"];
+                int SoLuong = (int)(KHO_DAL.Instance.getKitDetailOnKitIndex(MaPhuTung)).Rows[0]["SoLuong"];
+                int SoLuongPhuTung = (int)row["SoLuong"];
+                CHITIETPHIEUSUACHUA_DAL.Instance.InsertKit(MaPhieuSuaChua, MaPhuTung, SoLuongPhuTung);
+                KHO_DAL.Instance.UpdateKitAvailableQuantityAfterChoosing(MaPhuTung, SoLuong - SoLuongPhuTung);
+            }
+            XE_DAL.Instance.UpdateCarStatus(MaXe, 2);
+            MessageBox.Show("Đã thêm phụ tùng cho xe !!");
         }
     }
 }

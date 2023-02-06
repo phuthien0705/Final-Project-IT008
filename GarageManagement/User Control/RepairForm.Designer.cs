@@ -230,6 +230,7 @@ namespace GarageManagement.User_Control
             this.confirmBtn.Size = new System.Drawing.Size(113, 25);
             this.confirmBtn.TabIndex = 40;
             this.confirmBtn.Text = "Xác nhận";
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // removeBtn
             // 

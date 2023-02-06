@@ -74,6 +74,13 @@ namespace DAL
             return result > 0;
         }
 
+        public bool UpdateCarStatus(int MaXe, int TrangThai)
+        {
+            string query = String.Format("UPDATE XE SET TrangThai = {0} WHERE MaXe = {1}", TrangThai, MaXe);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
         public int GetNumberOfTypeCar(int TrangThai)
         {
             string query = String.Format("SELECT COUNT(*) FROM XE WHERE TrangThai = {0}", TrangThai);
