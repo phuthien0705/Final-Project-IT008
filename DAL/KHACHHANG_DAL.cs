@@ -29,7 +29,7 @@ namespace DAL
         {
             // Giới tính : f là nữ, m là nam
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,NgayDangKy) VALUES('{0}','{1}','{2}','{3}','{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
+            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,ThoiGianDangKy) VALUES(N'{0}','{1}',N'{2}',N'{3}','{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -60,7 +60,7 @@ namespace DAL
 
         public DataTable SearchForCustomer(string keyword)
         {
-            string query = String.Format("SELECT * FROM KHACHHANG WHERE TenKH LIKE '%{0}%' OR DienThoai LIKE '%{1}%'", keyword, keyword);
+            string query = String.Format("SELECT * FROM KHACHHANG WHERE TenKH LIKE N'%{0}%' OR DienThoai LIKE N'%{1}%'", keyword, keyword);
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }
