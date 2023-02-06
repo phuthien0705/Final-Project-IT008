@@ -176,7 +176,7 @@ namespace GarageManagement.User_Control
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            PHIEUTHUTIEN_DAL.Instance.addBill(int.Parse(this.currentCar["MaXe"].ToString()),double.Parse(((totalCostOfSquarePart + totalRepairCost) * 0.9).ToString()), DateTime.Now);
+            PHIEUTHUTIEN_DAL.Instance.addBill(int.Parse(this.currentCar["MaXe"].ToString()),double.Parse(((totalCostOfSquarePart + totalRepairCost) * 0.9).ToString()), int.Parse(paymentMethodComboBox.SelectedIndex.ToString()), DateTime.Now);
             XE_DAL.Instance.UpdateCarStatus(int.Parse(this.currentCar["MaXe"].ToString()), 3);
             MessageBox.Show("Thanh toán thành công");
             resetAllValue();
