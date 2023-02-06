@@ -37,10 +37,6 @@ namespace GarageManagement.User_Control
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.kitChosenLv = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.carCbb = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -131,11 +127,6 @@ namespace GarageManagement.User_Control
             // 
             this.kitChosenLv.AutoArrange = false;
             this.kitChosenLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.kitChosenLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
             this.kitChosenLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kitChosenLv.FullRowSelect = true;
             this.kitChosenLv.HideSelection = false;
@@ -145,26 +136,6 @@ namespace GarageManagement.User_Control
             this.kitChosenLv.TabIndex = 41;
             this.kitChosenLv.UseCompatibleStateImageBehavior = false;
             this.kitChosenLv.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "STT";
-            this.columnHeader1.Width = 50;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên phụ tùng";
-            this.columnHeader2.Width = 230;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Giá (VND)";
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Số lượng";
-            this.columnHeader4.Width = 162;
             // 
             // label2
             // 
@@ -344,6 +315,7 @@ namespace GarageManagement.User_Control
             this.chooseBtn.Size = new System.Drawing.Size(87, 25);
             this.chooseBtn.TabIndex = 45;
             this.chooseBtn.Text = "Chọn";
+            this.chooseBtn.Click += new System.EventHandler(this.chooseBtn_Click);
             // 
             // RepairForm
             // 
@@ -387,10 +359,6 @@ namespace GarageManagement.User_Control
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2GradientButton confirmBtn;
         private System.Windows.Forms.ListView kitChosenLv;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private Guna.UI2.WinForms.Guna2GradientButton removeBtn;
         private System.Windows.Forms.ListView problemLv;
         private System.Windows.Forms.ColumnHeader columnHeader5;
