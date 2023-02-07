@@ -45,7 +45,7 @@ namespace DAL
         // this function is use to get accessories in stock
         public DataTable getAccessoriesInStock()
         {
-            string query = "SELECT * FROM dbo.KHO";
+            string query = "SELECT * FROM dbo.KHO WHERE SoLuong > 0";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -57,10 +57,11 @@ namespace DAL
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         // this function is use to delete accessory
-        public void deleteAccessory(int MaPhuTung)
+        public bool deleteAccessory(int MaPhuTung)
         {
-            string query = "DELETE FROM dbo.KHO WHERE MaPhuTung=N'" + MaPhuTung + "'";
-            DataProvider.Instance.ExecuteNonQuery(query);
+            string query = String.Format("DELETE FROM KHO WHERE MaPhuTung = {0}", MaPhuTung);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
         // this function is use to update accessory
         public void updateAccessory(int MaPhuTung, int SoLuong, int DonGia)

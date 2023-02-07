@@ -36,6 +36,10 @@ namespace DAL
             return (int) DataProvider.Instance.ExecuteScalar(query);
         }
 
-
+        public int GetQuantityOfBill()
+        {
+            string query = "SELECT COUNT(*) FROM PHIEUTHUTIEN";
+            return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
     }
 }

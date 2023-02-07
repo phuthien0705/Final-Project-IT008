@@ -84,7 +84,7 @@ namespace GarageManagement.User_Control
             orderedQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(1).ToString();
             inProgressQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(2).ToString();
             completedQuantityLb.Text = XE_DAL.Instance.GetNumberOfTypeCar(3).ToString();
-            revenueLb.Text = FormatMoney(PHIEUTHUTIEN_DAL.Instance.GetTotalRevenue());
+            revenueLb.Text = PHIEUTHUTIEN_DAL.Instance.GetQuantityOfBill() > 0 ? FormatMoney(PHIEUTHUTIEN_DAL.Instance.GetTotalRevenue()) : "0";
         }
 
         string FormatMoney(int money)

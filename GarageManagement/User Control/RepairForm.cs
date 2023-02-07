@@ -103,7 +103,7 @@ namespace GarageManagement.User_Control
                 string car = carList.Rows[i]["BienSo"].ToString() + " | " + carList.Rows[i]["TenHieuXe"].ToString();
                 carCbb.Items.Add(car);
             }
-            carCbb.SelectedIndex = 0;
+            if (carCbb.Items.Count > 0) carCbb.SelectedIndex = 0;
         }
 
         void LoadProblemList(int MaXe)
