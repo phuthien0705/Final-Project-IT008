@@ -159,6 +159,7 @@ namespace GarageManagement
             this.statusCb.BorderRadius = 15;
             this.statusCb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.statusCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statusCb.Enabled = false;
             this.statusCb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.statusCb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.statusCb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
