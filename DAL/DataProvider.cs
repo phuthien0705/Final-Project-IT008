@@ -12,7 +12,7 @@ namespace DAL
     {
         private static DataProvider instance;
 
-        private string connectionStr = "Data Source=.;Initial Catalog=carmanage;Integrated Security=True";
+        private string connectionStr = "Data Source=.;Initial Catalog=carmanage9;Integrated Security=True";
 
         public static DataProvider Instance
         {

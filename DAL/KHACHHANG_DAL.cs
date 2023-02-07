@@ -20,7 +20,7 @@ namespace DAL
 
         public DataTable LoadCustomerList()
         {
-            string query = "SELECT * FROM dbo.KHACHHANG";
+            string query = "SELECT * FROM dbo.KHACHHANG WHERE KichHoat = 1";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -29,7 +29,7 @@ namespace DAL
         {
             // Giới tính : f là nữ, m là nam
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,ThoiGianDangKy) VALUES(N'{0}','{1}',N'{2}',N'{3}','{4}')", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
+            string query = String.Format("INSERT INTO KHACHHANG(TenKH,DienThoai,DiaChi,GioiTinh,ThoiGianDangKy,KichHoat) VALUES(N'{0}','{1}',N'{2}',N'{3}','{4}',1)", HoVaTen, SoDienThoai, DiaChi, GioiTinh, currentTime);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -38,9 +38,9 @@ namespace DAL
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
-        public bool DeleteCustomer(int MaKhachHang)
+        public bool SoftDeleteCustomer(int MaKH)
         {
-            string query = String.Format("DELETE FROM KHACHHANG WHERE MaKH = {0}", MaKhachHang);
+            string query = String.Format("UPDATE KHACHHANG SET KichHoat = 0 WHERE MaKH = {0}", MaKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

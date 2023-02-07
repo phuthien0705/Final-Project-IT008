@@ -53,9 +53,9 @@ namespace DAL
             return result > 0;
         }
 
-        public bool DeleteAllCarOfCustomer(int MaKH)
+        public bool SoftDeleteAllCarOfCustomer(int MaKH)
         {
-            string query = String.Format("DELETE FROM XE WHERE MaKH = {0}", MaKH);
+            string query = String.Format("UPDATE XE SET TrangThai = 0 WHERE MaKH = {0}", MaKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

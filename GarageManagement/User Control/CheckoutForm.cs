@@ -35,7 +35,7 @@ namespace GarageManagement.User_Control
             for (int i = 0; i < listCar.Rows.Count; i++) {
                 carComboBox.Items.Add(listCar.Rows[i]["BienSo"].ToString() + " | " + listCar.Rows[i]["TenHieuXe"].ToString());
             }
-
+            if (carComboBox.Items.Count > 0) carComboBox.SelectedIndex = 0;
         }
         private void checkCheckoutCondition() {
             if (confirmCheckbox.Checked == true && carComboBox.Text != "" && paymentMethodComboBox.Text != "")
