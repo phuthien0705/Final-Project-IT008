@@ -49,17 +49,17 @@ namespace DAL
             return (int)DataProvider.Instance.ExecuteScalar(query);
         }
 
-        public bool AddKitQuantity(int MaPhieuSuaChua, int MaPhuTung, int SoLuongPhuTung)
-        {
-            int SoLuong = GetQuantityOfKit(MaPhieuSuaChua, MaPhuTung);
-            return UpdateKitQuantity(MaPhieuSuaChua, MaPhuTung, SoLuongPhuTung + SoLuong);
-        }
-
         public bool ExistKit(int MaPhieuSuaChua, int MaPhuTung)
         {
             string query = String.Format("SELECT COUNT(*) FROM CHITIETPHIEUSUACHUA WHERE MaPhieuSuaChua = {0} AND MaPhuTung = {1}", MaPhieuSuaChua, MaPhuTung);
             int result = (int)DataProvider.Instance.ExecuteScalar(query);
             return result > 0;
+        }
+
+        public int GetTotalPrice(int MaPhieuSuaChua)
+        {
+            string query = String.Format("SELECT SUM(SoLuongPhuTung * DonGia) FROM CHITIETPHIEUSUACHUA,KHO WHERE KHO.MaPhuTung = CHITIETPHIEUSUACHUA.MaPhuTung AND MaPhieuSuaChua = {0}", MaPhieuSuaChua);
+            return (int)DataProvider.Instance.ExecuteScalar(query);
         }
     }
 }

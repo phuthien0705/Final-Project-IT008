@@ -37,10 +37,15 @@ namespace DAL
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+        public DataTable getKitDetailOnKitIndex(int MaPhuTung)
+        {
+            string query = String.Format("SELECT * FROM KHO WHERE MaPhuTung = {0}", MaPhuTung);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         // this function is use to get accessories in stock
         public DataTable getAccessoriesInStock()
         {
-            string query = "SELECT * FROM dbo.KHO";
+            string query = "SELECT * FROM dbo.KHO WHERE SoLuong > 0";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -52,16 +57,24 @@ namespace DAL
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         // this function is use to delete accessory
-        public void deleteAccessory(int MaPhuTung)
+        public bool deleteAccessory(int MaPhuTung)
         {
-            string query = "DELETE FROM dbo.KHO WHERE MaPhuTung=N'" + MaPhuTung + "'";
-            DataProvider.Instance.ExecuteNonQuery(query);
+            string query = String.Format("DELETE FROM KHO WHERE MaPhuTung = {0}", MaPhuTung);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
         // this function is use to update accessory
         public void updateAccessory(int MaPhuTung, int SoLuong, int DonGia)
         {
             string query = $"UPDATE dbo.KHO SET SoLuong=N'{SoLuong}',DonGia=N'{DonGia}' WHERE MaPhuTung=N'{MaPhuTung}'";
             DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        public bool UpdateKitAvailableQuantityAfterChoosing(int MaPhuTung, int SoLuong) 
+        {
+            string query = String.Format("UPDATE KHO SET SoLuong = {0} WHERE MaPhuTung = {1}", SoLuong, MaPhuTung);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
     }
 }

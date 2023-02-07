@@ -45,10 +45,45 @@ namespace DAL
             return result > 0;
         }
 
-        public bool UpdateCustomer(int MaPhieuSuaChua, int MaXe, int MaKH, int TienCong, int TienPhuTung)
+        public bool UpdateRepairCard(int MaPhieuSuaChua, int MaXe, int MaKH, int TienCong, int TienPhuTung)
         {
             int tongTien = TienCong + TienPhuTung;
             string query = String.Format("UPDATE PHIEUSUACHUA SET MaXe = {1}, MaKH = {2}, TienCong = {3}, TienPhuTung = {4},  TongTien = {5} WHERE MaPhieuSuaChua = {0}", MaPhieuSuaChua, MaXe, MaKH, TienCong, TienPhuTung, tongTien);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public int GetKitTotalPrice(int MaPhieuSuaChua)
+        {
+            string query = String.Format("SELECT TienPhuTung FROM PHIEUSUACHUA WHERE MaPhieuSuaChua = {0}", MaPhieuSuaChua);
+            return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
+
+        public int GetProblemTotalFee(int MaPhieuSuaChua)
+        {
+            string query = String.Format("SELECT TienCong FROM PHIEUSUACHUA WHERE MaPhieuSuaChua = {0}", MaPhieuSuaChua);
+            return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
+
+        public bool UpdateProblemFee(int MaPhieuSuaChua, int TienCong)
+        {
+            int tongTien = TienCong + GetKitTotalPrice(MaPhieuSuaChua);
+            string query = String.Format("UPDATE PHIEUSUACHUA SET TienCong = {0}, TongTien = {1} WHERE MaPhieuSuaChua = {2}", TienCong, tongTien, MaPhieuSuaChua);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool UpdateTotalKitPrice(int MaPhieuSuaChua, int TienPhuTung)
+        {
+            int tongTien = TienPhuTung + GetProblemTotalFee(MaPhieuSuaChua);
+            string query = String.Format("UPDATE PHIEUSUACHUA SET TienPhuTung = {0}, TongTien = {1} WHERE MaPhieuSuaChua = {2}", TienPhuTung, tongTien, MaPhieuSuaChua);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool UpdateCustomer(int MaPhieuSuaChua, int MaKH)
+        {
+            string query = String.Format("UPDATE PHIEUSUACHUA SET MaKH = {0} WHERE MaPhieuSuaChua = {1}", MaKH, MaPhieuSuaChua);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
