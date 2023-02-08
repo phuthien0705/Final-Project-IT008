@@ -203,3 +203,4 @@ D:\Git clone test\Final-Project-IT008\GarageManagement\obj\Debug\GarageManagemen
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\DAL.dll
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\bin\Debug\DAL.pdb
 D:\Lập trình Trực quan\GarageManagement\GarageManagement\obj\Debug\GarageManagement.CustomerDetail.resources
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\GarageManagement\bin\Debug\Guna.UI.dll
