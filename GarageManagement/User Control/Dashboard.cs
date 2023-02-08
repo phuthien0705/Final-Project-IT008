@@ -124,5 +124,10 @@ namespace GarageManagement.User_Control
             }
             return formatedMoney;
         }
+
+        private void Dashboard_VisibleChanged(object sender, EventArgs e)
+        {
+            LoadNumberOfStatusCar();
+        }
     }
 }

@@ -321,6 +321,7 @@ namespace GarageManagement.User_Control
             this.Controls.Add(this.label15);
             this.Name = "RepairForm";
             this.Size = new System.Drawing.Size(1069, 622);
+            this.VisibleChanged += new System.EventHandler(this.RepairForm_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

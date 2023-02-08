@@ -46,10 +46,8 @@ namespace GarageManagement.User_Control
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.problemLv = new System.Windows.Forms.ListView();
             this.searchCustomerTb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.reloadBtn = new System.Windows.Forms.PictureBox();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reloadBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -295,23 +293,9 @@ namespace GarageManagement.User_Control
             this.searchCustomerTb.TextOffset = new System.Drawing.Point(5, 0);
             this.searchCustomerTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchCustomerTb_KeyPress);
             // 
-            // reloadBtn
-            // 
-            this.reloadBtn.BackgroundImage = global::GarageManagement.Properties.Resources._61225;
-            this.reloadBtn.Image = global::GarageManagement.Properties.Resources._61225;
-            this.reloadBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("reloadBtn.InitialImage")));
-            this.reloadBtn.Location = new System.Drawing.Point(212, 25);
-            this.reloadBtn.Name = "reloadBtn";
-            this.reloadBtn.Size = new System.Drawing.Size(15, 15);
-            this.reloadBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.reloadBtn.TabIndex = 49;
-            this.reloadBtn.TabStop = false;
-            this.reloadBtn.Click += new System.EventHandler(this.reloadBtn_Click);
-            // 
             // CarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.reloadBtn);
             this.Controls.Add(this.searchCustomerTb);
             this.Controls.Add(this.guna2ContainerControl2);
             this.Controls.Add(this.label3);
@@ -332,7 +316,6 @@ namespace GarageManagement.User_Control
             this.VisibleChanged += new System.EventHandler(this.CarForm_VisibleChanged);
             this.guna2ContainerControl1.ResumeLayout(false);
             this.guna2ContainerControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reloadBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,6 +339,5 @@ namespace GarageManagement.User_Control
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private Guna.UI2.WinForms.Guna2TextBox searchCustomerTb;
         private System.Windows.Forms.ListView problemLv;
-        private System.Windows.Forms.PictureBox reloadBtn;
     }
 }

@@ -111,5 +111,10 @@ namespace GarageManagement.User_Control
             viewCustomerDetail.Font = new Font(viewCustomerDetail.Font, FontStyle.Regular);
             Cursor.Current = Cursors.Default;
         }
+
+        private void CustomerForm_VisibleChanged(object sender, EventArgs e)
+        {
+            LoadCustomerList();
+        }
     }
 }

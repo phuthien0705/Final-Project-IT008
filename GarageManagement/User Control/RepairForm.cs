@@ -23,6 +23,11 @@ namespace GarageManagement.User_Control
         public RepairForm()
         {
             InitializeComponent();
+            Reload();
+        }
+
+        void Reload()
+        {
             LoadAvailableKitList();
             LoadCarCombobox();
             CreateTableForChoosenKit();
@@ -30,6 +35,7 @@ namespace GarageManagement.User_Control
 
         void CreateTableForChoosenKit()
         {
+            chosenKitData.Columns.Clear();
             chosenKitData.Columns.Add("MaPhuTung", typeof(int));
             chosenKitData.Columns.Add("TenVatTuPhuTung", typeof(string));
             chosenKitData.Columns.Add("SoLuong", typeof(int));
@@ -97,6 +103,7 @@ namespace GarageManagement.User_Control
        
         void LoadCarCombobox()
         {
+            carCbb.Items.Clear();
             carList = XE_DAL.Instance.LoadCarListOnStatus(1);
             for (int i = 0; i < carList.Rows.Count; i++)
             {
@@ -234,6 +241,11 @@ namespace GarageManagement.User_Control
             }
             XE_DAL.Instance.UpdateCarStatus(MaXe, 2);
             MessageBox.Show("Đã thêm phụ tùng cho xe !!");
+        }
+
+        private void RepairForm_VisibleChanged(object sender, EventArgs e)
+        {
+            Reload();
         }
     }
 }
