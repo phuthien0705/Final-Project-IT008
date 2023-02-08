@@ -82,7 +82,7 @@ namespace GarageManagement
             
             if (KHACHHANG_DAL.Instance.UpdateCustomer(MaKH, TenKH, DienThoai, GioiTinh, DiaChi))
             {
-                SaveCustomerImage();
+                if (File.Exists(opFile.FileName)) SaveCustomerImage();
                 MessageBox.Show("Cập nhật khách hàng thành công");
             }
             else
