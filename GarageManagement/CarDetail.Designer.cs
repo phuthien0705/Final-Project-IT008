@@ -53,6 +53,8 @@ namespace GarageManagement
             this.customerCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.noImgLb = new System.Windows.Forms.Label();
+            this.purchasedLb = new System.Windows.Forms.Label();
+            this.totalCostLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@ namespace GarageManagement
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(219, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 28);
+            this.label7.Size = new System.Drawing.Size(137, 23);
             this.label7.TabIndex = 56;
             this.label7.Text = "THÔNG TIN XE";
             // 
@@ -82,7 +84,7 @@ namespace GarageManagement
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(35, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 49;
             this.label2.Text = "Hãng xe";
             // 
@@ -92,7 +94,7 @@ namespace GarageManagement
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(385, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 21);
+            this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 51;
             this.label1.Text = "Biển số";
             // 
@@ -147,7 +149,7 @@ namespace GarageManagement
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(172, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 21);
+            this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 61;
             this.label5.Text = "Tình trạng";
             // 
@@ -210,7 +212,7 @@ namespace GarageManagement
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(19, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 23);
+            this.label9.Size = new System.Drawing.Size(136, 19);
             this.label9.TabIndex = 66;
             this.label9.Text = "Dịch vụ đã chọn";
             // 
@@ -220,7 +222,7 @@ namespace GarageManagement
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(9, 402);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(177, 23);
+            this.label10.Size = new System.Drawing.Size(146, 19);
             this.label10.TabIndex = 67;
             this.label10.Text = "Phụ tùng đã chọn";
             // 
@@ -230,7 +232,7 @@ namespace GarageManagement
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(327, 112);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(161, 21);
+            this.label12.Size = new System.Drawing.Size(138, 19);
             this.label12.TabIndex = 71;
             this.label12.Text = "Thời gian tiếp nhận";
             // 
@@ -322,7 +324,7 @@ namespace GarageManagement
             this.viewCustomerDetail.ForeColor = System.Drawing.Color.DarkOrange;
             this.viewCustomerDetail.Location = new System.Drawing.Point(595, 252);
             this.viewCustomerDetail.Name = "viewCustomerDetail";
-            this.viewCustomerDetail.Size = new System.Drawing.Size(179, 20);
+            this.viewCustomerDetail.Size = new System.Drawing.Size(145, 18);
             this.viewCustomerDetail.TabIndex = 75;
             this.viewCustomerDetail.Text = "Xem thông tin chủ xe";
             this.viewCustomerDetail.Click += new System.EventHandler(this.viewCustomerDetail_Click);
@@ -353,7 +355,7 @@ namespace GarageManagement
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(35, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 21);
+            this.label3.Size = new System.Drawing.Size(57, 19);
             this.label3.TabIndex = 76;
             this.label3.Text = "Chủ xe";
             // 
@@ -363,14 +365,36 @@ namespace GarageManagement
             this.noImgLb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.noImgLb.Location = new System.Drawing.Point(636, 112);
             this.noImgLb.Name = "noImgLb";
-            this.noImgLb.Size = new System.Drawing.Size(88, 17);
+            this.noImgLb.Size = new System.Drawing.Size(68, 13);
             this.noImgLb.TabIndex = 78;
             this.noImgLb.Text = "Chưa có ảnh";
+            // 
+            // purchasedLb
+            // 
+            this.purchasedLb.AutoSize = true;
+            this.purchasedLb.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchasedLb.Location = new System.Drawing.Point(265, 478);
+            this.purchasedLb.Name = "purchasedLb";
+            this.purchasedLb.Size = new System.Drawing.Size(118, 18);
+            this.purchasedLb.TabIndex = 79;
+            this.purchasedLb.Text = "Đã thanh toán:";
+            // 
+            // totalCostLabel
+            // 
+            this.totalCostLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCostLabel.Location = new System.Drawing.Point(389, 475);
+            this.totalCostLabel.Name = "totalCostLabel";
+            this.totalCostLabel.Size = new System.Drawing.Size(153, 36);
+            this.totalCostLabel.TabIndex = 80;
+            this.totalCostLabel.Text = "500.000 VND";
+            this.totalCostLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // CarDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(780, 520);
+            this.Controls.Add(this.totalCostLabel);
+            this.Controls.Add(this.purchasedLb);
             this.Controls.Add(this.noImgLb);
             this.Controls.Add(this.customerCb);
             this.Controls.Add(this.label3);
@@ -426,5 +450,7 @@ namespace GarageManagement
         private Guna.UI2.WinForms.Guna2ComboBox customerCb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label noImgLb;
+        private System.Windows.Forms.Label purchasedLb;
+        private System.Windows.Forms.Label totalCostLabel;
     }
 }

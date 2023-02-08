@@ -41,5 +41,11 @@ namespace DAL
             string query = "SELECT COUNT(*) FROM PHIEUTHUTIEN";
             return (int)DataProvider.Instance.ExecuteScalar(query);
         }
+
+        public DataTable GetBillOnCar(int MaXe)
+        {
+            string query = String.Format("SELECT * FROM PHIEUTHUTIEN WHERE MaXe = {0}", MaXe);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
