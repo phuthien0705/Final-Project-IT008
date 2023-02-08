@@ -609,6 +609,7 @@ namespace GarageManagement.User_Control
             this.Name = "CheckoutForm";
             this.Size = new System.Drawing.Size(1069, 622);
             this.Load += new System.EventHandler(this.CheckoutForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.CheckoutForm_VisibleChanged);
             this.guna2ContainerControl1.ResumeLayout(false);
             this.totalPanel.ResumeLayout(false);
             this.totalPanel.PerformLayout();

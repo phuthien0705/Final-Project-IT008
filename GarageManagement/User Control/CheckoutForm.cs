@@ -80,7 +80,8 @@ namespace GarageManagement.User_Control
         } 
         private void carComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string value = (string)carComboBox.SelectedItem;
+            totalRepairCost = 0;
+            totalCostOfSquarePart = 0;
             if (carComboBox.SelectedIndex == -1) return;
             int index = carComboBox.SelectedIndex > 0 ? carComboBox.SelectedIndex : 0;
             this.currentCar = this.listCar.Rows[index];
@@ -197,6 +198,11 @@ namespace GarageManagement.User_Control
                 }
             }
             return formatedMoney;
+        }
+
+        private void CheckoutForm_VisibleChanged(object sender, EventArgs e)
+        {
+            loadCarComboBox();
         }
     }
 }
