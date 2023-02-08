@@ -136,7 +136,7 @@ namespace GarageManagement
             this.deleteBtn.FillColor2 = System.Drawing.Color.IndianRed;
             this.deleteBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(542, 478);
+            this.deleteBtn.Location = new System.Drawing.Point(619, 430);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(110, 30);
             this.deleteBtn.TabIndex = 59;
@@ -189,7 +189,7 @@ namespace GarageManagement
             this.updateBtn.FillColor2 = System.Drawing.SystemColors.Highlight;
             this.updateBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.White;
-            this.updateBtn.Location = new System.Drawing.Point(658, 478);
+            this.updateBtn.Location = new System.Drawing.Point(619, 466);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(110, 30);
             this.updateBtn.TabIndex = 59;
@@ -373,7 +373,7 @@ namespace GarageManagement
             // 
             this.purchasedLb.AutoSize = true;
             this.purchasedLb.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.purchasedLb.Location = new System.Drawing.Point(265, 478);
+            this.purchasedLb.Location = new System.Drawing.Point(253, 480);
             this.purchasedLb.Name = "purchasedLb";
             this.purchasedLb.Size = new System.Drawing.Size(118, 18);
             this.purchasedLb.TabIndex = 79;
@@ -381,10 +381,10 @@ namespace GarageManagement
             // 
             // totalCostLabel
             // 
-            this.totalCostLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalCostLabel.Location = new System.Drawing.Point(389, 475);
+            this.totalCostLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCostLabel.Location = new System.Drawing.Point(377, 475);
             this.totalCostLabel.Name = "totalCostLabel";
-            this.totalCostLabel.Size = new System.Drawing.Size(153, 36);
+            this.totalCostLabel.Size = new System.Drawing.Size(165, 36);
             this.totalCostLabel.TabIndex = 80;
             this.totalCostLabel.Text = "500.000 VND";
             this.totalCostLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
