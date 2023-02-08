@@ -35,7 +35,7 @@ namespace GarageManagement.User_Control
             for (int i = 0; i < listCar.Rows.Count; i++) {
                 carComboBox.Items.Add(listCar.Rows[i]["BienSo"].ToString() + " | " + listCar.Rows[i]["TenHieuXe"].ToString());
             }
-
+            if (carComboBox.Items.Count > 0) carComboBox.SelectedIndex = 0;
         }
         private void checkCheckoutCondition() {
             if (confirmCheckbox.Checked == true && carComboBox.Text != "" && paymentMethodComboBox.Text != "")
@@ -108,35 +108,39 @@ namespace GarageManagement.User_Control
             // get list problem
             DataTable problem = CHITIETTIENCONG_DAL.Instance.LoadProblemDetail(int.Parse(repairCards.Rows[0]["MaPhieuSuaChua"].ToString()));
             clearAllItemsInProblemListView();
+            int i = 1;
             foreach (DataRow row in problem.Rows) {
-                ListViewItem lvItem = new ListViewItem(row["MaTC"].ToString());
+                ListViewItem lvItem = new ListViewItem(i + "");
                 lvItem.SubItems.Add(row["TenTienCong"].ToString());
                 lvItem.SubItems.Add(row["ChiPhi"].ToString());
                 ProblemListView.Items.Add(lvItem);
                 // add cost of square part item to totalRepairCost
                 totalRepairCost += double.Parse(row["ChiPhi"].ToString());
+                i++;
             }
 
             // get list order detail
             DataTable orderDetail = CHITIETPHIEUSUACHUA_DAL.Instance.GetKitListOfCar(int.Parse(repairCards.Rows[0]["MaPhieuSuaChua"].ToString()));
             clearAllItemsInOrderListView();
+            i = 1;
             foreach (DataRow row in orderDetail.Rows)
             {
-                ListViewItem lvItem = new ListViewItem(row["MaPhuTung"].ToString());
+                ListViewItem lvItem = new ListViewItem(i + "");
                 lvItem.SubItems.Add(row["TenVatTuPhuTung"].ToString());
                 lvItem.SubItems.Add(row["DonGia"].ToString());
                 lvItem.SubItems.Add(row["SoLuongPhuTung"].ToString());
                 orderDetailListView.Items.Add(lvItem);
                 // add repair cost item to totalCostOfSquarePart
                 totalCostOfSquarePart += double.Parse(row["DonGia"].ToString()) * double.Parse(row["SoLuongPhuTung"].ToString());
+                i++;
             }
 
             loadDataToTotalPanel();
         }
         private void loadDataToTotalPanel() {
-            totalCostOfSquarePartLabel.Text = $"{totalCostOfSquarePart}đ";
-            totalRepairCostLabel.Text = $"{totalRepairCost}đ";
-            totalCostLabel.Text = $"{((totalCostOfSquarePart + totalRepairCost) * 0.9).ToString()}đ";
+            totalCostOfSquarePartLabel.Text = FormatMoney((int)totalCostOfSquarePart) + " VND";
+            totalRepairCostLabel.Text = FormatMoney((int)totalRepairCost) + " VND";
+            totalCostLabel.Text = FormatMoney((int)((totalCostOfSquarePart + totalRepairCost) * 1.1)) + " VND";
             taxLabel.Text = "10.00%";
         }
         private void confirmCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -147,33 +151,7 @@ namespace GarageManagement.User_Control
         {
             checkCheckoutCondition();
         }
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void receiptInfo1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void policyCb_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
        
-
         private void submitBtn_Click(object sender, EventArgs e)
         {
             PHIEUTHUTIEN_DAL.Instance.addBill(int.Parse(this.currentCar["MaXe"].ToString()),double.Parse(((totalCostOfSquarePart + totalRepairCost) * 0.9).ToString()), int.Parse(paymentMethodComboBox.SelectedIndex.ToString()), DateTime.Now);
@@ -183,11 +161,42 @@ namespace GarageManagement.User_Control
             loadCarComboBox();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        string FormatMoney(int money)
         {
-
+            List<string> all = new List<string>();
+            while (money != 0)
+            {
+                int remainder = (money % 1000);
+                string part = "";
+                if (remainder < 10)
+                {
+                    part = "00" + remainder;
+                }
+                else if (remainder < 100)
+                {
+                    part = "0" + remainder;
+                }
+                else if (remainder < 1000)
+                {
+                    part = "" + remainder;
+                }
+                all.Add(part);
+                money /= 1000;
+            }
+            string formatedMoney = "";
+            all[all.Count - 1] = (Int32.Parse(all[all.Count - 1])).ToString();
+            for (int i = all.Count - 1; i >= 0; i--)
+            {
+                if (i == 0)
+                {
+                    formatedMoney += all[i];
+                }
+                else
+                {
+                    formatedMoney += all[i] + ".";
+                }
+            }
+            return formatedMoney;
         }
-
-        
     }
 }

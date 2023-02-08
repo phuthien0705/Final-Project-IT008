@@ -30,34 +30,6 @@ namespace GarageManagement
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarDetail));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "Flat tires",
-            "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "Broken windows",
-            "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "3",
-            "Punctured tires",
-            "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "Indicator",
-            "200",
-            "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "Insulation film",
-            "450",
-            "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
-            "3",
-            "Disk brake",
-            "150",
-            "1"}, -1);
             this.carImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,28 +45,21 @@ namespace GarageManagement
             this.label12 = new System.Windows.Forms.Label();
             this.orderedDateTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.problemLv = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.problemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.fee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.kitOrderedLv = new System.Windows.Forms.ListView();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.kitName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.quanity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.brandCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.viewCustomerDetail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.customerCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.noImgLb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
             this.SuspendLayout();
             // 
             // carImg
             // 
-            this.carImg.Image = ((System.Drawing.Image)(resources.GetObject("carImg.Image")));
             this.carImg.ImageRotate = 0F;
-            this.carImg.Location = new System.Drawing.Point(592, 42);
+            this.carImg.Location = new System.Drawing.Point(594, 42);
             this.carImg.Name = "carImg";
             this.carImg.Size = new System.Drawing.Size(150, 150);
             this.carImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +115,7 @@ namespace GarageManagement
             this.plateNumberTb.Margin = new System.Windows.Forms.Padding(4);
             this.plateNumberTb.Name = "plateNumberTb";
             this.plateNumberTb.PasswordChar = '\0';
-            this.plateNumberTb.PlaceholderText = "Type for plate number";
+            this.plateNumberTb.PlaceholderText = "Nhập biển số";
             this.plateNumberTb.SelectedText = "";
             this.plateNumberTb.Size = new System.Drawing.Size(154, 31);
             this.plateNumberTb.TabIndex = 48;
@@ -173,7 +138,7 @@ namespace GarageManagement
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(110, 30);
             this.deleteBtn.TabIndex = 59;
-            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.Text = "Xóa";
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // label5
@@ -193,6 +158,7 @@ namespace GarageManagement
             this.statusCb.BorderRadius = 15;
             this.statusCb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.statusCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statusCb.Enabled = false;
             this.statusCb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.statusCb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.statusCb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,7 +191,7 @@ namespace GarageManagement
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(110, 30);
             this.updateBtn.TabIndex = 59;
-            this.updateBtn.Text = "Update";
+            this.updateBtn.Text = "Cập nhật";
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // chooseImgBtn
@@ -288,7 +254,7 @@ namespace GarageManagement
             this.orderedDateTb.Margin = new System.Windows.Forms.Padding(4);
             this.orderedDateTb.Name = "orderedDateTb";
             this.orderedDateTb.PasswordChar = '\0';
-            this.orderedDateTb.PlaceholderText = "Type for customer phone number";
+            this.orderedDateTb.PlaceholderText = "Nhập thời gian";
             this.orderedDateTb.SelectedText = "";
             this.orderedDateTb.Size = new System.Drawing.Size(212, 31);
             this.orderedDateTb.TabIndex = 70;
@@ -298,38 +264,15 @@ namespace GarageManagement
             // 
             this.problemLv.AutoArrange = false;
             this.problemLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.problemLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.problemName,
-            this.fee});
             this.problemLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.problemLv.FullRowSelect = true;
             this.problemLv.HideSelection = false;
-            this.problemLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
             this.problemLv.Location = new System.Drawing.Point(161, 212);
             this.problemLv.Name = "problemLv";
             this.problemLv.Size = new System.Drawing.Size(381, 101);
             this.problemLv.TabIndex = 72;
             this.problemLv.UseCompatibleStateImageBehavior = false;
             this.problemLv.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 50;
-            // 
-            // problemName
-            // 
-            this.problemName.Text = "Problem";
-            this.problemName.Width = 214;
-            // 
-            // fee
-            // 
-            this.fee.Text = "Fee($)";
-            this.fee.Width = 117;
             // 
             // gunaElipse1
             // 
@@ -339,44 +282,15 @@ namespace GarageManagement
             // kitOrderedLv
             // 
             this.kitOrderedLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.kitOrderedLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.kitName,
-            this.price,
-            this.quanity});
             this.kitOrderedLv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kitOrderedLv.FullRowSelect = true;
             this.kitOrderedLv.HideSelection = false;
-            this.kitOrderedLv.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
             this.kitOrderedLv.Location = new System.Drawing.Point(161, 356);
             this.kitOrderedLv.Name = "kitOrderedLv";
             this.kitOrderedLv.Size = new System.Drawing.Size(381, 105);
             this.kitOrderedLv.TabIndex = 73;
             this.kitOrderedLv.UseCompatibleStateImageBehavior = false;
             this.kitOrderedLv.View = System.Windows.Forms.View.Details;
-            // 
-            // id
-            // 
-            this.id.Text = "ID";
-            this.id.Width = 49;
-            // 
-            // kitName
-            // 
-            this.kitName.Text = "Kit name";
-            this.kitName.Width = 148;
-            // 
-            // price
-            // 
-            this.price.Text = "Price($)";
-            this.price.Width = 98;
-            // 
-            // quanity
-            // 
-            this.quanity.Text = "Quanity";
-            this.quanity.Width = 85;
             // 
             // gunaElipse2
             // 
@@ -405,7 +319,8 @@ namespace GarageManagement
             // 
             this.viewCustomerDetail.BackColor = System.Drawing.Color.Transparent;
             this.viewCustomerDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewCustomerDetail.Location = new System.Drawing.Point(397, 188);
+            this.viewCustomerDetail.ForeColor = System.Drawing.Color.DarkOrange;
+            this.viewCustomerDetail.Location = new System.Drawing.Point(595, 252);
             this.viewCustomerDetail.Name = "viewCustomerDetail";
             this.viewCustomerDetail.Size = new System.Drawing.Size(179, 20);
             this.viewCustomerDetail.TabIndex = 75;
@@ -442,10 +357,21 @@ namespace GarageManagement
             this.label3.TabIndex = 76;
             this.label3.Text = "Chủ xe";
             // 
+            // noImgLb
+            // 
+            this.noImgLb.AutoSize = true;
+            this.noImgLb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.noImgLb.Location = new System.Drawing.Point(636, 112);
+            this.noImgLb.Name = "noImgLb";
+            this.noImgLb.Size = new System.Drawing.Size(81, 16);
+            this.noImgLb.TabIndex = 78;
+            this.noImgLb.Text = "Chưa có ảnh";
+            // 
             // CarDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(780, 520);
+            this.Controls.Add(this.noImgLb);
             this.Controls.Add(this.customerCb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.viewCustomerDetail);
@@ -492,19 +418,13 @@ namespace GarageManagement
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox orderedDateTb;
         private System.Windows.Forms.ListView problemLv;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader problemName;
-        private System.Windows.Forms.ColumnHeader fee;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private System.Windows.Forms.ListView kitOrderedLv;
-        private System.Windows.Forms.ColumnHeader id;
-        private System.Windows.Forms.ColumnHeader kitName;
-        private System.Windows.Forms.ColumnHeader price;
-        private System.Windows.Forms.ColumnHeader quanity;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
         private Guna.UI2.WinForms.Guna2ComboBox brandCb;
         private Guna.UI2.WinForms.Guna2HtmlLabel viewCustomerDetail;
         private Guna.UI2.WinForms.Guna2ComboBox customerCb;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label noImgLb;
     }
 }

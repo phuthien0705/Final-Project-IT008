@@ -155,7 +155,7 @@ namespace GarageManagement.User_Control
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(132, 30);
             this.btnAdd.TabIndex = 32;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label6
@@ -164,9 +164,9 @@ namespace GarageManagement.User_Control
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(31, 174);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 21);
+            this.label6.Size = new System.Drawing.Size(74, 21);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Quanity";
+            this.label6.Text = "Số lượng";
             // 
             // label5
             // 
@@ -174,9 +174,9 @@ namespace GarageManagement.User_Control
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(31, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 21);
+            this.label5.Size = new System.Drawing.Size(96, 21);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Price($)";
+            this.label5.Text = "Giá (VND)";
             // 
             // label1
             // 
@@ -184,9 +184,9 @@ namespace GarageManagement.User_Control
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(31, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 21);
+            this.label1.Size = new System.Drawing.Size(118, 21);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Kit Name";
+            this.label1.Text = "Tên phụ tùng";
             // 
             // txtQuantity1
             // 
@@ -207,7 +207,7 @@ namespace GarageManagement.User_Control
             this.txtQuantity1.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity1.Name = "txtQuantity1";
             this.txtQuantity1.PasswordChar = '\0';
-            this.txtQuantity1.PlaceholderText = "Type for quanity";
+            this.txtQuantity1.PlaceholderText = "Số lượng phụ tùng";
             this.txtQuantity1.SelectedText = "";
             this.txtQuantity1.Size = new System.Drawing.Size(280, 31);
             this.txtQuantity1.TabIndex = 23;
@@ -233,7 +233,7 @@ namespace GarageManagement.User_Control
             this.txtPrice1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice1.Name = "txtPrice1";
             this.txtPrice1.PasswordChar = '\0';
-            this.txtPrice1.PlaceholderText = "Type for price";
+            this.txtPrice1.PlaceholderText = "Giá phụ tùng";
             this.txtPrice1.SelectedText = "";
             this.txtPrice1.Size = new System.Drawing.Size(280, 31);
             this.txtPrice1.TabIndex = 23;
@@ -259,7 +259,7 @@ namespace GarageManagement.User_Control
             this.txtKitName.Margin = new System.Windows.Forms.Padding(4);
             this.txtKitName.Name = "txtKitName";
             this.txtKitName.PasswordChar = '\0';
-            this.txtKitName.PlaceholderText = "Type for kit name";
+            this.txtKitName.PlaceholderText = "Tên phụ tùng";
             this.txtKitName.SelectedText = "";
             this.txtKitName.Size = new System.Drawing.Size(280, 31);
             this.txtKitName.TabIndex = 26;
@@ -376,7 +376,7 @@ namespace GarageManagement.User_Control
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(132, 30);
             this.btnUpdate.TabIndex = 32;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label2
@@ -385,9 +385,9 @@ namespace GarageManagement.User_Control
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(31, 174);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 21);
+            this.label2.Size = new System.Drawing.Size(74, 21);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Quanity";
+            this.label2.Text = "Số lượng";
             // 
             // label3
             // 
@@ -395,9 +395,9 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(31, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 21);
+            this.label3.Size = new System.Drawing.Size(96, 21);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Price($)";
+            this.label3.Text = "Giá (VND)";
             // 
             // label4
             // 
@@ -405,9 +405,9 @@ namespace GarageManagement.User_Control
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(31, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 21);
+            this.label4.Size = new System.Drawing.Size(118, 21);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Kit Name";
+            this.label4.Text = "Tên phụ tùng";
             // 
             // txtQuantity2
             // 
@@ -428,7 +428,7 @@ namespace GarageManagement.User_Control
             this.txtQuantity2.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity2.Name = "txtQuantity2";
             this.txtQuantity2.PasswordChar = '\0';
-            this.txtQuantity2.PlaceholderText = "Type for quanity";
+            this.txtQuantity2.PlaceholderText = "Số lượng phụ tùng";
             this.txtQuantity2.SelectedText = "";
             this.txtQuantity2.Size = new System.Drawing.Size(280, 31);
             this.txtQuantity2.TabIndex = 23;
@@ -454,7 +454,7 @@ namespace GarageManagement.User_Control
             this.txtPrice2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice2.Name = "txtPrice2";
             this.txtPrice2.PasswordChar = '\0';
-            this.txtPrice2.PlaceholderText = "Type for price";
+            this.txtPrice2.PlaceholderText = "Giá phụ tùng";
             this.txtPrice2.SelectedText = "";
             this.txtPrice2.Size = new System.Drawing.Size(280, 31);
             this.txtPrice2.TabIndex = 23;

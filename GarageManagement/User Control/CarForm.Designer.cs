@@ -79,7 +79,7 @@ namespace GarageManagement.User_Control
             this.plateNumberTb.Margin = new System.Windows.Forms.Padding(4);
             this.plateNumberTb.Name = "plateNumberTb";
             this.plateNumberTb.PasswordChar = '\0';
-            this.plateNumberTb.PlaceholderText = "Type for plate number";
+            this.plateNumberTb.PlaceholderText = "Nhập biển số xe";
             this.plateNumberTb.SelectedText = "";
             this.plateNumberTb.Size = new System.Drawing.Size(353, 31);
             this.plateNumberTb.TabIndex = 12;

@@ -30,31 +30,31 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Indicator",
             "200",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Insulation film",
             "450",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Disk brake",
             "150",
             "1"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutForm));
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
@@ -138,9 +138,9 @@ namespace GarageManagement.User_Control
             this.orderDetailListView.FullRowSelect = true;
             this.orderDetailListView.HideSelection = false;
             this.orderDetailListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8,
-            listViewItem9});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.orderDetailListView.Location = new System.Drawing.Point(12, 9);
             this.orderDetailListView.Name = "orderDetailListView";
             this.orderDetailListView.Size = new System.Drawing.Size(661, 128);
@@ -160,7 +160,7 @@ namespace GarageManagement.User_Control
             // 
             // price
             // 
-            this.price.Text = "Giá(đ)";
+            this.price.Text = "Giá (VND)";
             this.price.Width = 154;
             // 
             // quanity
@@ -275,7 +275,6 @@ namespace GarageManagement.User_Control
             this.totalCostLabel.TabIndex = 28;
             this.totalCostLabel.Text = "$1720";
             this.totalCostLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.totalCostLabel.Click += new System.EventHandler(this.label6_Click);
             // 
             // taxLabel
             // 
@@ -300,9 +299,9 @@ namespace GarageManagement.User_Control
             // totalRepairCostLabel
             // 
             this.totalRepairCostLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalRepairCostLabel.Location = new System.Drawing.Point(158, 262);
+            this.totalRepairCostLabel.Location = new System.Drawing.Point(131, 262);
             this.totalRepairCostLabel.Name = "totalRepairCostLabel";
-            this.totalRepairCostLabel.Size = new System.Drawing.Size(109, 23);
+            this.totalRepairCostLabel.Size = new System.Drawing.Size(136, 23);
             this.totalRepairCostLabel.TabIndex = 24;
             this.totalRepairCostLabel.Text = "$200";
             this.totalRepairCostLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -330,9 +329,9 @@ namespace GarageManagement.User_Control
             // totalCostOfSquarePartLabel
             // 
             this.totalCostOfSquarePartLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalCostOfSquarePartLabel.Location = new System.Drawing.Point(154, 222);
+            this.totalCostOfSquarePartLabel.Location = new System.Drawing.Point(127, 222);
             this.totalCostOfSquarePartLabel.Name = "totalCostOfSquarePartLabel";
-            this.totalCostOfSquarePartLabel.Size = new System.Drawing.Size(113, 21);
+            this.totalCostOfSquarePartLabel.Size = new System.Drawing.Size(140, 21);
             this.totalCostOfSquarePartLabel.TabIndex = 22;
             this.totalCostOfSquarePartLabel.Text = "$1500";
             this.totalCostOfSquarePartLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -370,7 +369,7 @@ namespace GarageManagement.User_Control
             this.confirmCheckbox.AutoSize = true;
             this.confirmCheckbox.Location = new System.Drawing.Point(29, 86);
             this.confirmCheckbox.Name = "confirmCheckbox";
-            this.confirmCheckbox.Size = new System.Drawing.Size(226, 36);
+            this.confirmCheckbox.Size = new System.Drawing.Size(245, 38);
             this.confirmCheckbox.TabIndex = 22;
             this.confirmCheckbox.Text = "Khách hàng chấp nhận mọi chính \r\nsách của doanh nghiệp";
             this.confirmCheckbox.UseVisualStyleBackColor = true;
@@ -553,16 +552,15 @@ namespace GarageManagement.User_Control
             this.ProblemListView.FullRowSelect = true;
             this.ProblemListView.HideSelection = false;
             this.ProblemListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.ProblemListView.Location = new System.Drawing.Point(12, 8);
             this.ProblemListView.Name = "ProblemListView";
             this.ProblemListView.Size = new System.Drawing.Size(661, 114);
             this.ProblemListView.TabIndex = 7;
             this.ProblemListView.UseCompatibleStateImageBehavior = false;
             this.ProblemListView.View = System.Windows.Forms.View.Details;
-            this.ProblemListView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -571,12 +569,12 @@ namespace GarageManagement.User_Control
             // 
             // problemName
             // 
-            this.problemName.Text = "Vấn đề";
+            this.problemName.Text = "Tên dịch vụ";
             this.problemName.Width = 322;
             // 
             // fee
             // 
-            this.fee.Text = "Phí(đ)";
+            this.fee.Text = "Chi phí (VND)";
             this.fee.Width = 143;
             // 
             // gunaElipse4

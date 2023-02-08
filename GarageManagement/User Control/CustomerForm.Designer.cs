@@ -81,7 +81,7 @@ namespace GarageManagement.User_Control
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(46, 375);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 19);
+            this.label6.Size = new System.Drawing.Size(111, 21);
             this.label6.TabIndex = 61;
             this.label6.Text = "Số điện thoại";
             // 
@@ -104,7 +104,7 @@ namespace GarageManagement.User_Control
             this.txtbxPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtbxPhone.Name = "txtbxPhone";
             this.txtbxPhone.PasswordChar = '\0';
-            this.txtbxPhone.PlaceholderText = "Type for customer phone number";
+            this.txtbxPhone.PlaceholderText = "Nhập địa chỉ";
             this.txtbxPhone.SelectedText = "";
             this.txtbxPhone.Size = new System.Drawing.Size(295, 31);
             this.txtbxPhone.TabIndex = 60;
@@ -116,7 +116,7 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(46, 283);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 19);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 59;
             this.label3.Text = "Địa chỉ";
             // 
@@ -139,7 +139,7 @@ namespace GarageManagement.User_Control
             this.txtbxAdrdess.Margin = new System.Windows.Forms.Padding(4);
             this.txtbxAdrdess.Name = "txtbxAdrdess";
             this.txtbxAdrdess.PasswordChar = '\0';
-            this.txtbxAdrdess.PlaceholderText = "Type for customer address";
+            this.txtbxAdrdess.PlaceholderText = "Nhập địa chỉ";
             this.txtbxAdrdess.SelectedText = "";
             this.txtbxAdrdess.Size = new System.Drawing.Size(295, 31);
             this.txtbxAdrdess.TabIndex = 58;
@@ -221,7 +221,7 @@ namespace GarageManagement.User_Control
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(406, 99);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 19);
+            this.label5.Size = new System.Drawing.Size(205, 21);
             this.label5.TabIndex = 53;
             this.label5.Text = "Danh sách khách hàng";
             // 
@@ -231,7 +231,7 @@ namespace GarageManagement.User_Control
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(46, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
+            this.label4.Size = new System.Drawing.Size(92, 21);
             this.label4.TabIndex = 51;
             this.label4.Text = "Họ và tên";
             // 
@@ -254,7 +254,7 @@ namespace GarageManagement.User_Control
             this.txtbxName.Margin = new System.Windows.Forms.Padding(4);
             this.txtbxName.Name = "txtbxName";
             this.txtbxName.PasswordChar = '\0';
-            this.txtbxName.PlaceholderText = "Type for customer name";
+            this.txtbxName.PlaceholderText = "Nhập họ và tên";
             this.txtbxName.SelectedText = "";
             this.txtbxName.Size = new System.Drawing.Size(295, 31);
             this.txtbxName.TabIndex = 48;
@@ -266,7 +266,7 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(31, 27);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(250, 29);
+            this.label15.Size = new System.Drawing.Size(311, 36);
             this.label15.TabIndex = 47;
             this.label15.Text = "Thêm khách hàng";
             // 
@@ -299,7 +299,7 @@ namespace GarageManagement.User_Control
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(46, 191);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 19);
+            this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 66;
             this.label1.Text = "Giới tính";
             // 
@@ -309,7 +309,7 @@ namespace GarageManagement.User_Control
             this.viewCustomerDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewCustomerDetail.Location = new System.Drawing.Point(837, 100);
             this.viewCustomerDetail.Name = "viewCustomerDetail";
-            this.viewCustomerDetail.Size = new System.Drawing.Size(177, 18);
+            this.viewCustomerDetail.Size = new System.Drawing.Size(219, 20);
             this.viewCustomerDetail.TabIndex = 76;
             this.viewCustomerDetail.Text = "Xem thông tin khách hàng";
             this.viewCustomerDetail.Click += new System.EventHandler(this.viewCustomerDetail_Click);
