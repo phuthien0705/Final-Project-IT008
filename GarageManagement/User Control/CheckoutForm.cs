@@ -1,13 +1,17 @@
 ﻿using DAL;
+using Scriban;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.Playwright;
 
 namespace GarageManagement.User_Control
 {
@@ -17,6 +21,11 @@ namespace GarageManagement.User_Control
         private DataRow currentCar = null;
         private double totalCostOfSquarePart = 0; // tổng chi phí phụ tùng
         private double totalRepairCost = 0; // tổng chi phí sữa chữa
+        private bool flagPrintPDF = false;
+        List<Item> listItem = new List<Item>();
+        List<Problem> listProblem = new List<Problem>();
+
+
         public CheckoutForm()
         {
             InitializeComponent();
@@ -28,16 +37,19 @@ namespace GarageManagement.User_Control
             loadCarComboBox();
         }
 
-        private void loadCarComboBox() {
+        private void loadCarComboBox()
+        {
             carComboBox.Items.Clear();
             DataTable listCar = XE_DAL.Instance.LoadCarListOnStatus(2);
             this.listCar = listCar;
-            for (int i = 0; i < listCar.Rows.Count; i++) {
+            for (int i = 0; i < listCar.Rows.Count; i++)
+            {
                 carComboBox.Items.Add(listCar.Rows[i]["BienSo"].ToString() + " | " + listCar.Rows[i]["TenHieuXe"].ToString());
             }
             if (carComboBox.Items.Count > 0) carComboBox.SelectedIndex = 0;
         }
-        private void checkCheckoutCondition() {
+        private void checkCheckoutCondition()
+        {
             if (confirmCheckbox.Checked == true && carComboBox.Text != "" && paymentMethodComboBox.Text != "")
             {
                 submitBtn.Enabled = true;
@@ -47,19 +59,23 @@ namespace GarageManagement.User_Control
                 submitBtn.Enabled = false;
             }
         }
-        private void checkCustomberPanelCondition() {
-            if (this.currentCar != null && customerPanel.Visible == false) {
+        private void checkCustomberPanelCondition()
+        {
+            if (this.currentCar != null && customerPanel.Visible == false)
+            {
                 customerPanel.Visible = true;
             }
         }
-        private void clearAllItemsInProblemListView() {
+        private void clearAllItemsInProblemListView()
+        {
             ProblemListView.Items.Clear();
         }
         private void clearAllItemsInOrderListView()
         {
             orderDetailListView.Items.Clear();
         }
-        private void resetAllValue() {
+        private void resetAllValue()
+        {
             currentCar = null;
             totalCostOfSquarePart = 0;
             totalRepairCost = 0;
@@ -77,9 +93,14 @@ namespace GarageManagement.User_Control
             confirmCheckbox.Checked = false;
             ProblemListView.Items.Clear();
             orderDetailListView.Items.Clear();
-        } 
+        }
         private void carComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            totalCostOfSquarePart = 0;
+            totalRepairCost = 0;
+            listItem = new List<Item>();
+            listProblem = new List<Problem>();
             string value = (string)carComboBox.SelectedItem;
             if (carComboBox.SelectedIndex == -1) return;
             int index = carComboBox.SelectedIndex > 0 ? carComboBox.SelectedIndex : 0;
@@ -89,7 +110,8 @@ namespace GarageManagement.User_Control
             checkCustomberPanelCondition();
 
             DataTable customerInfo = KHACHHANG_DAL.Instance.GetCustomerById(this.listCar.Rows[index]["MaKH"].ToString());
-            if (customerInfo.Rows.Count == 0) {
+            if (customerInfo.Rows.Count == 0)
+            {
                 MessageBox.Show("Không tìm thấy khách hàng");
                 return;
             }
@@ -101,7 +123,8 @@ namespace GarageManagement.User_Control
 
             // get repair card
             DataTable repairCards = PHIEUSUACHUA_DAL.Instance.GetRepairCardFromCarNotInPHIEUTHUTIEN(int.Parse(this.currentCar["MaXe"].ToString()));
-            if (repairCards.Rows.Count == 0) {
+            if (repairCards.Rows.Count == 0)
+            {
                 MessageBox.Show("Không tìm thấy phiếu sữa chữa");
                 return;
             }
@@ -109,12 +132,19 @@ namespace GarageManagement.User_Control
             DataTable problem = CHITIETTIENCONG_DAL.Instance.LoadProblemDetail(int.Parse(repairCards.Rows[0]["MaPhieuSuaChua"].ToString()));
             clearAllItemsInProblemListView();
             int i = 1;
-            foreach (DataRow row in problem.Rows) {
+            foreach (DataRow row in problem.Rows)
+            {
                 ListViewItem lvItem = new ListViewItem(i + "");
                 lvItem.SubItems.Add(row["TenTienCong"].ToString());
                 lvItem.SubItems.Add(row["ChiPhi"].ToString());
                 ProblemListView.Items.Add(lvItem);
                 // add cost of square part item to totalRepairCost
+                var problem_export = new Problem()
+                {
+                    tentiencong = row["TenTienCong"].ToString(),
+                    chiphi = row["ChiPhi"].ToString(),
+                };
+                listProblem.Add(problem_export);
                 totalRepairCost += double.Parse(row["ChiPhi"].ToString());
                 i++;
             }
@@ -130,6 +160,13 @@ namespace GarageManagement.User_Control
                 lvItem.SubItems.Add(row["DonGia"].ToString());
                 lvItem.SubItems.Add(row["SoLuongPhuTung"].ToString());
                 orderDetailListView.Items.Add(lvItem);
+                var item = new Item()
+                {
+                    tenvatdung = row["TenVatTuPhuTung"].ToString(),
+                    dongia = row["DonGia"].ToString(),
+                    soluongphutung = row["SoLuongPhuTung"].ToString()
+                };
+                listItem.Add(item);
                 // add repair cost item to totalCostOfSquarePart
                 totalCostOfSquarePart += double.Parse(row["DonGia"].ToString()) * double.Parse(row["SoLuongPhuTung"].ToString());
                 i++;
@@ -137,7 +174,8 @@ namespace GarageManagement.User_Control
 
             loadDataToTotalPanel();
         }
-        private void loadDataToTotalPanel() {
+        private void loadDataToTotalPanel()
+        {
             totalCostOfSquarePartLabel.Text = FormatMoney((int)totalCostOfSquarePart) + " VND";
             totalRepairCostLabel.Text = FormatMoney((int)totalRepairCost) + " VND";
             totalCostLabel.Text = FormatMoney((int)((totalCostOfSquarePart + totalRepairCost) * 1.1)) + " VND";
@@ -151,10 +189,10 @@ namespace GarageManagement.User_Control
         {
             checkCheckoutCondition();
         }
-       
+
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            PHIEUTHUTIEN_DAL.Instance.addBill(int.Parse(this.currentCar["MaXe"].ToString()),double.Parse(((totalCostOfSquarePart + totalRepairCost) * 0.9).ToString()), int.Parse(paymentMethodComboBox.SelectedIndex.ToString()), DateTime.Now);
+            PHIEUTHUTIEN_DAL.Instance.addBill(int.Parse(this.currentCar["MaXe"].ToString()), double.Parse(((totalCostOfSquarePart + totalRepairCost) * 0.9).ToString()), int.Parse(paymentMethodComboBox.SelectedIndex.ToString()), DateTime.Now);
             XE_DAL.Instance.UpdateCarStatus(int.Parse(this.currentCar["MaXe"].ToString()), 3);
             MessageBox.Show("Thanh toán thành công");
             resetAllValue();
@@ -198,5 +236,102 @@ namespace GarageManagement.User_Control
             }
             return formatedMoney;
         }
+        public dynamic GenerateDataDemo()
+        {
+            var customer = new
+            {
+                Name = customerLabel.Text,
+                Address = addressLabel.Text,
+                CarPlate = carPlateLabel.Text,
+                CarBrand = carBrandLabel.Text,
+                DateRecieve = receivedDayLabel.Text
+            };
+
+
+            var fee = new
+            {
+                Total = totalCostLabel.Text,
+                ItemCost = totalCostOfSquarePartLabel.Text,
+                RepairCost = totalRepairCostLabel.Text,
+                Tax = taxLabel.Text,
+
+            };
+
+            var data = new
+            {
+                Data = new
+                {
+                    Title = "Hóa đơn sửa chữa",
+                    Customer = customer,
+                    NumInvoice = 111,
+                    Items = listItem,
+                    Problems = listProblem,
+                    Fee = fee,
+                    Date = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
+                    Description = "Thanks for using services!"
+                }
+
+            };
+
+            return data;
+        }
+
+        private async void printDevoiceBtn_Click(object sender, EventArgs e)
+        {
+            Microsoft.Playwright.Program.Main(new[] { "install" });
+            var templateContent = File.ReadAllText("template_invoice.html");
+            var template = Template.Parse(templateContent);
+
+            var templateData = GenerateDataDemo();
+
+            var pageContent = template.Render(templateData);
+            File.WriteAllText("export.html", pageContent);
+            Process.Start("export.html");
+
+            var dataUrl = "data:text/html;base64," + Convert.ToBase64String(Encoding.UTF8.GetBytes(pageContent));
+
+            var playwright = await Playwright.CreateAsync();
+            var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            {
+                Headless = true,
+            });
+
+            var context = await browser.NewContextAsync();
+            var page = await context.NewPageAsync();
+            await page.GotoAsync(dataUrl, new PageGotoOptions { WaitUntil = WaitUntilState.NetworkIdle });
+
+            // Generate the PDF
+            var output = await page.PdfAsync(new PagePdfOptions
+            {
+                Format = "letter", // or "letter"
+                Landscape = true,
+                Margin = new Microsoft.Playwright.Margin() { Top = "0", Right = "0", Bottom = "0", Left = "0" },
+                Scale = 0.8f,
+            });
+
+            // Save the pdf to the disk
+            File.WriteAllBytes("invoice.pdf", output);
+
+            //File.WriteAllText("export.html", pageContent);
+            Process.Start("invoice.pdf");
+        }
     }
+
+
+    public class Item
+    {
+        public String tenvatdung { get; set; }
+        public String dongia { get; set; }
+
+        public String soluongphutung { get; set; }
+
+    }
+
+    public class Problem
+    {
+        public String tentiencong { get; set; }
+
+        public String chiphi { get; set; }
+    }
+
 }
