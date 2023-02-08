@@ -30,7 +30,6 @@ namespace GarageManagement
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarDetail));
             this.carImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,14 +52,14 @@ namespace GarageManagement
             this.viewCustomerDetail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.customerCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.noImgLb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
             this.SuspendLayout();
             // 
             // carImg
             // 
-            this.carImg.Image = ((System.Drawing.Image)(resources.GetObject("carImg.Image")));
             this.carImg.ImageRotate = 0F;
-            this.carImg.Location = new System.Drawing.Point(592, 42);
+            this.carImg.Location = new System.Drawing.Point(594, 42);
             this.carImg.Name = "carImg";
             this.carImg.Size = new System.Drawing.Size(150, 150);
             this.carImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,6 +158,7 @@ namespace GarageManagement
             this.statusCb.BorderRadius = 15;
             this.statusCb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.statusCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statusCb.Enabled = false;
             this.statusCb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.statusCb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.statusCb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,10 +357,21 @@ namespace GarageManagement
             this.label3.TabIndex = 76;
             this.label3.Text = "Chủ xe";
             // 
+            // noImgLb
+            // 
+            this.noImgLb.AutoSize = true;
+            this.noImgLb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.noImgLb.Location = new System.Drawing.Point(636, 112);
+            this.noImgLb.Name = "noImgLb";
+            this.noImgLb.Size = new System.Drawing.Size(88, 17);
+            this.noImgLb.TabIndex = 78;
+            this.noImgLb.Text = "Chưa có ảnh";
+            // 
             // CarDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(780, 520);
+            this.Controls.Add(this.noImgLb);
             this.Controls.Add(this.customerCb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.viewCustomerDetail);
@@ -414,5 +425,6 @@ namespace GarageManagement
         private Guna.UI2.WinForms.Guna2HtmlLabel viewCustomerDetail;
         private Guna.UI2.WinForms.Guna2ComboBox customerCb;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label noImgLb;
     }
 }

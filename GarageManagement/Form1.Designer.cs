@@ -48,14 +48,14 @@ namespace GarageManagement
             this.carBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.dashboardBtn = new Guna.UI.WinForms.GunaGradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dashboard1 = new GarageManagement.User_Control.Dashboard();
+            this.customerForm2 = new GarageManagement.User_Control.CustomerForm();
             this.checkoutForm1 = new GarageManagement.User_Control.CheckoutForm();
             this.kitForm1 = new GarageManagement.User_Control.KitForm();
             this.repairForm1 = new GarageManagement.User_Control.RepairForm();
             this.carForm1 = new GarageManagement.User_Control.CarForm();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.customerForm2 = new GarageManagement.User_Control.CustomerForm();
-            this.dashboard1 = new GarageManagement.User_Control.Dashboard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,13 +101,12 @@ namespace GarageManagement
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 23);
+            this.label2.Size = new System.Drawing.Size(263, 21);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Garage Management";
+            this.label2.Text = "Phần mềm quản lý Garage";
             // 
             // label1
             // 
@@ -115,7 +114,7 @@ namespace GarageManagement
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(121, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 34);
+            this.label1.Size = new System.Drawing.Size(131, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "AutoRepair";
             // 
@@ -209,11 +208,11 @@ namespace GarageManagement
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(92, 126);
+            this.label4.Location = new System.Drawing.Point(69, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 21);
+            this.label4.Size = new System.Drawing.Size(96, 19);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Admin";
+            this.label4.Text = "Quản trị viên";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -225,7 +224,7 @@ namespace GarageManagement
             this.label3.Location = new System.Drawing.Point(52, 102);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(160, 23);
+            this.label3.Size = new System.Drawing.Size(130, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nguyễn Mai Linh";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -370,6 +369,24 @@ namespace GarageManagement
             this.panel3.Size = new System.Drawing.Size(1069, 625);
             this.panel3.TabIndex = 2;
             // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1069, 625);
+            this.dashboard1.TabIndex = 5;
+            // 
+            // customerForm2
+            // 
+            this.customerForm2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerForm2.Location = new System.Drawing.Point(0, 0);
+            this.customerForm2.Margin = new System.Windows.Forms.Padding(4);
+            this.customerForm2.Name = "customerForm2";
+            this.customerForm2.Size = new System.Drawing.Size(1069, 625);
+            this.customerForm2.TabIndex = 4;
+            // 
             // checkoutForm1
             // 
             this.checkoutForm1.BackColor = System.Drawing.SystemColors.Control;
@@ -416,24 +433,6 @@ namespace GarageManagement
             // 
             this.gunaElipse2.Radius = 15;
             this.gunaElipse2.TargetControl = this;
-            // 
-            // customerForm2
-            // 
-            this.customerForm2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customerForm2.Location = new System.Drawing.Point(0, 0);
-            this.customerForm2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.customerForm2.Name = "customerForm2";
-            this.customerForm2.Size = new System.Drawing.Size(1069, 625);
-            this.customerForm2.TabIndex = 4;
-            // 
-            // dashboard1
-            // 
-            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1069, 625);
-            this.dashboard1.TabIndex = 5;
             // 
             // Form1
             // 
