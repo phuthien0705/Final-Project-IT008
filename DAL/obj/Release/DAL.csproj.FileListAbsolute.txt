@@ -1,0 +1,9 @@
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\bin\Release\DAL.dll
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\bin\Release\DAL.pdb
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\bin\Release\DTO.dll
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\bin\Release\DTO.pdb
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Release\DAL.dll
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Release\DAL.pdb
