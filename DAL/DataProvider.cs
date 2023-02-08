@@ -14,6 +14,7 @@ namespace DAL
 
         private string connectionStr = "Data Source=THIEN;Initial Catalog=GarageManagement;Integrated Security=True";
 
+
         public static DataProvider Instance
         {
             get => instance == null ? new DataProvider() : instance;

@@ -117,7 +117,7 @@ namespace GarageManagement
             int MaPhieuSuaChua = (int)(PHIEUSUACHUA_DAL.Instance.GetRepairCardFromCar(MaXe)).Rows[0]["MaPhieuSuaChua"];
             if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaKH, MaHX, TrangThai) && PHIEUSUACHUA_DAL.Instance.UpdateCustomer(MaPhieuSuaChua, MaKH)) 
             {
-                SaveCarImage();
+                if (File.Exists(opFile.FileName)) SaveCarImage();
                 MessageBox.Show("Cập nhật thành công !!");
             }
             else

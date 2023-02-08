@@ -1,0 +1,11 @@
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Release\BLL.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Release\BLL.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Release\DAL.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Release\DTO.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Release\DAL.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\bin\Release\DTO.pdb
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Release\BLL.csproj.CopyComplete
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Release\BLL.dll
+D:\study\C#_project\Đồ án\main\Final-Project-IT008\BLL\obj\Release\BLL.pdb
