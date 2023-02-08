@@ -47,7 +47,7 @@ namespace DAL
 
         public bool UpdateCustomer(int MaKH, string TenKH, string DienThoai, string GioiTinh, string DiaChi)
         {
-            string query = String.Format("UPDATE KHACHHANG SET TenKH = N'{0}', DienThoai = '{1}', GioiTinh = '{2}', DiaChi = N'{3}' WHERE MaKH = {4}", TenKH, DienThoai, GioiTinh, DiaChi, MaKH);
+            string query = String.Format("UPDATE KHACHHANG SET TenKH = N'{0}', DienThoai = '{1}', GioiTinh = N'{2}', DiaChi = N'{3}' WHERE MaKH = {4}", TenKH, DienThoai, GioiTinh, DiaChi, MaKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
