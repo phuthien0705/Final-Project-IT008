@@ -29,7 +29,6 @@ namespace GarageManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerDetail));
             this.label11 = new System.Windows.Forms.Label();
             this.genderCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -40,12 +39,13 @@ namespace GarageManagement
             this.label4 = new System.Windows.Forms.Label();
             this.nameTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.chooseImgBtn = new System.Windows.Forms.Button();
-            this.carImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.customerImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.updateBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.deleteBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label12 = new System.Windows.Forms.Label();
             this.createdTb = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
+            this.noImgLb = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.customerImg)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -196,23 +196,23 @@ namespace GarageManagement
             // 
             // chooseImgBtn
             // 
-            this.chooseImgBtn.Location = new System.Drawing.Point(451, 252);
+            this.chooseImgBtn.Location = new System.Drawing.Point(441, 250);
             this.chooseImgBtn.Name = "chooseImgBtn";
-            this.chooseImgBtn.Size = new System.Drawing.Size(71, 23);
+            this.chooseImgBtn.Size = new System.Drawing.Size(90, 23);
             this.chooseImgBtn.TabIndex = 80;
             this.chooseImgBtn.Text = "Tải ảnh lên";
             this.chooseImgBtn.UseVisualStyleBackColor = true;
+            this.chooseImgBtn.Click += new System.EventHandler(this.chooseImgBtn_Click);
             // 
-            // carImg
+            // customerImg
             // 
-            this.carImg.Image = ((System.Drawing.Image)(resources.GetObject("carImg.Image")));
-            this.carImg.ImageRotate = 0F;
-            this.carImg.Location = new System.Drawing.Point(406, 72);
-            this.carImg.Name = "carImg";
-            this.carImg.Size = new System.Drawing.Size(160, 160);
-            this.carImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.carImg.TabIndex = 79;
-            this.carImg.TabStop = false;
+            this.customerImg.ImageRotate = 0F;
+            this.customerImg.Location = new System.Drawing.Point(406, 72);
+            this.customerImg.Name = "customerImg";
+            this.customerImg.Size = new System.Drawing.Size(160, 160);
+            this.customerImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.customerImg.TabIndex = 79;
+            this.customerImg.TabStop = false;
             // 
             // updateBtn
             // 
@@ -290,16 +290,27 @@ namespace GarageManagement
             this.createdTb.TabIndex = 83;
             this.createdTb.TextOffset = new System.Drawing.Point(0, -1);
             // 
+            // noImgLb
+            // 
+            this.noImgLb.AutoSize = true;
+            this.noImgLb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.noImgLb.Location = new System.Drawing.Point(453, 149);
+            this.noImgLb.Name = "noImgLb";
+            this.noImgLb.Size = new System.Drawing.Size(88, 17);
+            this.noImgLb.TabIndex = 85;
+            this.noImgLb.Text = "Chưa có ảnh";
+            // 
             // CustomerDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(617, 361);
+            this.Controls.Add(this.noImgLb);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.createdTb);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.chooseImgBtn);
-            this.Controls.Add(this.carImg);
+            this.Controls.Add(this.customerImg);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.genderCb);
             this.Controls.Add(this.label8);
@@ -313,7 +324,7 @@ namespace GarageManagement
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerDetail";
             this.Load += new System.EventHandler(this.CustomerDetail_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.carImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,10 +342,11 @@ namespace GarageManagement
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox nameTb;
         private System.Windows.Forms.Button chooseImgBtn;
-        private Guna.UI2.WinForms.Guna2PictureBox carImg;
+        private Guna.UI2.WinForms.Guna2PictureBox customerImg;
         private Guna.UI2.WinForms.Guna2GradientButton updateBtn;
         private Guna.UI2.WinForms.Guna2GradientButton deleteBtn;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox createdTb;
+        private System.Windows.Forms.Label noImgLb;
     }
 }
