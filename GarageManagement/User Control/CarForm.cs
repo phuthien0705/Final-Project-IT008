@@ -23,21 +23,15 @@ namespace GarageManagement.User_Control
             InitializeComponent();
         }
 
+
         private void CarForm_Load(object sender, EventArgs e)
         {
-            DataTable allBrand = HIEUXE_DAL.Instance.LoadBrandList();
-            for (int i = 0; i < allBrand.Rows.Count; i++)
-            {
-                brandCb.Items.Add(allBrand.Rows[i]["TenHieuXe"].ToString());
-            }
-            brandCb.SelectedIndex = 0;
-            LoadCutomerList();
-            LoadProblemList();
-            LoadBrandList();
+            Reload();
         }
 
         void LoadCutomerList()
         {
+            customerLv.Clear();
             customerList = KHACHHANG_DAL.Instance.LoadCustomerList();
             customerLv.Columns.Add("STT", 50);
             customerLv.Columns.Add("Họ và tên", 225);
@@ -61,6 +55,7 @@ namespace GarageManagement.User_Control
 
         void LoadProblemList()
         {
+            problemLv.Clear();
             problemList = TIENCONG_DAL.Instance.LoadProblemList();
             problemLv.Columns.Add("STT", 50);
             problemLv.Columns.Add("Tên dịch vụ", 180);
@@ -176,6 +171,29 @@ namespace GarageManagement.User_Control
                     item.SubItems.Add(phoneNumberItem);
                 }
             }
+        }
+
+        private void reloadBtn_Click(object sender, EventArgs e)
+        {
+            Reload();
+        }
+
+        void Reload()
+        {
+            DataTable allBrand = HIEUXE_DAL.Instance.LoadBrandList();
+            for (int i = 0; i < allBrand.Rows.Count; i++)
+            {
+                brandCb.Items.Add(allBrand.Rows[i]["TenHieuXe"].ToString());
+            }
+            brandCb.SelectedIndex = 0;
+            LoadCutomerList();
+            LoadProblemList();
+            LoadBrandList();
+        }
+
+        private void CarForm_VisibleChanged(object sender, EventArgs e)
+        {
+            Reload();
         }
     }
 }

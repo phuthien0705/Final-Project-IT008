@@ -46,8 +46,10 @@ namespace GarageManagement.User_Control
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.problemLv = new System.Windows.Forms.ListView();
             this.searchCustomerTb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.reloadBtn = new System.Windows.Forms.PictureBox();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -56,7 +58,7 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(22, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(231, 36);
+            this.label15.Size = new System.Drawing.Size(184, 29);
             this.label15.TabIndex = 10;
             this.label15.Text = "Thêm xe mới";
             // 
@@ -91,7 +93,7 @@ namespace GarageManagement.User_Control
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(60, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 21);
+            this.label1.Size = new System.Drawing.Size(117, 19);
             this.label1.TabIndex = 13;
             this.label1.Text = "Nhập biển số xe";
             // 
@@ -101,7 +103,7 @@ namespace GarageManagement.User_Control
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(60, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 21);
+            this.label2.Size = new System.Drawing.Size(107, 19);
             this.label2.TabIndex = 13;
             this.label2.Text = "Chọn hãng xe";
             // 
@@ -111,7 +113,7 @@ namespace GarageManagement.User_Control
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(474, 93);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 21);
+            this.label5.Size = new System.Drawing.Size(135, 19);
             this.label5.TabIndex = 13;
             this.label5.Text = "Chọn khách hàng";
             // 
@@ -236,7 +238,7 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(60, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 21);
+            this.label3.Size = new System.Drawing.Size(101, 19);
             this.label3.TabIndex = 47;
             this.label3.Text = "Chọn dịch vụ";
             // 
@@ -293,9 +295,23 @@ namespace GarageManagement.User_Control
             this.searchCustomerTb.TextOffset = new System.Drawing.Point(5, 0);
             this.searchCustomerTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchCustomerTb_KeyPress);
             // 
+            // reloadBtn
+            // 
+            this.reloadBtn.BackgroundImage = global::GarageManagement.Properties.Resources._61225;
+            this.reloadBtn.Image = global::GarageManagement.Properties.Resources._61225;
+            this.reloadBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("reloadBtn.InitialImage")));
+            this.reloadBtn.Location = new System.Drawing.Point(212, 25);
+            this.reloadBtn.Name = "reloadBtn";
+            this.reloadBtn.Size = new System.Drawing.Size(15, 15);
+            this.reloadBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reloadBtn.TabIndex = 49;
+            this.reloadBtn.TabStop = false;
+            this.reloadBtn.Click += new System.EventHandler(this.reloadBtn_Click);
+            // 
             // CarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.reloadBtn);
             this.Controls.Add(this.searchCustomerTb);
             this.Controls.Add(this.guna2ContainerControl2);
             this.Controls.Add(this.label3);
@@ -313,8 +329,10 @@ namespace GarageManagement.User_Control
             this.Name = "CarForm";
             this.Size = new System.Drawing.Size(1069, 622);
             this.Load += new System.EventHandler(this.CarForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.CarForm_VisibleChanged);
             this.guna2ContainerControl1.ResumeLayout(false);
             this.guna2ContainerControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reloadBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +356,6 @@ namespace GarageManagement.User_Control
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private Guna.UI2.WinForms.Guna2TextBox searchCustomerTb;
         private System.Windows.Forms.ListView problemLv;
+        private System.Windows.Forms.PictureBox reloadBtn;
     }
 }
