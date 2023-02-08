@@ -61,3 +61,12 @@ D:\study\C#_project\Đồ án\main\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.
 D:\study\C#_project\Đồ án\main\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\study\C#_project\Đồ án\main\Final-Project-IT008\DAL\obj\Debug\DAL.dll
 D:\study\C#_project\Đồ án\main\Final-Project-IT008\DAL\obj\Debug\DAL.pdb
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\bin\Debug\DAL.dll
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\bin\Debug\DAL.pdb
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\bin\Debug\DTO.dll
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\bin\Debug\DTO.pdb
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Debug\DAL.dll
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DAL\obj\Debug\DAL.pdb

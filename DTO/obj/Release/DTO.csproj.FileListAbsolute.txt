@@ -1,0 +1,6 @@
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DTO\bin\Release\DTO.dll
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DTO\bin\Release\DTO.pdb
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DTO\obj\Release\DTO.csproj.AssemblyReference.cache
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DTO\obj\Release\DTO.dll
+D:\study\C#_project\Đồ án\TrungBui\Final-Project-IT008\DTO\obj\Release\DTO.pdb
