@@ -33,6 +33,7 @@ namespace GarageManagement
             LoadCarDeTail();
             LoadProblemList();
             LoadKitChoosen();
+            LoadPurchased();
             imageExist = CheckImageExist();
             LoadCarImage();
         }
@@ -57,6 +58,22 @@ namespace GarageManagement
             else
             {
                 opFile.Dispose();
+            }
+        }
+
+        void LoadPurchased()
+        {
+            if ((int) data.Rows[0]["TrangThai"] == 3)
+            {
+                int TienThu = (int) PHIEUTHUTIEN_DAL.Instance.GetBillOnCar(MaXe).Rows[0]["TienThu"];
+                totalCostLabel.Text = FormatMoney(TienThu) + " VND";
+                purchasedLb.Visible = true;
+                totalCostLabel.Visible = true;
+            }
+            else
+            {
+                purchasedLb.Visible = false;
+                totalCostLabel.Visible = false;
             }
         }
 
@@ -288,6 +305,44 @@ namespace GarageManagement
         int GetTableIndexFromComboboxIndex(ComboBox comboBox, DataTable dataTable, string fieldName)
         {
             return (int) dataTable.Rows[comboBox.SelectedIndex][fieldName];
+        }
+
+        string FormatMoney(int money)
+        {
+            List<string> all = new List<string>();
+            while (money != 0)
+            {
+                int remainder = (money % 1000);
+                string part = "";
+                if (remainder < 10)
+                {
+                    part = "00" + remainder;
+                }
+                else if (remainder < 100)
+                {
+                    part = "0" + remainder;
+                }
+                else if (remainder < 1000)
+                {
+                    part = "" + remainder;
+                }
+                all.Add(part);
+                money /= 1000;
+            }
+            string formatedMoney = "";
+            all[all.Count - 1] = (Int32.Parse(all[all.Count - 1])).ToString();
+            for (int i = all.Count - 1; i >= 0; i--)
+            {
+                if (i == 0)
+                {
+                    formatedMoney += all[i];
+                }
+                else
+                {
+                    formatedMoney += all[i] + ".";
+                }
+            }
+            return formatedMoney;
         }
     }
 }
