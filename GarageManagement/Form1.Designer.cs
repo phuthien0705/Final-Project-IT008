@@ -208,11 +208,11 @@ namespace GarageManagement
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(92, 126);
+            this.label4.Location = new System.Drawing.Point(69, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 19);
+            this.label4.Size = new System.Drawing.Size(96, 19);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Admin";
+            this.label4.Text = "Quản trị viên";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3

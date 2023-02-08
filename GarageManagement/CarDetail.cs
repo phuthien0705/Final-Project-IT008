@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,12 @@ namespace GarageManagement
 {
     public partial class CarDetail : Form
     {
+        string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\car_image\";
+
+        public OpenFileDialog opFile = new OpenFileDialog();
+
+        bool imageExist = false;
+
         private DataTable data;
 
         private DataTable allCustomer;
@@ -26,24 +33,78 @@ namespace GarageManagement
             LoadCarDeTail();
             LoadProblemList();
             LoadKitChoosen();
+            imageExist = CheckImageExist();
+            LoadCarImage();
         }
 
         private void chooseImgBtn_Click(object sender, EventArgs e)
         {
-            string imageLocation = "";
+            opFile.Title = "Select a Image";
+            opFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";                                                                                   // <---
+
+            if (opFile.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    carImg.Image = new Bitmap(opFile.OpenFile());
+                    noImgLb.Visible = false;
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Unable to open file " + exp.Message);
+                }
+            }
+            else
+            {
+                opFile.Dispose();
+            }
+        }
+
+        void LoadCarImage()
+        {
+            string iName = "image" + MaXe + ".jpg";
+            if (imageExist)
+            {
+                noImgLb.Visible = false;
+                using (FileStream fs = new FileStream(appPath + iName, FileMode.Open))
+                {
+                    Image image = Image.FromStream(fs);
+                    carImg.Image = image;
+                    fs.Close();
+                }
+            }
+            else
+            {
+                noImgLb.Visible = true;
+            }
+        }
+
+        bool CheckImageExist()
+        {
+            string iName = "image" + MaXe + ".jpg";
+            return File.Exists(appPath + iName);
+        }
+
+        void SaveCarImage()
+        {
             try
             {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;...";
-
-                if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    imageLocation = dialog.FileName;
-                    carImg.ImageLocation = imageLocation;
+                if (Directory.Exists(appPath) == false)
+                {                                                                                    
+                    Directory.CreateDirectory(appPath);        
                 }
-            } catch (Exception)
+                string iName = "image" + MaXe + ".jpg";
+                string filepath = opFile.FileName;
+
+                if (imageExist)
+                {
+                    File.Delete(appPath + iName);
+                }
+                File.Copy(filepath, appPath + iName);
+            }
+            catch (Exception exp)
             {
-                MessageBox.Show("Cann't upload image now !","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cannot save image !! \n " + exp.Message);
             }
         }
 
@@ -56,6 +117,7 @@ namespace GarageManagement
             int MaPhieuSuaChua = (int)(PHIEUSUACHUA_DAL.Instance.GetRepairCardFromCar(MaXe)).Rows[0]["MaPhieuSuaChua"];
             if (XE_DAL.Instance.UpdateCar(this.MaXe, BienSo, MaKH, MaHX, TrangThai) && PHIEUSUACHUA_DAL.Instance.UpdateCustomer(MaPhieuSuaChua, MaKH)) 
             {
+                SaveCarImage();
                 MessageBox.Show("Cập nhật thành công !!");
             }
             else
