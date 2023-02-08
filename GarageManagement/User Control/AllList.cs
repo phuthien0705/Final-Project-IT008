@@ -12,12 +12,15 @@ namespace GarageManagement.User_Control
 {
     public partial class AllList : UserControl
     {
+        private Dashboard db;
+
         public DataTable carList;
 
         public CarDetail carDetail;
 
-        public AllList()
+        public AllList(Dashboard db)
         {
+            this.db = db;
             InitializeComponent();
             LoadCarListView();
         }
@@ -188,6 +191,16 @@ namespace GarageManagement.User_Control
                     item.SubItems.Add(orderDatetimeItem);
                 }
             }
+        }
+
+        private void AllList_Load(object sender, EventArgs e)
+        {
+            this.Visible = db.Visible == true;
+        }
+
+        private void AllList_VisibleChanged(object sender, EventArgs e)
+        {
+            LoadCarListView();
         }
     }
 }

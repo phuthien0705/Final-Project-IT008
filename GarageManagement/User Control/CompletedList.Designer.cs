@@ -86,7 +86,7 @@ namespace GarageManagement.User_Control
             // 
             this.viewDetail.BackColor = System.Drawing.Color.Transparent;
             this.viewDetail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewDetail.Location = new System.Drawing.Point(901, 32);
+            this.viewDetail.Location = new System.Drawing.Point(921, 32);
             this.viewDetail.Name = "viewDetail";
             this.viewDetail.Size = new System.Drawing.Size(128, 20);
             this.viewDetail.TabIndex = 21;

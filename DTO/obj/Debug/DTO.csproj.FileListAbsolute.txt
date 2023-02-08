@@ -39,3 +39,4 @@ D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.
 D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\obj\Debug\DTO.dll
 D:\study\C#_project\Đồ án\main\Final-Project-IT008\DTO\obj\Debug\DTO.pdb
+D:\Lập trình Trực quan\GarageManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

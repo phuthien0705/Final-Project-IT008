@@ -35,7 +35,7 @@ namespace GarageManagement.User_Control
         private void backToAllBtn_Click(object sender, EventArgs e)
         {
             db.panel1.Controls.Clear();
-            AllList allList = new AllList();
+            AllList allList = new AllList(db);
             db.panel1.Controls.Add(allList);
             allList.Dock = DockStyle.Fill;
         }

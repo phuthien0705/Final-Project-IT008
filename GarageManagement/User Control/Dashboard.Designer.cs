@@ -52,7 +52,7 @@ namespace GarageManagement.User_Control
             this.revenueLb = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.allList1 = new GarageManagement.User_Control.AllList();
+            this.allList1 = new GarageManagement.User_Control.AllList(this);
             this.gunaGradient2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.gunaGradient2Panel3.SuspendLayout();

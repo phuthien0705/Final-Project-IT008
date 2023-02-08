@@ -131,6 +131,8 @@ namespace GarageManagement.User_Control
             this.Controls.Add(this.guna2ContainerControl1);
             this.Name = "AllList";
             this.Size = new System.Drawing.Size(1069, 387);
+            this.Load += new System.EventHandler(this.AllList_Load);
+            this.VisibleChanged += new System.EventHandler(this.AllList_VisibleChanged);
             this.guna2ContainerControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
