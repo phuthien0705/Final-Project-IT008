@@ -30,31 +30,31 @@ namespace GarageManagement.User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Indicator",
             "200",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Insulation film",
             "450",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Disk brake",
             "150",
             "1"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutForm));
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Flat tires",
             "5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Broken windows",
             "10"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "3",
             "Punctured tires",
             "10"}, -1);
@@ -103,6 +103,7 @@ namespace GarageManagement.User_Control
             this.fee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.printDevoiceBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2ContainerControl1.SuspendLayout();
             this.totalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,9 +139,9 @@ namespace GarageManagement.User_Control
             this.orderDetailListView.FullRowSelect = true;
             this.orderDetailListView.HideSelection = false;
             this.orderDetailListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem7,
+            listViewItem8,
+            listViewItem9});
             this.orderDetailListView.Location = new System.Drawing.Point(12, 9);
             this.orderDetailListView.Name = "orderDetailListView";
             this.orderDetailListView.Size = new System.Drawing.Size(661, 128);
@@ -172,6 +173,7 @@ namespace GarageManagement.User_Control
             // 
             this.totalPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.totalPanel.BorderRadius = 15;
+            this.totalPanel.Controls.Add(this.printDevoiceBtn);
             this.totalPanel.Controls.Add(this.pictureBox1);
             this.totalPanel.Controls.Add(this.submitBtn);
             this.totalPanel.Controls.Add(this.paymentMethodComboBox);
@@ -213,7 +215,7 @@ namespace GarageManagement.User_Control
             this.submitBtn.FillColor2 = System.Drawing.Color.DarkOrchid;
             this.submitBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(24, 494);
+            this.submitBtn.Location = new System.Drawing.Point(24, 478);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(239, 30);
             this.submitBtn.TabIndex = 36;
@@ -251,7 +253,7 @@ namespace GarageManagement.User_Control
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(21, 398);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(252, 23);
+            this.label12.Size = new System.Drawing.Size(207, 19);
             this.label12.TabIndex = 34;
             this.label12.Text = "Phương thước thanh toán:";
             // 
@@ -292,7 +294,7 @@ namespace GarageManagement.User_Control
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(20, 345);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 28);
+            this.label5.Size = new System.Drawing.Size(94, 23);
             this.label5.TabIndex = 26;
             this.label5.Text = "Tổng tiền:";
             // 
@@ -312,7 +314,7 @@ namespace GarageManagement.User_Control
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(20, 304);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 23);
+            this.label4.Size = new System.Drawing.Size(49, 19);
             this.label4.TabIndex = 25;
             this.label4.Text = "Thuế:";
             // 
@@ -322,7 +324,7 @@ namespace GarageManagement.User_Control
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(20, 263);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 23);
+            this.label3.Size = new System.Drawing.Size(110, 19);
             this.label3.TabIndex = 25;
             this.label3.Text = "Phí sửa chữa:";
             // 
@@ -342,7 +344,7 @@ namespace GarageManagement.User_Control
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 222);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 23);
+            this.label2.Size = new System.Drawing.Size(109, 19);
             this.label2.TabIndex = 23;
             this.label2.Text = "Phí phụ tùng:";
             // 
@@ -369,7 +371,7 @@ namespace GarageManagement.User_Control
             this.confirmCheckbox.AutoSize = true;
             this.confirmCheckbox.Location = new System.Drawing.Point(29, 86);
             this.confirmCheckbox.Name = "confirmCheckbox";
-            this.confirmCheckbox.Size = new System.Drawing.Size(245, 38);
+            this.confirmCheckbox.Size = new System.Drawing.Size(191, 30);
             this.confirmCheckbox.TabIndex = 22;
             this.confirmCheckbox.Text = "Khách hàng chấp nhận mọi chính \r\nsách của doanh nghiệp";
             this.confirmCheckbox.UseVisualStyleBackColor = true;
@@ -402,7 +404,7 @@ namespace GarageManagement.User_Control
             this.receivedDayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receivedDayLabel.Location = new System.Drawing.Point(129, 136);
             this.receivedDayLabel.Name = "receivedDayLabel";
-            this.receivedDayLabel.Size = new System.Drawing.Size(160, 20);
+            this.receivedDayLabel.Size = new System.Drawing.Size(140, 17);
             this.receivedDayLabel.TabIndex = 22;
             this.receivedDayLabel.Text = "2022/03/31 11:02:15";
             // 
@@ -412,7 +414,7 @@ namespace GarageManagement.User_Control
             this.carBrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carBrandLabel.Location = new System.Drawing.Point(129, 105);
             this.carBrandLabel.Name = "carBrandLabel";
-            this.carBrandLabel.Size = new System.Drawing.Size(128, 20);
+            this.carBrandLabel.Size = new System.Drawing.Size(107, 17);
             this.carBrandLabel.TabIndex = 22;
             this.carBrandLabel.Text = "Mercedes-Benz";
             // 
@@ -422,7 +424,7 @@ namespace GarageManagement.User_Control
             this.carPlateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carPlateLabel.Location = new System.Drawing.Point(129, 74);
             this.carPlateLabel.Name = "carPlateLabel";
-            this.carPlateLabel.Size = new System.Drawing.Size(93, 20);
+            this.carPlateLabel.Size = new System.Drawing.Size(82, 17);
             this.carPlateLabel.TabIndex = 22;
             this.carPlateLabel.Text = "51A-256.21";
             // 
@@ -432,7 +434,7 @@ namespace GarageManagement.User_Control
             this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLabel.Location = new System.Drawing.Point(129, 43);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(161, 20);
+            this.addressLabel.Size = new System.Drawing.Size(136, 17);
             this.addressLabel.TabIndex = 22;
             this.addressLabel.Text = "25 Ballaire, Houston";
             // 
@@ -442,7 +444,7 @@ namespace GarageManagement.User_Control
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(23, 104);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 20);
+            this.label10.Size = new System.Drawing.Size(67, 17);
             this.label10.TabIndex = 21;
             this.label10.Text = "Hiệu xe:";
             // 
@@ -452,7 +454,7 @@ namespace GarageManagement.User_Control
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(23, 74);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(104, 20);
+            this.label15.Size = new System.Drawing.Size(88, 17);
             this.label15.TabIndex = 21;
             this.label15.Text = "Biển số xe:";
             // 
@@ -462,7 +464,7 @@ namespace GarageManagement.User_Control
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(23, 134);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(103, 20);
+            this.label17.Size = new System.Drawing.Size(91, 17);
             this.label17.TabIndex = 21;
             this.label17.Text = "Ngày nhận:";
             // 
@@ -472,7 +474,7 @@ namespace GarageManagement.User_Control
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(23, 44);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 20);
+            this.label18.Size = new System.Drawing.Size(63, 17);
             this.label18.TabIndex = 21;
             this.label18.Text = "Địa chỉ:";
             // 
@@ -482,7 +484,7 @@ namespace GarageManagement.User_Control
             this.customerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerLabel.Location = new System.Drawing.Point(129, 12);
             this.customerLabel.Name = "customerLabel";
-            this.customerLabel.Size = new System.Drawing.Size(117, 20);
+            this.customerLabel.Size = new System.Drawing.Size(96, 17);
             this.customerLabel.TabIndex = 21;
             this.customerLabel.Text = "Callum Wilson";
             // 
@@ -492,7 +494,7 @@ namespace GarageManagement.User_Control
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(23, 14);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(113, 20);
+            this.label20.Size = new System.Drawing.Size(99, 17);
             this.label20.TabIndex = 21;
             this.label20.Text = "Khách hàng:";
             // 
@@ -521,7 +523,7 @@ namespace GarageManagement.User_Control
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(25, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(201, 23);
+            this.label8.Size = new System.Drawing.Size(162, 19);
             this.label8.TabIndex = 19;
             this.label8.Text = "Chọn xe thanh toán";
             // 
@@ -552,9 +554,9 @@ namespace GarageManagement.User_Control
             this.ProblemListView.FullRowSelect = true;
             this.ProblemListView.HideSelection = false;
             this.ProblemListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.ProblemListView.Location = new System.Drawing.Point(12, 8);
             this.ProblemListView.Name = "ProblemListView";
             this.ProblemListView.Size = new System.Drawing.Size(661, 114);
@@ -596,6 +598,25 @@ namespace GarageManagement.User_Control
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // printDevoiceBtn
+            // 
+            this.printDevoiceBtn.Animated = true;
+            this.printDevoiceBtn.BorderRadius = 15;
+            this.printDevoiceBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.printDevoiceBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.printDevoiceBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.printDevoiceBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.printDevoiceBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.printDevoiceBtn.FillColor = System.Drawing.Color.Orchid;
+            this.printDevoiceBtn.FillColor2 = System.Drawing.Color.DarkOrchid;
+            this.printDevoiceBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printDevoiceBtn.ForeColor = System.Drawing.Color.White;
+            this.printDevoiceBtn.Location = new System.Drawing.Point(25, 514);
+            this.printDevoiceBtn.Name = "printDevoiceBtn";
+            this.printDevoiceBtn.Size = new System.Drawing.Size(239, 30);
+            this.printDevoiceBtn.TabIndex = 39;
+            this.printDevoiceBtn.Text = "In hóa đơn";
             // 
             // CheckoutForm
             // 
@@ -668,5 +689,6 @@ namespace GarageManagement.User_Control
         private System.Windows.Forms.Label label20;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.CheckBox confirmCheckbox;
+        private Guna.UI2.WinForms.Guna2GradientButton printDevoiceBtn;
     }
 }
